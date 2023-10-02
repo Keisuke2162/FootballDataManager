@@ -34,7 +34,7 @@ struct StandingView: View {
                                 .foregroundColor(Color.white)
                                 .font(.custom("SSportsD-Medium", size: 16))
                             Spacer()
-                            Text(viewModel.list[index].points)
+                            Text(viewModel.list[index].points.description)
                                 .foregroundColor(Color.white)
                                 .font(.custom("SSportsD-Medium", size: 16))
                         }

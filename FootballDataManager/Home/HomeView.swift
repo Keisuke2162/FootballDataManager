@@ -25,9 +25,16 @@ struct HomeView: View {
                             .scaledToFit()
                             .frame(width: 50, height: 50)
                         Text(item.name)
+                            .foregroundColor(Color.white)
+                            .font(.custom("SSportsD-Medium", size: 16))
                     }
                 }
+                .frame(height: 46)
+                .listRowBackground(Color.clear)
             }
+            .scrollContentBackground(.hidden)
+            .background(Color.init("SkySportsRed"))
+            .listStyle(.grouped)
         }
     }
 }
