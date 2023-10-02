@@ -21,7 +21,7 @@ struct StandingView: View {
                             Text("\(index + 1)")
                                 .foregroundColor(Color.white)
                                 .font(.custom("SSportsD-Medium", size: 16))
-                                .frame(width: 16)
+                                .frame(width: 24)
                             let imageURL = URL(string: viewModel.list[index].team.logo)
                             AsyncImage(url: imageURL) { image in
                                 image.resizable()
@@ -31,6 +31,10 @@ struct StandingView: View {
                             .scaledToFit()
                             .frame(width: 30, height: 30)
                             Text(viewModel.list[index].team.name)
+                                .foregroundColor(Color.white)
+                                .font(.custom("SSportsD-Medium", size: 16))
+                            Spacer()
+                            Text(viewModel.list[index].points)
                                 .foregroundColor(Color.white)
                                 .font(.custom("SSportsD-Medium", size: 16))
                         }
