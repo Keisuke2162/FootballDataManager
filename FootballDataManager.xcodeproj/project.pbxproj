@@ -22,6 +22,8 @@
 		679A8CB62AC9BEDC000C090C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CB52AC9BEDC000C090C /* APIError.swift */; };
 		679A8CB82AC9CDED000C090C /* StandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CB72AC9CDED000C090C /* StandingViewModel.swift */; };
 		679A8CBA2AC9D832000C090C /* StandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CB92AC9D832000C090C /* StandingView.swift */; };
+		679A8CBD2ACB3C40000C090C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679A8CBC2ACB3C40000C090C /* Color.xcassets */; };
+		679A8CC02ACB3C63000C090C /* SSportsD-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 679A8CBF2ACB3C63000C090C /* SSportsD-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		679A8CB52AC9BEDC000C090C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		679A8CB72AC9CDED000C090C /* StandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingViewModel.swift; sourceTree = "<group>"; };
 		679A8CB92AC9D832000C090C /* StandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingView.swift; sourceTree = "<group>"; };
+		679A8CBC2ACB3C40000C090C /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		679A8CBF2ACB3C63000C090C /* SSportsD-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SSportsD-Medium.ttf"; sourceTree = "<group>"; };
+		679A8CC12ACB3C9E000C090C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,10 +115,11 @@
 		679A8C7B2AC99A33000C090C /* FootballDataManager */ = {
 			isa = PBXGroup;
 			children = (
+				679A8CC12ACB3C9E000C090C /* Info.plist */,
+				679A8CBB2ACB3C28000C090C /* Resource */,
 				679A8CB22AC9BE96000C090C /* API */,
 				679A8C7C2AC99A33000C090C /* FootballDataManagerApp.swift */,
 				679A8C7E2AC99A33000C090C /* ContentView.swift */,
-				679A8C802AC99A35000C090C /* Assets.xcassets */,
 				679A8C822AC99A35000C090C /* Preview Content */,
 				679A8CA62AC99F08000C090C /* Home */,
 				679A8CAC2AC9A912000C090C /* Standing */,
@@ -181,6 +187,24 @@
 				679A8CB52AC9BEDC000C090C /* APIError.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		679A8CBB2ACB3C28000C090C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				679A8CBE2ACB3C55000C090C /* Font */,
+				679A8C802AC99A35000C090C /* Assets.xcassets */,
+				679A8CBC2ACB3C40000C090C /* Color.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		679A8CBE2ACB3C55000C090C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				679A8CBF2ACB3C63000C090C /* SSportsD-Medium.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +313,8 @@
 			files = (
 				679A8C842AC99A35000C090C /* Preview Assets.xcassets in Resources */,
 				679A8C812AC99A35000C090C /* Assets.xcassets in Resources */,
+				679A8CBD2ACB3C40000C090C /* Color.xcassets in Resources */,
+				679A8CC02ACB3C63000C090C /* SSportsD-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +510,7 @@
 				DEVELOPMENT_TEAM = D2B3JPR4TJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FootballDataManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -513,6 +540,7 @@
 				DEVELOPMENT_TEAM = D2B3JPR4TJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FootballDataManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
