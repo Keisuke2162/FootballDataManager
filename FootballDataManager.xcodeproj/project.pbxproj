@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		672CB5112AD3E7DA005048D5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB5102AD3E7DA005048D5 /* Message.swift */; };
 		679A8C7D2AC99A33000C090C /* FootballDataManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8C7C2AC99A33000C090C /* FootballDataManagerApp.swift */; };
 		679A8C812AC99A35000C090C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679A8C802AC99A35000C090C /* Assets.xcassets */; };
 		679A8C842AC99A35000C090C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679A8C832AC99A35000C090C /* Preview Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		672CB5102AD3E7DA005048D5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		679A8C792AC99A33000C090C /* FootballDataManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballDataManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		679A8C7C2AC99A33000C090C /* FootballDataManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballDataManagerApp.swift; sourceTree = "<group>"; };
 		679A8C802AC99A35000C090C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				679A8CA92AC99F51000C090C /* Entity */,
 				679A8CB22AC9BE96000C090C /* API */,
 				679A8CC72AD3C358000C090C /* Views */,
+				672CB5102AD3E7DA005048D5 /* Message.swift */,
 			);
 			path = FootballDataManager;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				679A8CAE2AC9A97A000C090C /* StandingsItem.swift in Sources */,
 				679A8CB42AC9BEA9000C090C /* TableListAPIClient.swift in Sources */,
 				679A8CB82AC9CDED000C090C /* StandingViewModel.swift in Sources */,
+				672CB5112AD3E7DA005048D5 /* Message.swift in Sources */,
 				679A8CC32ACF4ED8000C090C /* SelectLeagueView.swift in Sources */,
 				679A8CB62AC9BEDC000C090C /* APIError.swift in Sources */,
 				679A8CAB2AC9A470000C090C /* League.swift in Sources */,

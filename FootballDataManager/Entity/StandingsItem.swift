@@ -23,10 +23,19 @@ struct Standing: Codable {
     let rank: Int
     let team: TeamInfo
     let points: Int
+    let goalsDiff: Int
+    let all: AllGameInformation
 }
 
 struct TeamInfo: Codable {
     let id: Int
     let name: String
     let logo: String
+}
+
+struct AllGameInformation: Codable {
+    let played: Int
+    let win: Int
+    let draw: Int
+    let lose: Int
 }
