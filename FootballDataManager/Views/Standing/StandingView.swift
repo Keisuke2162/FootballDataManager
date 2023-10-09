@@ -75,7 +75,7 @@ struct StandingView: View {
                 .listStyle(.grouped)
             }
             .onAppear {
-                viewModel.getTableList(leagueID)
+                viewModel.getStandings(leagueID)
             }
         }
         .navigationBarBackButtonHidden(true)

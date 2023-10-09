@@ -22,7 +22,7 @@
 		679A8CAB2AC9A470000C090C /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CAA2AC9A470000C090C /* League.swift */; };
 		679A8CAE2AC9A97A000C090C /* StandingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CAD2AC9A97A000C090C /* StandingsItem.swift */; };
 		679A8CB02AC9B917000C090C /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CAF2AC9B917000C090C /* Team.swift */; };
-		679A8CB42AC9BEA9000C090C /* TableListAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CB32AC9BEA9000C090C /* TableListAPIClient.swift */; };
+		679A8CB42AC9BEA9000C090C /* StandingListAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CB32AC9BEA9000C090C /* StandingListAPIClient.swift */; };
 		679A8CB62AC9BEDC000C090C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CB52AC9BEDC000C090C /* APIError.swift */; };
 		679A8CB82AC9CDED000C090C /* StandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CB72AC9CDED000C090C /* StandingViewModel.swift */; };
 		679A8CBA2AC9D832000C090C /* StandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CB92AC9D832000C090C /* StandingView.swift */; };
@@ -69,7 +69,7 @@
 		679A8CAA2AC9A470000C090C /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		679A8CAD2AC9A97A000C090C /* StandingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsItem.swift; sourceTree = "<group>"; };
 		679A8CAF2AC9B917000C090C /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		679A8CB32AC9BEA9000C090C /* TableListAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListAPIClient.swift; sourceTree = "<group>"; };
+		679A8CB32AC9BEA9000C090C /* StandingListAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingListAPIClient.swift; sourceTree = "<group>"; };
 		679A8CB52AC9BEDC000C090C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		679A8CB72AC9CDED000C090C /* StandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingViewModel.swift; sourceTree = "<group>"; };
 		679A8CB92AC9D832000C090C /* StandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingView.swift; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 		679A8CB22AC9BE96000C090C /* API */ = {
 			isa = PBXGroup;
 			children = (
-				679A8CB32AC9BEA9000C090C /* TableListAPIClient.swift */,
+				679A8CB32AC9BEA9000C090C /* StandingListAPIClient.swift */,
 				672CB5152AD3EDD0005048D5 /* ScheduleAPIClient.swift */,
 				679A8CB52AC9BEDC000C090C /* APIError.swift */,
 			);
@@ -391,7 +391,7 @@
 				679A8CA82AC99F14000C090C /* HomeView.swift in Sources */,
 				679A8CAE2AC9A97A000C090C /* StandingsItem.swift in Sources */,
 				672CB5162AD3EDD0005048D5 /* ScheduleAPIClient.swift in Sources */,
-				679A8CB42AC9BEA9000C090C /* TableListAPIClient.swift in Sources */,
+				679A8CB42AC9BEA9000C090C /* StandingListAPIClient.swift in Sources */,
 				672CB5142AD3EDBD005048D5 /* ScheduleView.swift in Sources */,
 				679A8CB82AC9CDED000C090C /* StandingViewModel.swift in Sources */,
 				672CB5112AD3E7DA005048D5 /* Message.swift in Sources */,
