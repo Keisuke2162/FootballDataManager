@@ -18,7 +18,8 @@ struct HomeView: View {
             ZStack {
                 List(leagues, id: \.self) { item in
                     NavigationLink {
-                        StandingView(leagueID: item.leagueID)
+                        ScheduleView(leagueID: item.leagueID)
+                        // StandingView(leagueID: item.leagueID)
                     } label: {
                         HStack(spacing: 16.0) {
                             Image(item.imageString)
@@ -34,9 +35,9 @@ struct HomeView: View {
                     .listRowBackground(Color.clear)
                 }
                 .scrollContentBackground(.hidden)
-                .background(Color.init("SkySportsRed"))
+                .background(Color.init("SkySportsBlue"))
                 .listStyle(.grouped)
-                SelectLeagueView()
+                // SelectLeagueView()
             }
         }
     }

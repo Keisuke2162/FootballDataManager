@@ -1,14 +1,14 @@
 //
-//  StandingListAPIClient.swift
+//  ScheduleAPIClient.swift
 //  FootballDataManager
 //
-//  Created by Kei on 2023/10/01.
+//  Created by Kei on 2023/10/09.
 //
 
 import Foundation
 
-final class StandingListAPIClient {
-    func getLeagueTable(leagueID: String, completion: @escaping ((Result<StandingsItem, APIError>) -> Void)) {
+final class ScheduleAPIClient {
+    func getLeagueTable(leagueID: String, completion: @escaping ((Result<FixtureResponse, APIError>) -> Void)) {
         guard let apiURL = URL(string: "https://v3.football.api-sports.io/standings") else {
             return completion(.failure(.invalidURL))
         }
@@ -27,11 +27,14 @@ final class StandingListAPIClient {
         request.setValue("", forHTTPHeaderField: "x-rapidapi-key")
         request.httpMethod = "GET"
 
-        if let fileURL = Bundle.main.url(forResource: "football_api_standings_2023_39", withExtension: "json") {
+        if let fileURL = Bundle.main.url(forResource: "foorball_api_fixtures_2023_39", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: fileURL)
                 let decoder = JSONDecoder()
-                let jsonData = try decoder.decode(StandingsItem.self, from: data)
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+                decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                let jsonData = try decoder.decode(FixtureResponse.self, from: data)
                 completion(.success(jsonData))
             } catch {
                 completion(.failure(.unknown))
