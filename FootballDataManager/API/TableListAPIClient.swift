@@ -28,12 +28,26 @@ class StandingListAPIClient {
         request.setValue("53110f892335ebb2b23428672aca5826", forHTTPHeaderField: "x-rapidapi-key")
         request.httpMethod = "GET"
 
+        if let fileURL = Bundle.main.url(forResource: "football_api_standings_2023_39", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: fileURL)
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print("テスト　\(json)")
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(StandingsItem.self, from: data)
+                completion(.success(jsonData))
+            } catch {
+                completion(.failure(.unknown))
+            }
+        } else {
+            print("テスト　OMG")
+        }
+        
+        /*
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             do {
-                
                 guard let data else { throw APIError.networkError }
-                // let json = try JSONSerialization.jsonObject(with: data, options: [])
                 guard let item = try? JSONDecoder().decode(StandingsItem.self, from: data) else {
                     throw APIError.noneValue
                 }
@@ -48,6 +62,7 @@ class StandingListAPIClient {
                 completion(.failure(apiError))
             }
         }.resume()
+         */
     }
 }
 
