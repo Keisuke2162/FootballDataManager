@@ -34,9 +34,9 @@ struct HomeView: View {
                     .listRowBackground(Color.clear)
                 }
                 .scrollContentBackground(.hidden)
-                .background(Color.init("SkySportsRed"))
+                .background(Color.init("SkySportsBlue"))
                 .listStyle(.grouped)
-                SelectLeagueView()
+                // SelectLeagueView()
             }
         }
     }
