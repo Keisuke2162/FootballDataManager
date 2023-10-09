@@ -9,7 +9,8 @@ import SwiftUI
 
 struct Message: View {
     var body: some View {
-        Text("トイレ行ってきます")
+        Text("南部杯見ます🐎")
+            .font(.custom("SSportsD-Medium", size: 40))
     }
 }
 
