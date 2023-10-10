@@ -36,36 +36,7 @@ struct StandingView: View {
                             .frame(width: 24)
                     }
                     ForEach(0 ..< viewModel.list.count, id: \.self) { index in
-                        HStack(spacing: 16.0) {
-                            Text("\(index + 1)")
-                                .foregroundColor(Color.white)
-                                .font(.custom("SSportsD-Medium", size: 12))
-                                .frame(width: 24)
-                            let imageURL = URL(string: viewModel.list[index].team.logo)
-                            AsyncImage(url: imageURL) { image in
-                                image.resizable()
-                            } placeholder: {
-                                ProgressView()
-                            }
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                            Text(viewModel.list[index].team.name)
-                                .foregroundColor(Color.white)
-                                .font(.custom("SSportsD-Medium", size: 16))
-                            Spacer()
-                            Text(viewModel.list[index].all.played.description)
-                                .foregroundColor(Color.white)
-                                .font(.custom("SSportsD-Medium", size: 16))
-                                .frame(width: 24)
-                            Text(viewModel.list[index].goalsDiff.description)
-                                .foregroundColor(Color.white)
-                                .font(.custom("SSportsD-Medium", size: 16))
-                                .frame(width: 24)
-                            Text(viewModel.list[index].points.description)
-                                .foregroundColor(Color.white)
-                                .font(.custom("SSportsD-Medium", size: 16))
-                                .frame(width: 24)
-                        }
+                        StandingCellView(standingItem: viewModel.list[index])
                         .frame(height: 46)
                         .listRowBackground(Color.clear)
                     }
