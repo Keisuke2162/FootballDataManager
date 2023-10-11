@@ -22,18 +22,15 @@ final class ScheduleViewModel: ObservableObject {
     }
 
     private let scheduleAPIClient = ScheduleAPIClient()
-
-    func getFixtures(_ id: String) {
-        scheduleAPIClient.getLeagueTable(leagueID: id) { result in
-            switch result {
-            case .success(let res):
-                // 取得したデータ
-                self.items = res.response
-                
-                // 取得した試合データのうち、試合日付が当日に近い未来日付を選択
-                
-            case .failure(let failure):
-                print("Error \(failure.title)")
+    
+    func getShcedules(_ id: String) {
+        Task {
+            do {
+                let item = try await scheduleAPIClient.getSchedule(leagueID: id)
+                self.items = item.response
+            } catch {
+                // エラー処理
+                print("Error")
             }
         }
     }
