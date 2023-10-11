@@ -106,7 +106,7 @@ struct ScheduleView: View {
                 }
             }
             .onAppear {
-                viewModel.getFixtures(leagueID)
+                viewModel.getShcedules(leagueID)
             }
         }
         .navigationBarBackButtonHidden(true)
