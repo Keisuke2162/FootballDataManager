@@ -41,20 +41,6 @@ final class StandingListAPIClient {
         } catch {
             throw APIError.unknown
         }
-    
-        /*
-        let (data, _) = try await URLSession.shared.data(for: request)
-
-        do {
-            let item = try JSONDecoder().decode(StandingsItem.self, from: data)
-            guard let items = item.response.first?.league.standings.first else {
-                throw APIError.unknown
-            }
-            return items
-        } catch {
-            throw APIError.unknown
-        }
-         */
     }
     
     
