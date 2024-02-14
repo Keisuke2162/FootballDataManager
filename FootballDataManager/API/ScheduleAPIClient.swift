@@ -42,21 +42,6 @@ final class ScheduleAPIClient {
         } catch {
             throw APIError.unknown
         }
-        
-        /*
-        let (data, _) = try await URLSession.shared.data(for: request)
-
-        do {
-            let decoder = JSONDecoder()
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-            decoder.dateDecodingStrategy = .formatted(dateFormatter)
-            let item = try decoder.decode(FixtureResponse.self, from: data)
-            return item
-        } catch {
-            throw APIError.unknown
-        }
-         */
     }
 }
 

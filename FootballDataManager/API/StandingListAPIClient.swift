@@ -78,26 +78,5 @@ final class StandingListAPIClient {
         } else {
             print("OMG")
         }
-        
-        /*
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
-            do {
-                guard let data else { throw APIError.networkError }
-                guard let item = try? JSONDecoder().decode(StandingsItem.self, from: data) else {
-                    throw APIError.noneValue
-                }
-                DispatchQueue.main.async {
-                    completion(.success(item))
-                }
-            } catch {
-                guard let apiError = error as? APIError else {
-                    completion(.failure(.unknown))
-                    return
-                }
-                completion(.failure(apiError))
-            }
-        }.resume()
-         */
     }
 }
