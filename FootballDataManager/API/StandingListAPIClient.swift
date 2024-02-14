@@ -8,6 +8,17 @@
 import ComposableArchitecture
 import Foundation
 
+@DependencyClient
+struct StandingClient {
+    var getStanding: @Sendable (_ id: String) async throws -> [Standing]
+}
+
+extension StandingClient: TestDependencyKey {
+    static let previewValue: Self(
+        
+    )
+}
+
 final class StandingListAPIClient {
     func getStanding(leagueID: String) async throws -> [Standing] {
         guard let apiURL = URL(string: "https://v3.football.api-sports.io/standings") else {
@@ -41,43 +52,6 @@ final class StandingListAPIClient {
             return items
         } catch {
             throw APIError.unknown
-        }
-    }
-    
-    
-    /*
-     Concurrencyを使わない旧実装
-     */
-    func getLeagueTable(leagueID: String, completion: @escaping ((Result<StandingsItem, APIError>) -> Void)) {
-        guard let apiURL = URL(string: "https://v3.football.api-sports.io/standings") else {
-            return completion(.failure(.invalidURL))
-        }
-
-        var urlComponents = URLComponents(url: apiURL, resolvingAgainstBaseURL: true)
-        urlComponents?.queryItems = [
-            .init(name: "season", value: "2023"),
-            .init(name: "league", value: leagueID)
-        ]
-
-        guard let url = urlComponents?.url else {
-            return completion(.failure(.invalidURL))
-        }
-
-        var request = URLRequest(url: url)
-        request.setValue("", forHTTPHeaderField: "x-rapidapi-key")
-        request.httpMethod = "GET"
-        
-        if let fileURL = Bundle.main.url(forResource: "football_api_standings_2023_39", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: fileURL)
-                let decoder = JSONDecoder()
-                let jsonData = try decoder.decode(StandingsItem.self, from: data)
-                completion(.success(jsonData))
-            } catch {
-                completion(.failure(.unknown))
-            }
-        } else {
-            print("OMG")
         }
     }
 }

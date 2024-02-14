@@ -39,3 +39,49 @@ struct AllGameInformation: Codable {
     let draw: Int
     let lose: Int
 }
+
+// MARK: - Mock
+extension AllGameInformation {
+    static let mock = Self(
+        played: 30,
+        win: 10,
+        draw: 5,
+        lose: 15
+    )
+}
+
+extension TeamInfo {
+    static let mock = Self(
+        id: 1,
+        name: "Everton",
+        logo: ""
+    )
+}
+
+extension Standing {
+    static let mock = Self(
+        rank: 1,
+        team: .mock,
+        points: 30,
+        goalsDiff: 15,
+        all: .mock
+    )
+}
+
+extension LeagueItem {
+    static let mock = Self(
+        standings: [[.mock]]
+    )
+}
+
+extension StandingResponse {
+    static let mock = Self(
+        league: .mock
+    )
+}
+
+extension StandingsItem {
+    static let mock = Self(
+        response: [.mock]
+    )
+}

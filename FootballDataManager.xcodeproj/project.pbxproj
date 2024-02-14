@@ -114,9 +114,24 @@
 			isa = PBXGroup;
 			children = (
 				672CB5132AD3EDBD005048D5 /* ScheduleView.swift */,
-				672CB5192AD3F0B9005048D5 /* ScheduleViewModel.swift */,
 			);
 			path = Schedule;
+			sourceTree = "<group>";
+		};
+		67936B922B7D2A080004E4B9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				672CB5192AD3F0B9005048D5 /* ScheduleViewModel.swift */,
+				679A8CB72AC9CDED000C090C /* StandingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		67936B932B7D2A0F0004E4B9 /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reducer;
 			sourceTree = "<group>";
 		};
 		679A8C702AC99A32000C090C = {
@@ -148,7 +163,9 @@
 				679A8CBB2ACB3C28000C090C /* Resource */,
 				679A8CA92AC99F51000C090C /* Entity */,
 				679A8CB22AC9BE96000C090C /* API */,
+				67936B932B7D2A0F0004E4B9 /* Reducer */,
 				679A8CC72AD3C358000C090C /* Views */,
+				67936B922B7D2A080004E4B9 /* ViewModel */,
 				672CB5102AD3E7DA005048D5 /* Message.swift */,
 			);
 			path = FootballDataManager;
@@ -202,7 +219,6 @@
 		679A8CAC2AC9A912000C090C /* Standing */ = {
 			isa = PBXGroup;
 			children = (
-				679A8CB72AC9CDED000C090C /* StandingViewModel.swift */,
 				679A8CB92AC9D832000C090C /* StandingView.swift */,
 				672CB51B2AD5D3B6005048D5 /* StandingCellView.swift */,
 			);
