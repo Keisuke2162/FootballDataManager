@@ -33,7 +33,6 @@
 		679A8CC92AD3C3E0000C090C /* football_api_standings_2023_39.json in Resources */ = {isa = PBXBuildFile; fileRef = 679A8CC82AD3C3E0000C090C /* football_api_standings_2023_39.json */; };
 		679A8CCD2AD3C7C2000C090C /* foorball_api_fixtures_2023_39.json in Resources */ = {isa = PBXBuildFile; fileRef = 679A8CCC2AD3C7C2000C090C /* foorball_api_fixtures_2023_39.json */; };
 		67D742832B69960B003FA70E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 67D742822B69960B003FA70E /* ComposableArchitecture */; };
-		67D742862B69962F003FA70E /* HomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D742852B69962F003FA70E /* HomeFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +82,6 @@
 		679A8CC22ACF4ED8000C090C /* SelectLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLeagueView.swift; sourceTree = "<group>"; };
 		679A8CC82AD3C3E0000C090C /* football_api_standings_2023_39.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football_api_standings_2023_39.json; sourceTree = "<group>"; };
 		679A8CCC2AD3C7C2000C090C /* foorball_api_fixtures_2023_39.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_fixtures_2023_39.json; sourceTree = "<group>"; };
-		67D742852B69962F003FA70E /* HomeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +184,6 @@
 			children = (
 				679A8CA72AC99F14000C090C /* HomeView.swift */,
 				679A8CC22ACF4ED8000C090C /* SelectLeagueView.swift */,
-				67D742852B69962F003FA70E /* HomeFeature.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -253,19 +250,11 @@
 		679A8CC72AD3C358000C090C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				67D742842B699618003FA70E /* New Group */,
 				672CB5122AD3EDB0005048D5 /* Schedule */,
 				679A8CA62AC99F08000C090C /* Home */,
 				679A8CAC2AC9A912000C090C /* Standing */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		67D742842B699618003FA70E /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,7 +324,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					679A8C782AC99A33000C090C = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -414,7 +403,6 @@
 				679A8CAE2AC9A97A000C090C /* StandingsItem.swift in Sources */,
 				672CB51C2AD5D3B6005048D5 /* StandingCellView.swift in Sources */,
 				672CB5162AD3EDD0005048D5 /* ScheduleAPIClient.swift in Sources */,
-				67D742862B69962F003FA70E /* HomeFeature.swift in Sources */,
 				679A8CB42AC9BEA9000C090C /* StandingListAPIClient.swift in Sources */,
 				672CB5142AD3EDBD005048D5 /* ScheduleView.swift in Sources */,
 				679A8CB82AC9CDED000C090C /* StandingViewModel.swift in Sources */,
@@ -497,6 +485,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -557,6 +546,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -757,8 +747,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.7.1;
+				kind = exactVersion;
+				version = 1.8.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
