@@ -19,7 +19,14 @@ struct LeagueItem: Codable {
     let standings: [[Standing]]
 }
 
-struct Standing: Codable {
+struct Standing: Codable, Equatable, Identifiable, Sendable {
+    static func == (lhs: Standing, rhs: Standing) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    var id: Int {
+        team.id
+    }
     let rank: Int
     let team: TeamInfo
     let points: Int
@@ -27,7 +34,7 @@ struct Standing: Codable {
     let all: AllGameInformation
 }
 
-struct TeamInfo: Codable {
+struct TeamInfo: Codable, Equatable, Identifiable, Sendable {
     let id: Int
     let name: String
     let logo: String
