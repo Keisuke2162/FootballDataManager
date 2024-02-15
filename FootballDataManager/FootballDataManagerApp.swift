@@ -11,7 +11,7 @@ import SwiftUI
 struct FootballDataManagerApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            StandingListView(leagueID: "39")
         }
     }
 }

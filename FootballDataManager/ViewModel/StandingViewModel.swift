@@ -23,18 +23,4 @@ final class StandingViewModel: ObservableObject {
             }
         }
     }
-    
-    /*
-     Concurrencyを使わない旧実装
-     */
-    func getTableList(_ id: String) {
-        standingListAPIClient.getLeagueTable(leagueID: id) { result in
-            switch result {
-            case .success(let res):
-                self.list = res.response.first?.league.standings.first ?? []
-            case .failure(let failure):
-                print("Error \(failure.title)")
-            }
-        }
-    }
 }

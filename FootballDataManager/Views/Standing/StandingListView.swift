@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StandingView: View {
+struct StandingListView: View {
     let leagueID: String
     @ObservedObject private var viewModel = StandingViewModel()
     @Environment(\.dismiss) var dismiss
@@ -69,6 +69,6 @@ struct StandingView: View {
 
 struct TableView_Previews: PreviewProvider {
     static var previews: some View {
-        StandingView(leagueID: "39")
+        StandingListView(leagueID: "39")
     }
 }
