@@ -45,14 +45,17 @@ struct StandingListView: View {
                 .listStyle(.grouped)
             }
         }
-        .navigationBarBackButtonHidden()
-        .navigationBarBackButtonHidden(true)
-        .toolbarBackground(.white, for: .navigationBar)
+        .task {
+            do {
+                try await Task.sleep(for: .milliseconds(300))
+                await store.send(.fetchStandings).finish()
+            } catch {}
+        }
     }
 }
 
 #Preview {
-    StandingListView(store: Store(initialState: StandingListReducer.State(id: "39"), reducer: {
+    StandingListView(store: Store(initialState: StandingListReducer.State(leagueID: "39"), reducer: {
         StandingListReducer()
     }))
 }
