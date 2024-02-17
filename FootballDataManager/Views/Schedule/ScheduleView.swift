@@ -5,51 +5,33 @@
 //  Created by Kei on 2023/10/09.
 //
 
+import ComposableArchitecture
 import SwiftUI
 
 struct ScheduleView: View {
-    let leagueID: String
-    @ObservedObject private var viewModel = ScheduleViewModel()
-    @Environment(\.dismiss) var dismiss
-    
-    var groupedItems: [String: [Fixture]] {
-        Dictionary(grouping: viewModel.items) { item in
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            return dateFormatter.string(from: item.fixture.date)
-        }
-    }
-
-    var dateKeys: [String] {
-        groupedItems.keys.sorted()
-    }
+    @Bindable var store: StoreOf<ScheduleReducer>
 
     var body: some View {
         NavigationView {
             VStack {
-                if viewModel.items.isEmpty {
-                    Text("Loading...")
+                if store.state.fixtures.isEmpty {
                 } else {
                     HStack {
                         Spacer()
                         Button {
-                            if viewModel.selectedDateIndex > 0 {
-                                viewModel.selectedDateIndex -= 1
-                            }
+                            store.send(.backDateButton)
                         } label: {
                             Text("←")
                                 .foregroundColor(Color.init("SkySportsBlue"))
                                 .font(.custom("SSportsD-Medium", size: 16))
                         }
                         Spacer()
-                        Text(viewModel.dateKeys[viewModel.selectedDateIndex])
+                        Text(store.state.dateKeys.isEmpty ? "" : store.state.dateKeys[store.selectedDateIndex])
                             .foregroundColor(Color.init("SkySportsBlue"))
                             .font(.custom("SSportsD-Medium", size: 16))
                         Spacer()
                         Button {
-                            if viewModel.selectedDateIndex < dateKeys.count - 1 {
-                                viewModel.selectedDateIndex += 1
-                            }
+                            store.send(.forwardDateButton)
                         } label: {
                             Text("→")
                                 .foregroundColor(Color.init("SkySportsBlue"))
@@ -57,14 +39,11 @@ struct ScheduleView: View {
                         }
                         Spacer()
                     }
-                    
-                    let listItems = groupedItems[dateKeys[viewModel.selectedDateIndex]] ?? []
                     List {
-                        ForEach(0 ..< listItems.count, id: \.self) { index in
-                            let fixtureItem = listItems[index]
+                        ForEach(store.groupedItems[store.dateKeys[store.selectedDateIndex]] ?? []) { item in
                             HStack {
                                 Spacer()
-                                let homeImageURL = URL(string: fixtureItem.teams.home.logo)
+                                let homeImageURL = URL(string: item.teams.home.logo)
                                 AsyncImage(url: homeImageURL) { image in
                                     image.resizable()
                                 } placeholder: {
@@ -73,17 +52,17 @@ struct ScheduleView: View {
                                 .scaledToFit()
                                 .frame(width: 40, height: 40)
                                 Spacer()
-                                Text(fixtureItem.goals.home?.description ?? "")
+                                Text(item.goals.home?.description ?? "")
                                     .foregroundColor(Color.white)
                                     .font(.custom("SSportsD-Medium", size: 16))
                                 Text("-")
                                     .foregroundColor(Color.white)
                                     .font(.custom("SSportsD-Medium", size: 16))
-                                Text(fixtureItem.goals.away?.description ?? "")
+                                Text(item.goals.away?.description ?? "")
                                     .foregroundColor(Color.white)
                                     .font(.custom("SSportsD-Medium", size: 16))
                                 Spacer()
-                                let awayImageURL = URL(string: fixtureItem.teams.away.logo)
+                                let awayImageURL = URL(string: item.teams.away.logo)
                                 AsyncImage(url: awayImageURL) { image in
                                     image.resizable()
                                 } placeholder: {
@@ -102,30 +81,18 @@ struct ScheduleView: View {
                     .listStyle(.grouped)
                 }
             }
-            .onAppear {
-                viewModel.getShcedules(leagueID)
-            }
         }
-        .navigationBarBackButtonHidden(true)
-        .toolbarBackground(.white, for: .navigationBar)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    dismiss()
-                } label: {
-                    HStack {
-                        Image(systemName: "chevron.backward")
-                            .font(.system(size: 17, weight: .medium))
-                    }
-                    .foregroundColor(.white)
-                }
-            }
+        .task {
+            do {
+                try await Task.sleep(for: .milliseconds(300))
+                await store.send(.fetchFixtures).finish()
+            } catch {}
         }
     }
 }
 
-struct ScheduleView_Previews: PreviewProvider {
-    static var previews: some View {
-        ScheduleView(leagueID: "39")
-    }
+#Preview {
+    ScheduleView(store: Store(initialState: ScheduleReducer.State(leagueID: "39"), reducer: {
+        ScheduleReducer()
+    }))
 }

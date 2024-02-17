@@ -10,12 +10,12 @@ import Foundation
 
 @DependencyClient
 struct FixtureScheduleClient {
-    var getFixtures: @Sendable (_ id: String) async throws -> [Fixture]
+    var getFixtures: @Sendable (_ id: String) async throws -> FixturesItem
 }
 
 extension FixtureScheduleClient: TestDependencyKey {
     static let previewValue = Self(
-        getFixtures: { _ in [.mock] }
+        getFixtures: { _ in .mock }
     )
     static let testValue: FixtureScheduleClient = Self()
 }
@@ -43,8 +43,8 @@ extension FixtureScheduleClient: DependencyKey {
 
             let (data, _) = try await URLSession.shared.data(from: request.url!)
             do {
-                let item = try JSONDecoder().decode(FixtureResponse.self, from: data)
-                return item.response
+                let item = try JSONDecoder().decode(FixturesItem.self, from: data)
+                return item
             } catch {
                 throw APIError.unknown
             }
@@ -54,7 +54,7 @@ extension FixtureScheduleClient: DependencyKey {
 
 // 通常のAPIClient実装
 final class ScheduleAPIClient {
-    func getSchedule(leagueID: String) async throws -> FixtureResponse {
+    func getSchedule(leagueID: String) async throws -> FixturesItem {
         guard let apiURL = URL(string: "https://v3.football.api-sports.io/standings") else {
             throw APIError.invalidURL
         }
@@ -83,7 +83,7 @@ final class ScheduleAPIClient {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
             decoder.dateDecodingStrategy = .formatted(dateFormatter)
-            let item = try decoder.decode(FixtureResponse.self, from: data)
+            let item = try decoder.decode(FixturesItem.self, from: data)
             return item
         } catch {
             throw APIError.unknown

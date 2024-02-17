@@ -7,8 +7,20 @@
 
 import Foundation
 
-struct FixtureResponse: Codable {
+struct FixturesItem: Codable {
     let response: [Fixture]
+
+    var groupedItems: [String: [Fixture]] {
+        Dictionary(grouping: response) { item in
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            return dateFormatter.string(from: item.fixture.date)
+        }
+    }
+
+    var dateKeys: [String] {
+        groupedItems.keys.sorted()
+    }
 }
 
 struct Fixture: Codable, Equatable, Identifiable, Sendable {
@@ -51,7 +63,7 @@ struct FixtureGoals: Codable {
 }
 
 // MARK: - Mock
-extension FixtureResponse {
+extension FixturesItem {
     static let mock = Self(
         response: [.mock]
     )
