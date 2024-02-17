@@ -11,9 +11,6 @@ struct ScheduleView: View {
     let leagueID: String
     @ObservedObject private var viewModel = ScheduleViewModel()
     @Environment(\.dismiss) var dismiss
-
-    // @State private var items: [Fixture] = []
-    // @State private var selectedDateIndex = 0
     
     var groupedItems: [String: [Fixture]] {
         Dictionary(grouping: viewModel.items) { item in

@@ -5,7 +5,19 @@
 //  Created by Kei on 2023/10/09.
 //
 
+import ComposableArchitecture
 import Foundation
+
+@DependencyClient
+struct FixtureScheduleClient {
+    var getFixtures: @Sendable (_ id: String) async throws -> [Fixture]
+}
+
+extension FixtureScheduleClient: TestDependencyKey {
+    static let previewValue = Self(
+        getFixtures: <#T##(String) async throws -> [Fixture]##(String) async throws -> [Fixture]##(_ id: String) async throws -> [Fixture]#>
+    )
+}
 
 final class ScheduleAPIClient {
     func getSchedule(leagueID: String) async throws -> FixtureResponse {

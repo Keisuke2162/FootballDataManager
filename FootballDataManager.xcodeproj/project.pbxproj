@@ -14,6 +14,7 @@
 		672CB51A2AD3F0B9005048D5 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB5192AD3F0B9005048D5 /* ScheduleViewModel.swift */; };
 		672CB51C2AD5D3B6005048D5 /* StandingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB51B2AD5D3B6005048D5 /* StandingCellView.swift */; };
 		67936B952B7E6DCD0004E4B9 /* StandingListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67936B942B7E6DCD0004E4B9 /* StandingListReducer.swift */; };
+		67936B972B8110780004E4B9 /* ScheduleReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67936B962B8110780004E4B9 /* ScheduleReducer.swift */; };
 		679A8C7D2AC99A33000C090C /* FootballDataManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8C7C2AC99A33000C090C /* FootballDataManagerApp.swift */; };
 		679A8C812AC99A35000C090C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679A8C802AC99A35000C090C /* Assets.xcassets */; };
 		679A8C842AC99A35000C090C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679A8C832AC99A35000C090C /* Preview Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		672CB5192AD3F0B9005048D5 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		672CB51B2AD5D3B6005048D5 /* StandingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingCellView.swift; sourceTree = "<group>"; };
 		67936B942B7E6DCD0004E4B9 /* StandingListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingListReducer.swift; sourceTree = "<group>"; };
+		67936B962B8110780004E4B9 /* ScheduleReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleReducer.swift; sourceTree = "<group>"; };
 		679A8C792AC99A33000C090C /* FootballDataManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballDataManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		679A8C7C2AC99A33000C090C /* FootballDataManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballDataManagerApp.swift; sourceTree = "<group>"; };
 		679A8C802AC99A35000C090C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				67936B942B7E6DCD0004E4B9 /* StandingListReducer.swift */,
+				67936B962B8110780004E4B9 /* ScheduleReducer.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				672CB51C2AD5D3B6005048D5 /* StandingCellView.swift in Sources */,
 				672CB5162AD3EDD0005048D5 /* ScheduleAPIClient.swift in Sources */,
 				679A8CB42AC9BEA9000C090C /* StandingListAPIClient.swift in Sources */,
+				67936B972B8110780004E4B9 /* ScheduleReducer.swift in Sources */,
 				672CB5142AD3EDBD005048D5 /* ScheduleView.swift in Sources */,
 				679A8CB82AC9CDED000C090C /* StandingViewModel.swift in Sources */,
 				672CB5112AD3E7DA005048D5 /* Message.swift in Sources */,
