@@ -14,8 +14,15 @@ struct FixtureScheduleClient {
 }
 
 extension FixtureScheduleClient: TestDependencyKey {
+//    static let previewValue = Self(
+//        getFixtures: { _ in .mock }
+//    )
     static let previewValue = Self(
-        getFixtures: { _ in .mock }
+        getFixtures: { id in
+            do {
+                return try await liveValue.getFixtures(id: id)
+            } catch { return .init(response: []) }
+        }
     )
     static let testValue: FixtureScheduleClient = Self()
 }
@@ -37,13 +44,31 @@ extension FixtureScheduleClient: DependencyKey {
                 .init(name: "league", value: id)
             ]
 
-            var request = URLRequest(url: components.url!)
-            request.setValue("", forHTTPHeaderField: "x-rapidapi-key")
-            request.httpMethod = "GET"
+            // MARK: - API Request
+//            var request = URLRequest(url: components.url!)
+//            request.setValue("", forHTTPHeaderField: "x-rapidapi-key")
+//            request.httpMethod = "GET"
+//
+//            let (data, _) = try await URLSession.shared.data(from: request.url!)
+//            do {
+//                let item = try JSONDecoder().decode(FixturesItem.self, from: data)
+//                return item
+//            } catch {
+//                throw APIError.unknown
+//            }
+            
+            // MARK: - Local JSON File
+            guard let fileURL = Bundle.main.url(forResource: "foorball_api_fixtures_2023_39", withExtension: "json") else {
+                throw APIError.unknown
+            }
 
-            let (data, _) = try await URLSession.shared.data(from: request.url!)
             do {
-                let item = try JSONDecoder().decode(FixturesItem.self, from: data)
+                let data = try Data(contentsOf: fileURL)
+                let decoder = JSONDecoder()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+                decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                let item = try decoder.decode(FixturesItem.self, from: data)
                 return item
             } catch {
                 throw APIError.unknown

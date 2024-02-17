@@ -14,8 +14,13 @@ struct StandingClient {
 }
 
 extension StandingClient: TestDependencyKey {
+//    static let previewValue = Self(getStanding: { _ in [.mock] })
     static let previewValue = Self(
-        getStanding: { _ in [.mock] }
+        getStanding: { id in
+            do {
+                return try await liveValue.getStanding(id)
+            } catch { return [] }
+        }
     )
     static var testValue: StandingClient = Self()
 }
@@ -35,28 +40,13 @@ extension StandingClient: DependencyKey {
                 .init(name: "season", value: "2023"),
                 .init(name: "league", value: id)
             ]
-            // TODO: Requestを叩く
-            var request = URLRequest(url: components.url!)
-            request.setValue("", forHTTPHeaderField: "x-rapidapi-key")
-            request.httpMethod = "GET"
-            
-            let (data, _) = try await URLSession.shared.data(from: request.url!)
-            do {
-                let item = try JSONDecoder().decode(StandingsItem.self, from: data)
-                guard let items = item.response.first?.league.standings.first else {
-                    throw APIError.unknown
-                }
-                return items
-            } catch {
-                throw APIError.unknown
-            }
-//            // JSONファイルからモックデータ読み込み
-//            guard let fileURL = Bundle.main.url(forResource: "football_api_standings_2023_39", withExtension: "json") else {
-//                throw APIError.unknown
-//            }
-//
+            // MARK: - API Request
+//            var request = URLRequest(url: components.url!)
+//            request.setValue("", forHTTPHeaderField: "x-rapidapi-key")
+//            request.httpMethod = "GET"
+//            
+//            let (data, _) = try await URLSession.shared.data(from: request.url!)
 //            do {
-//                let data = try Data(contentsOf: fileURL)
 //                let item = try JSONDecoder().decode(StandingsItem.self, from: data)
 //                guard let items = item.response.first?.league.standings.first else {
 //                    throw APIError.unknown
@@ -65,6 +55,23 @@ extension StandingClient: DependencyKey {
 //            } catch {
 //                throw APIError.unknown
 //            }
+            
+            // MARK: - Local JSON File
+            // JSONファイルからモックデータ読み込み
+            guard let fileURL = Bundle.main.url(forResource: "football_api_standings_2023_39", withExtension: "json") else {
+                throw APIError.unknown
+            }
+
+            do {
+                let data = try Data(contentsOf: fileURL)
+                let item = try JSONDecoder().decode(StandingsItem.self, from: data)
+                guard let items = item.response.first?.league.standings.first else {
+                    throw APIError.unknown
+                }
+                return items
+            } catch {
+                throw APIError.unknown
+            }
         }
     )
 }
