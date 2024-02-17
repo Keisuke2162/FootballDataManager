@@ -22,8 +22,8 @@ struct ScheduleReducer {
         case fixturesResponse(Result<[Fixture], Error>)
     }
 
-    @Dependency(\.standingClient) var standingClient
-    private enum CancelID { case standing }
+    @Dependency(\.fixtureScheduleClient) var fixtureScheduleClient
+    private enum CancelID { case fixtures }
 
     var body: some Reducer<State, Action> {
         Reduce { state, action in
@@ -32,13 +32,13 @@ struct ScheduleReducer {
                 return .none
             case .fetchFixtures:   // データ取得開始
                 return .run { [leagueID = state.leagueID] send in
-                    await send(.standingResponse(Result { try await self.standingClient.getStanding(id: leagueID) }))
+                    await send(.fixturesResponse(Result { try await self.fixtureScheduleClient.getFixtures(id: leagueID )}))
                 }
-                .cancellable(id: CancelID.standing)
+                .cancellable(id: CancelID.fixtures)
             case .fixturesResponse(.failure):   // APIエラー時
                 return .none
             case let .fixturesResponse(.success(response)): // データ取得正常終了時
-                state.standings = response
+                state.fixtures = response
                 return .none
             }
         }
