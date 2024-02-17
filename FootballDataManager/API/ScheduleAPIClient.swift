@@ -15,10 +15,44 @@ struct FixtureScheduleClient {
 
 extension FixtureScheduleClient: TestDependencyKey {
     static let previewValue = Self(
-        getFixtures: <#T##(String) async throws -> [Fixture]##(String) async throws -> [Fixture]##(_ id: String) async throws -> [Fixture]#>
+        getFixtures: { _ in [.mock] }
+    )
+    static let testValue: FixtureScheduleClient = Self()
+}
+
+extension DependencyValues {
+    var fixtureScheduleClient: FixtureScheduleClient {
+        get { self[FixtureScheduleClient.self] }
+        set { self[FixtureScheduleClient.self] = newValue }
+    }
+}
+
+extension FixtureScheduleClient: DependencyKey {
+    static let liveValue: FixtureScheduleClient = FixtureScheduleClient(
+        getFixtures: { id in
+            var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures")!
+            //https://v3.football.api-sports.io/fixtures?season=2021&league=39
+            components.queryItems = [
+                .init(name: "season", value: "2023"),
+                .init(name: "league", value: id)
+            ]
+
+            var request = URLRequest(url: components.url!)
+            request.setValue("", forHTTPHeaderField: "x-rapidapi-key")
+            request.httpMethod = "GET"
+
+            let (data, _) = try await URLSession.shared.data(from: request.url!)
+            do {
+                let item = try JSONDecoder().decode(FixtureResponse.self, from: data)
+                return item.response
+            } catch {
+                throw APIError.unknown
+            }
+        }
     )
 }
 
+// 通常のAPIClient実装
 final class ScheduleAPIClient {
     func getSchedule(leagueID: String) async throws -> FixtureResponse {
         guard let apiURL = URL(string: "https://v3.football.api-sports.io/standings") else {
