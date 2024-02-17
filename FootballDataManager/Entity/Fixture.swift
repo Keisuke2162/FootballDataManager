@@ -79,7 +79,7 @@ extension Fixture {
 extension FixtureItem {
     static let mock = Self(
         id: 1035037,
-        date: Date.now,
+        date: "2023-08-11T19:00:00+00:00".toDate()!,
         status: .mock
     )
 }
