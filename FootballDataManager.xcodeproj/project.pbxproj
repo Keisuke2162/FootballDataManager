@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		672CB5112AD3E7DA005048D5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB5102AD3E7DA005048D5 /* Message.swift */; };
 		672CB5142AD3EDBD005048D5 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB5132AD3EDBD005048D5 /* ScheduleView.swift */; };
 		672CB5162AD3EDD0005048D5 /* ScheduleAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB5152AD3EDD0005048D5 /* ScheduleAPIClient.swift */; };
 		672CB5182AD3EF71005048D5 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB5172AD3EF71005048D5 /* Fixture.swift */; };
@@ -56,7 +55,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		672CB5102AD3E7DA005048D5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		672CB5132AD3EDBD005048D5 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		672CB5152AD3EDD0005048D5 /* ScheduleAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAPIClient.swift; sourceTree = "<group>"; };
 		672CB5172AD3EF71005048D5 /* Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
@@ -173,17 +171,16 @@
 		679A8C7B2AC99A33000C090C /* FootballDataManager */ = {
 			isa = PBXGroup;
 			children = (
-				67936B982B814FE10004E4B9 /* Extensions */,
 				679A8C7C2AC99A33000C090C /* FootballDataManagerApp.swift */,
 				679A8CC12ACB3C9E000C090C /* Info.plist */,
 				679A8C822AC99A35000C090C /* Preview Content */,
+				67936B982B814FE10004E4B9 /* Extensions */,
 				679A8CBB2ACB3C28000C090C /* Resource */,
 				679A8CA92AC99F51000C090C /* Entity */,
 				679A8CB22AC9BE96000C090C /* API */,
 				67936B932B7D2A0F0004E4B9 /* Reducer */,
 				679A8CC72AD3C358000C090C /* Views */,
 				67936B922B7D2A080004E4B9 /* ViewModel */,
-				672CB5102AD3E7DA005048D5 /* Message.swift */,
 			);
 			path = FootballDataManager;
 			sourceTree = "<group>";
@@ -441,7 +438,6 @@
 				67936B972B8110780004E4B9 /* ScheduleReducer.swift in Sources */,
 				672CB5142AD3EDBD005048D5 /* ScheduleView.swift in Sources */,
 				679A8CB82AC9CDED000C090C /* StandingViewModel.swift in Sources */,
-				672CB5112AD3E7DA005048D5 /* Message.swift in Sources */,
 				679A8CC32ACF4ED8000C090C /* SelectLeagueView.swift in Sources */,
 				679A8CB62AC9BEDC000C090C /* APIError.swift in Sources */,
 				672CB5182AD3EF71005048D5 /* Fixture.swift in Sources */,
