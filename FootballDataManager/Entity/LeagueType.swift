@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum LeagueType {
+enum LeagueType: CaseIterable, Identifiable, Equatable {
     case england
     case italy
     case spain
@@ -67,6 +67,17 @@ extension LeagueType {
             "foorball_api_fixtures_2023_135"
         case .spain:
             "foorball_api_fixtures_2023_140"
+        }
+    }
+
+    var iconImage: Image {
+        switch self {
+        case .england:
+            Image("ic-england")
+        case .italy:
+            Image("ic-italy")
+        case .spain:
+            Image("ic-spain")
         }
     }
 }

@@ -75,6 +75,7 @@ struct ScheduleView: View {
                             .frame(height: 56)
                             .listRowBackground(Color.clear)
                         }
+                        Spacer().frame(height: 50).listRowBackground(EmptyView())
                     }
                     .scrollContentBackground(.hidden)
                     .background(store.state.leagueType.themaColor)

@@ -39,17 +39,22 @@ struct StandingListView: View {
                             .frame(height: 46)
                             .listRowBackground(Color.clear)
                     }
+                    Spacer().frame(height: 50).listRowBackground(EmptyView())
                 }
                 .scrollContentBackground(.hidden)
                 .background(store.state.leagueType.themaColor)
                 .listStyle(.grouped)
             }
+            
         }
-        .task {
-            do {
-                try await Task.sleep(for: .milliseconds(300))
-                await store.send(.fetchStandings).finish()
-            } catch {}
+        .onAppear {
+            Task {
+                do {
+                    print("テスト")
+                    try await Task.sleep(for: .milliseconds(300))
+                    await store.send(.fetchStandings).finish()
+                } catch {}
+            }
         }
     }
 }
