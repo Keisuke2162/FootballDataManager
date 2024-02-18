@@ -14,9 +14,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                StandingListView(store: .init(initialState: StandingListReducer.State(leagueType: store.selectedLeagueType), reducer: {
-                    StandingListReducer()
-                }))
+                StandingListView(store: store.scope(state: \.standingList, action: \.standingList))
                 VStack {
                     Spacer()
                     HStack {
