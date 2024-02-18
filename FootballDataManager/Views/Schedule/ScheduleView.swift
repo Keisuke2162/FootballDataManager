@@ -34,7 +34,7 @@ struct ScheduleView: View {
                             store.send(.forwardDateButton)
                         } label: {
                             Text("→")
-                                .foregroundColor(Color.init("SkySportsBlue"))
+                                .foregroundColor(store.state.leagueType.themaColor)
                                 .font(.custom("SSportsD-Medium", size: 16))
                         }
                         Spacer()
@@ -75,9 +75,10 @@ struct ScheduleView: View {
                             .frame(height: 56)
                             .listRowBackground(Color.clear)
                         }
+                        Spacer().frame(height: 50).listRowBackground(EmptyView())
                     }
                     .scrollContentBackground(.hidden)
-                    .background(Color.init("SkySportsBlue"))
+                    .background(store.state.leagueType.themaColor)
                     .listStyle(.grouped)
                 }
             }
@@ -92,7 +93,7 @@ struct ScheduleView: View {
 }
 
 #Preview {
-    ScheduleView(store: Store(initialState: ScheduleReducer.State(leagueID: "39"), reducer: {
+    ScheduleView(store: Store(initialState: ScheduleReducer.State(leagueType: .spain), reducer: {
         ScheduleReducer()
     }))
 }

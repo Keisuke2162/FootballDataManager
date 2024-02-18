@@ -10,7 +10,7 @@ import Foundation
 
 @DependencyClient
 struct FixtureScheduleClient {
-    var getFixtures: @Sendable (_ id: String) async throws -> FixturesItem
+    var getFixtures: @Sendable (_ type: LeagueType) async throws -> FixturesItem
 }
 
 extension FixtureScheduleClient: TestDependencyKey {
@@ -18,9 +18,9 @@ extension FixtureScheduleClient: TestDependencyKey {
 //        getFixtures: { _ in .mock }
 //    )
     static let previewValue = Self(
-        getFixtures: { id in
+        getFixtures: { type in
             do {
-                return try await liveValue.getFixtures(id: id)
+                return try await liveValue.getFixtures(type)
             } catch { return .init(response: []) }
         }
     )
@@ -36,12 +36,12 @@ extension DependencyValues {
 
 extension FixtureScheduleClient: DependencyKey {
     static let liveValue: FixtureScheduleClient = FixtureScheduleClient(
-        getFixtures: { id in
+        getFixtures: { type in
             var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures")!
             //https://v3.football.api-sports.io/fixtures?season=2021&league=39
             components.queryItems = [
                 .init(name: "season", value: "2023"),
-                .init(name: "league", value: id)
+                .init(name: "league", value: type.id)
             ]
 
             // MARK: - API Request
@@ -58,7 +58,7 @@ extension FixtureScheduleClient: DependencyKey {
 //            }
             
             // MARK: - Local JSON File
-            guard let fileURL = Bundle.main.url(forResource: "foorball_api_fixtures_2023_39", withExtension: "json") else {
+            guard let fileURL = Bundle.main.url(forResource: type.fixturesResource, withExtension: "json") else {
                 throw APIError.unknown
             }
 
@@ -76,43 +76,3 @@ extension FixtureScheduleClient: DependencyKey {
         }
     )
 }
-
-// 通常のAPIClient実装
-final class ScheduleAPIClient {
-    func getSchedule(leagueID: String) async throws -> FixturesItem {
-        guard let apiURL = URL(string: "https://v3.football.api-sports.io/standings") else {
-            throw APIError.invalidURL
-        }
-
-        var urlComponents = URLComponents(url: apiURL, resolvingAgainstBaseURL: true)
-        urlComponents?.queryItems = [
-            .init(name: "season", value: "2023"),
-            .init(name: "league", value: leagueID)
-        ]
-
-        guard let url = urlComponents?.url else {
-            throw APIError.invalidURL
-        }
-
-        var request = URLRequest(url: url)
-        request.setValue("", forHTTPHeaderField: "x-rapidapi-key")
-        request.httpMethod = "GET"
-
-        guard let fileURL = Bundle.main.url(forResource: "foorball_api_fixtures_2023_39", withExtension: "json") else {
-            throw APIError.unknown
-        }
-        
-        do {
-            let data = try Data(contentsOf: fileURL)
-            let decoder = JSONDecoder()
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-            decoder.dateDecodingStrategy = .formatted(dateFormatter)
-            let item = try decoder.decode(FixturesItem.self, from: data)
-            return item
-        } catch {
-            throw APIError.unknown
-        }
-    }
-}
-

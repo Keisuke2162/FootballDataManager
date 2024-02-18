@@ -39,11 +39,13 @@ struct StandingListView: View {
                             .frame(height: 46)
                             .listRowBackground(Color.clear)
                     }
+                    Spacer().frame(height: 50).listRowBackground(EmptyView())
                 }
                 .scrollContentBackground(.hidden)
-                .background(Color.init("SkySportsBlue"))
+                .background(store.state.leagueType.themaColor)
                 .listStyle(.grouped)
             }
+            
         }
         .task {
             do {
@@ -55,7 +57,7 @@ struct StandingListView: View {
 }
 
 #Preview {
-    StandingListView(store: Store(initialState: StandingListReducer.State(leagueID: "39"), reducer: {
+    StandingListView(store: Store(initialState: StandingListReducer.State(leagueType: .spain), reducer: {
         StandingListReducer()
     }))
 }

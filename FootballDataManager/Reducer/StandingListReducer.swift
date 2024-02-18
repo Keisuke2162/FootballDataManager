@@ -12,7 +12,7 @@ import ComposableArchitecture
 struct StandingListReducer {
     @ObservableState
     struct State: Equatable {
-        let leagueID: String
+        let leagueType: LeagueType
         var standings: [Standing] = []
     }
 
@@ -31,8 +31,8 @@ struct StandingListReducer {
             case .tapClubCell:      // Cellタップ時
                 return .none
             case .fetchStandings:   // データ取得開始
-                return .run { [leagueID = state.leagueID] send in
-                    await send(.standingResponse(Result { try await self.standingClient.getStanding(id: leagueID) }))
+                return .run { [leagueType = state.leagueType] send in
+                    await send(.standingResponse(Result { try await self.standingClient.getStanding(leagueType) }))
                 }
                 .cancellable(id: CancelID.standing)
             case .standingResponse(.failure):   // APIエラー時
