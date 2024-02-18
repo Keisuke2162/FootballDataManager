@@ -10,7 +10,6 @@
 		672CB5142AD3EDBD005048D5 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB5132AD3EDBD005048D5 /* ScheduleView.swift */; };
 		672CB5162AD3EDD0005048D5 /* ScheduleAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB5152AD3EDD0005048D5 /* ScheduleAPIClient.swift */; };
 		672CB5182AD3EF71005048D5 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB5172AD3EF71005048D5 /* Fixture.swift */; };
-		672CB51A2AD3F0B9005048D5 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB5192AD3F0B9005048D5 /* ScheduleViewModel.swift */; };
 		672CB51C2AD5D3B6005048D5 /* StandingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB51B2AD5D3B6005048D5 /* StandingCellView.swift */; };
 		67936B952B7E6DCD0004E4B9 /* StandingListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67936B942B7E6DCD0004E4B9 /* StandingListReducer.swift */; };
 		67936B972B8110780004E4B9 /* ScheduleReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67936B962B8110780004E4B9 /* ScheduleReducer.swift */; };
@@ -27,7 +26,6 @@
 		679A8CB02AC9B917000C090C /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CAF2AC9B917000C090C /* Team.swift */; };
 		679A8CB42AC9BEA9000C090C /* StandingListAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CB32AC9BEA9000C090C /* StandingListAPIClient.swift */; };
 		679A8CB62AC9BEDC000C090C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CB52AC9BEDC000C090C /* APIError.swift */; };
-		679A8CB82AC9CDED000C090C /* StandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CB72AC9CDED000C090C /* StandingViewModel.swift */; };
 		679A8CBA2AC9D832000C090C /* StandingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CB92AC9D832000C090C /* StandingListView.swift */; };
 		679A8CBD2ACB3C40000C090C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679A8CBC2ACB3C40000C090C /* Color.xcassets */; };
 		679A8CC02ACB3C63000C090C /* SSportsD-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 679A8CBF2ACB3C63000C090C /* SSportsD-Medium.ttf */; };
@@ -65,7 +63,6 @@
 		672CB5132AD3EDBD005048D5 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		672CB5152AD3EDD0005048D5 /* ScheduleAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAPIClient.swift; sourceTree = "<group>"; };
 		672CB5172AD3EF71005048D5 /* Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
-		672CB5192AD3F0B9005048D5 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		672CB51B2AD5D3B6005048D5 /* StandingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingCellView.swift; sourceTree = "<group>"; };
 		67936B942B7E6DCD0004E4B9 /* StandingListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingListReducer.swift; sourceTree = "<group>"; };
 		67936B962B8110780004E4B9 /* ScheduleReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleReducer.swift; sourceTree = "<group>"; };
@@ -85,7 +82,6 @@
 		679A8CAF2AC9B917000C090C /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		679A8CB32AC9BEA9000C090C /* StandingListAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingListAPIClient.swift; sourceTree = "<group>"; };
 		679A8CB52AC9BEDC000C090C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		679A8CB72AC9CDED000C090C /* StandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingViewModel.swift; sourceTree = "<group>"; };
 		679A8CB92AC9D832000C090C /* StandingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingListView.swift; sourceTree = "<group>"; };
 		679A8CBC2ACB3C40000C090C /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		679A8CBF2ACB3C63000C090C /* SSportsD-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SSportsD-Medium.ttf"; sourceTree = "<group>"; };
@@ -134,15 +130,6 @@
 				672CB5132AD3EDBD005048D5 /* ScheduleView.swift */,
 			);
 			path = Schedule;
-			sourceTree = "<group>";
-		};
-		67936B922B7D2A080004E4B9 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				672CB5192AD3F0B9005048D5 /* ScheduleViewModel.swift */,
-				679A8CB72AC9CDED000C090C /* StandingViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		67936B932B7D2A0F0004E4B9 /* Reducer */ = {
@@ -196,7 +183,6 @@
 				679A8CB22AC9BE96000C090C /* API */,
 				67936B932B7D2A0F0004E4B9 /* Reducer */,
 				679A8CC72AD3C358000C090C /* Views */,
-				67936B922B7D2A080004E4B9 /* ViewModel */,
 			);
 			path = FootballDataManager;
 			sourceTree = "<group>";
@@ -487,7 +473,6 @@
 				679A8CB42AC9BEA9000C090C /* StandingListAPIClient.swift in Sources */,
 				67936B972B8110780004E4B9 /* ScheduleReducer.swift in Sources */,
 				672CB5142AD3EDBD005048D5 /* ScheduleView.swift in Sources */,
-				679A8CB82AC9CDED000C090C /* StandingViewModel.swift in Sources */,
 				679A8CC32ACF4ED8000C090C /* SelectLeagueView.swift in Sources */,
 				679A8CB62AC9BEDC000C090C /* APIError.swift in Sources */,
 				672CB5182AD3EF71005048D5 /* Fixture.swift in Sources */,
@@ -495,7 +480,6 @@
 				67936B952B7E6DCD0004E4B9 /* StandingListReducer.swift in Sources */,
 				679A8CAB2AC9A470000C090C /* League.swift in Sources */,
 				67BD95612B8236EF002EBD0B /* SelectLeagueReducer.swift in Sources */,
-				672CB51A2AD3F0B9005048D5 /* ScheduleViewModel.swift in Sources */,
 				679A8C7D2AC99A33000C090C /* FootballDataManagerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
