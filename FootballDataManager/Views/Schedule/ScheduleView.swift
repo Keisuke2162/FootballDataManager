@@ -34,7 +34,7 @@ struct ScheduleView: View {
                             store.send(.forwardDateButton)
                         } label: {
                             Text("→")
-                                .foregroundColor(Color.init("SkySportsBlue"))
+                                .foregroundColor(store.state.leagueType.themaColor)
                                 .font(.custom("SSportsD-Medium", size: 16))
                         }
                         Spacer()
@@ -92,7 +92,7 @@ struct ScheduleView: View {
 }
 
 #Preview {
-    ScheduleView(store: Store(initialState: ScheduleReducer.State(leagueID: "39"), reducer: {
+    ScheduleView(store: Store(initialState: ScheduleReducer.State(leagueType: .england), reducer: {
         ScheduleReducer()
     }))
 }

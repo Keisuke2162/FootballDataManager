@@ -10,15 +10,15 @@ import Foundation
 
 @DependencyClient
 struct StandingClient {
-    var getStanding: @Sendable (_ id: String) async throws -> [Standing]
+    var getStanding: @Sendable (_ type: LeagueType) async throws -> [Standing]
 }
 
 extension StandingClient: TestDependencyKey {
 //    static let previewValue = Self(getStanding: { _ in [.mock] })
     static let previewValue = Self(
-        getStanding: { id in
+        getStanding: { type in
             do {
-                return try await liveValue.getStanding(id)
+                return try await liveValue.getStanding(type)
             } catch { return [] }
         }
     )
@@ -34,11 +34,11 @@ extension DependencyValues {
 
 extension StandingClient: DependencyKey {
     static let liveValue: StandingClient = StandingClient(
-        getStanding: { id in
+        getStanding: { type in
             var components = URLComponents(string: "https://v3.football.api-sports.io/standings")!
             components.queryItems = [
                 .init(name: "season", value: "2023"),
-                .init(name: "league", value: id)
+                .init(name: "league", value: type.id)
             ]
             // MARK: - API Request
 //            var request = URLRequest(url: components.url!)
@@ -58,7 +58,7 @@ extension StandingClient: DependencyKey {
             
             // MARK: - Local JSON File
             // JSONファイルからモックデータ読み込み
-            guard let fileURL = Bundle.main.url(forResource: "football_api_standings_2023_39", withExtension: "json") else {
+            guard let fileURL = Bundle.main.url(forResource: type.standingResource, withExtension: "json") else {
                 throw APIError.unknown
             }
 

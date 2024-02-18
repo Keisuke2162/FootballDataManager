@@ -34,6 +34,7 @@
 		679A8CC32ACF4ED8000C090C /* SelectLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8CC22ACF4ED8000C090C /* SelectLeagueView.swift */; };
 		679A8CC92AD3C3E0000C090C /* football_api_standings_2023_39.json in Resources */ = {isa = PBXBuildFile; fileRef = 679A8CC82AD3C3E0000C090C /* football_api_standings_2023_39.json */; };
 		679A8CCD2AD3C7C2000C090C /* foorball_api_fixtures_2023_39.json in Resources */ = {isa = PBXBuildFile; fileRef = 679A8CCC2AD3C7C2000C090C /* foorball_api_fixtures_2023_39.json */; };
+		67BD95512B815C2E002EBD0B /* LeagueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BD95502B815C2E002EBD0B /* LeagueType.swift */; };
 		67D742832B69960B003FA70E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 67D742822B69960B003FA70E /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		679A8CC22ACF4ED8000C090C /* SelectLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLeagueView.swift; sourceTree = "<group>"; };
 		679A8CC82AD3C3E0000C090C /* football_api_standings_2023_39.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football_api_standings_2023_39.json; sourceTree = "<group>"; };
 		679A8CCC2AD3C7C2000C090C /* foorball_api_fixtures_2023_39.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_fixtures_2023_39.json; sourceTree = "<group>"; };
+		67BD95502B815C2E002EBD0B /* LeagueType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 		679A8CA92AC99F51000C090C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				67BD95502B815C2E002EBD0B /* LeagueType.swift */,
 				679A8CAA2AC9A470000C090C /* League.swift */,
 				679A8CAD2AC9A97A000C090C /* StandingsItem.swift */,
 				679A8CAF2AC9B917000C090C /* Team.swift */,
@@ -271,8 +274,9 @@
 		679A8CC42AD3C12D000C090C /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				679A8CCC2AD3C7C2000C090C /* foorball_api_fixtures_2023_39.json */,
-				679A8CC82AD3C3E0000C090C /* football_api_standings_2023_39.json */,
+				67BD95552B81D46B002EBD0B /* Spain */,
+				67BD95542B81D45E002EBD0B /* Italy */,
+				67BD95532B81D445002EBD0B /* England */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -285,6 +289,29 @@
 				679A8CAC2AC9A912000C090C /* Standing */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		67BD95532B81D445002EBD0B /* England */ = {
+			isa = PBXGroup;
+			children = (
+				679A8CCC2AD3C7C2000C090C /* foorball_api_fixtures_2023_39.json */,
+				679A8CC82AD3C3E0000C090C /* football_api_standings_2023_39.json */,
+			);
+			path = England;
+			sourceTree = "<group>";
+		};
+		67BD95542B81D45E002EBD0B /* Italy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Italy;
+			sourceTree = "<group>";
+		};
+		67BD95552B81D46B002EBD0B /* Spain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Spain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +468,7 @@
 				679A8CC32ACF4ED8000C090C /* SelectLeagueView.swift in Sources */,
 				679A8CB62AC9BEDC000C090C /* APIError.swift in Sources */,
 				672CB5182AD3EF71005048D5 /* Fixture.swift in Sources */,
+				67BD95512B815C2E002EBD0B /* LeagueType.swift in Sources */,
 				67936B952B7E6DCD0004E4B9 /* StandingListReducer.swift in Sources */,
 				679A8CAB2AC9A470000C090C /* League.swift in Sources */,
 				672CB51A2AD3F0B9005048D5 /* ScheduleViewModel.swift in Sources */,

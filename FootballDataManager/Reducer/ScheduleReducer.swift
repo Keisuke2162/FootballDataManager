@@ -12,7 +12,7 @@ import ComposableArchitecture
 struct ScheduleReducer {
     @ObservableState
     struct State: Equatable {
-        let leagueID: String
+        let leagueType: LeagueType
         var fixtures: [Fixture] = []
         var selectedDateIndex: Int = 0
         var groupedItems: [String: [Fixture]] = [:]
@@ -36,8 +36,8 @@ struct ScheduleReducer {
             case .tapFixtureCell:      // Cellタップ時
                 return .none
             case .fetchFixtures:   // データ取得開始
-                return .run { [leagueID = state.leagueID] send in
-                    await send(.fixturesResponse(Result { try await self.fixtureScheduleClient.getFixtures(id: leagueID) }))
+                return .run { [leagueType = state.leagueType] send in
+                    await send(.fixturesResponse(Result { try await self.fixtureScheduleClient.getFixtures(id: leagueType.id) }))
                 }
                 .cancellable(id: CancelID.fixtures)
             case .fixturesResponse(.failure):   // APIエラー時
