@@ -47,14 +47,11 @@ struct StandingListView: View {
             }
             
         }
-        .onAppear {
-            Task {
-                do {
-                    print("テスト")
-                    try await Task.sleep(for: .milliseconds(300))
-                    await store.send(.fetchStandings).finish()
-                } catch {}
-            }
+        .task {
+            do {
+                try await Task.sleep(for: .milliseconds(300))
+                await store.send(.fetchStandings).finish()
+            } catch {}
         }
     }
 }

@@ -35,7 +35,9 @@ struct HomeReducer {
             case let .destination(.presented(.changeLeague(.delegate(.selectLeague(type))))):
                 state.selectedLeagueType = type
                 state.standingList = .init(leagueType: type)
-                return .none
+                return .run { send in
+                    await send(.standingList(.fetchStandings))
+                }
             case .destination:
                 return .none
             case .standingList:
