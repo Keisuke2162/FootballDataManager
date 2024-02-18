@@ -16,13 +16,13 @@ enum APIError: Error {
     var title: String {
         switch self {
         case .noneValue:
-            return "値が空で取得されたエラー"
+            return "noneValue"
         case .invalidURL:
-            return "無効なURLのエラー"
+            return "invalidURL"
         case .networkError:
-            return "ネットワークエラー"
+            return "networkError"
         default:
-            return "不明なエラー"
+            return "unknown"
         }
     }
 }
