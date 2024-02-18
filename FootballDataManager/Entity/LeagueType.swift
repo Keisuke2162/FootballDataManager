@@ -40,11 +40,11 @@ extension LeagueType {
     var themaColor: Color {
         switch self {
         case .england:
-            Color.init("SkySportsBlue")
+            Color.init("background-premier")
         case .italy:
-            Color.init("SkySportsBlue")
+            Color.init("background-seriea")
         case .spain:
-            Color.init("SkySportsBlue")
+            Color.init("background-laliga")
         }
     }
 
@@ -53,9 +53,9 @@ extension LeagueType {
         case .england:
             "football_api_standings_2023_39"
         case .italy:
-            "football_api_standings_2023_39"
+            "football_api_standings_2023_135"
         case .spain:
-            "football_api_standings_2023_39"
+            "football_api_standings_2023_140"
         }
     }
 
@@ -64,9 +64,9 @@ extension LeagueType {
         case .england:
             "foorball_api_fixtures_2023_39"
         case .italy:
-            "foorball_api_fixtures_2023_39"
+            "foorball_api_fixtures_2023_135"
         case .spain:
-            "foorball_api_fixtures_2023_39"
+            "foorball_api_fixtures_2023_140"
         }
     }
 }

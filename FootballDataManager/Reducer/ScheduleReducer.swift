@@ -37,7 +37,7 @@ struct ScheduleReducer {
                 return .none
             case .fetchFixtures:   // データ取得開始
                 return .run { [leagueType = state.leagueType] send in
-                    await send(.fixturesResponse(Result { try await self.fixtureScheduleClient.getFixtures(id: leagueType.id) }))
+                    await send(.fixturesResponse(Result { try await self.fixtureScheduleClient.getFixtures(leagueType) }))
                 }
                 .cancellable(id: CancelID.fixtures)
             case .fixturesResponse(.failure):   // APIエラー時

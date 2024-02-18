@@ -77,7 +77,7 @@ struct ScheduleView: View {
                         }
                     }
                     .scrollContentBackground(.hidden)
-                    .background(Color.init("SkySportsBlue"))
+                    .background(store.state.leagueType.themaColor)
                     .listStyle(.grouped)
                 }
             }
@@ -92,7 +92,7 @@ struct ScheduleView: View {
 }
 
 #Preview {
-    ScheduleView(store: Store(initialState: ScheduleReducer.State(leagueType: .england), reducer: {
+    ScheduleView(store: Store(initialState: ScheduleReducer.State(leagueType: .spain), reducer: {
         ScheduleReducer()
     }))
 }

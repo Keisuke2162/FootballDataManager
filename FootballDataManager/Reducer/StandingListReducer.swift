@@ -32,7 +32,7 @@ struct StandingListReducer {
                 return .none
             case .fetchStandings:   // データ取得開始
                 return .run { [leagueType = state.leagueType] send in
-                    await send(.standingResponse(Result { try await self.standingClient.getStanding(id: leagueType.id) }))
+                    await send(.standingResponse(Result { try await self.standingClient.getStanding(leagueType) }))
                 }
                 .cancellable(id: CancelID.standing)
             case .standingResponse(.failure):   // APIエラー時
