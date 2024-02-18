@@ -35,6 +35,10 @@
 		679A8CC92AD3C3E0000C090C /* football_api_standings_2023_39.json in Resources */ = {isa = PBXBuildFile; fileRef = 679A8CC82AD3C3E0000C090C /* football_api_standings_2023_39.json */; };
 		679A8CCD2AD3C7C2000C090C /* foorball_api_fixtures_2023_39.json in Resources */ = {isa = PBXBuildFile; fileRef = 679A8CCC2AD3C7C2000C090C /* foorball_api_fixtures_2023_39.json */; };
 		67BD95512B815C2E002EBD0B /* LeagueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BD95502B815C2E002EBD0B /* LeagueType.swift */; };
+		67BD95572B8217E9002EBD0B /* foorball_api_fixtures_2023_135.json in Resources */ = {isa = PBXBuildFile; fileRef = 67BD95562B8217E9002EBD0B /* foorball_api_fixtures_2023_135.json */; };
+		67BD95592B8217EE002EBD0B /* football_api_standings_2023_135.json in Resources */ = {isa = PBXBuildFile; fileRef = 67BD95582B8217EE002EBD0B /* football_api_standings_2023_135.json */; };
+		67BD955B2B8217F5002EBD0B /* foorball_api_fixtures_2023_140.json in Resources */ = {isa = PBXBuildFile; fileRef = 67BD955A2B8217F5002EBD0B /* foorball_api_fixtures_2023_140.json */; };
+		67BD955D2B8217FB002EBD0B /* football_api_standings_2023_140.json in Resources */ = {isa = PBXBuildFile; fileRef = 67BD955C2B8217FB002EBD0B /* football_api_standings_2023_140.json */; };
 		67D742832B69960B003FA70E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 67D742822B69960B003FA70E /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +92,10 @@
 		679A8CC82AD3C3E0000C090C /* football_api_standings_2023_39.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football_api_standings_2023_39.json; sourceTree = "<group>"; };
 		679A8CCC2AD3C7C2000C090C /* foorball_api_fixtures_2023_39.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_fixtures_2023_39.json; sourceTree = "<group>"; };
 		67BD95502B815C2E002EBD0B /* LeagueType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueType.swift; sourceTree = "<group>"; };
+		67BD95562B8217E9002EBD0B /* foorball_api_fixtures_2023_135.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_fixtures_2023_135.json; sourceTree = "<group>"; };
+		67BD95582B8217EE002EBD0B /* football_api_standings_2023_135.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football_api_standings_2023_135.json; sourceTree = "<group>"; };
+		67BD955A2B8217F5002EBD0B /* foorball_api_fixtures_2023_140.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_fixtures_2023_140.json; sourceTree = "<group>"; };
+		67BD955C2B8217FB002EBD0B /* football_api_standings_2023_140.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football_api_standings_2023_140.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +311,8 @@
 		67BD95542B81D45E002EBD0B /* Italy */ = {
 			isa = PBXGroup;
 			children = (
+				67BD95582B8217EE002EBD0B /* football_api_standings_2023_135.json */,
+				67BD95562B8217E9002EBD0B /* foorball_api_fixtures_2023_135.json */,
 			);
 			path = Italy;
 			sourceTree = "<group>";
@@ -310,6 +320,8 @@
 		67BD95552B81D46B002EBD0B /* Spain */ = {
 			isa = PBXGroup;
 			children = (
+				67BD955C2B8217FB002EBD0B /* football_api_standings_2023_140.json */,
+				67BD955A2B8217F5002EBD0B /* foorball_api_fixtures_2023_140.json */,
 			);
 			path = Spain;
 			sourceTree = "<group>";
@@ -424,11 +436,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67BD95592B8217EE002EBD0B /* football_api_standings_2023_135.json in Resources */,
 				679A8C842AC99A35000C090C /* Preview Assets.xcassets in Resources */,
 				679A8C812AC99A35000C090C /* Assets.xcassets in Resources */,
 				679A8CCD2AD3C7C2000C090C /* foorball_api_fixtures_2023_39.json in Resources */,
+				67BD95572B8217E9002EBD0B /* foorball_api_fixtures_2023_135.json in Resources */,
+				67BD955B2B8217F5002EBD0B /* foorball_api_fixtures_2023_140.json in Resources */,
 				679A8CBD2ACB3C40000C090C /* Color.xcassets in Resources */,
 				679A8CC02ACB3C63000C090C /* SSportsD-Medium.ttf in Resources */,
+				67BD955D2B8217FB002EBD0B /* football_api_standings_2023_140.json in Resources */,
 				679A8CC92AD3C3E0000C090C /* football_api_standings_2023_39.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
