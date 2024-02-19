@@ -15,6 +15,7 @@ struct ScheduleView: View {
         NavigationView {
             VStack {
                 if store.state.fixtures.isEmpty {
+                    Color.clear
                 } else {
                     HStack {
                         Spacer()
@@ -40,6 +41,7 @@ struct ScheduleView: View {
                         Spacer()
                     }
                     .frame(height: 32)
+                    .background(Color.white)
                     List {
                         ForEach(store.groupedItems[store.dateKeys[store.selectedDateIndex]] ?? []) { item in
                             HStack {
@@ -83,6 +85,7 @@ struct ScheduleView: View {
                     .listStyle(.grouped)
                 }
             }
+            .background(store.state.leagueType.themaColor)
         }
         .task {
             do {

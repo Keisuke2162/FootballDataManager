@@ -8,6 +8,7 @@
 import ComposableArchitecture
 import SwiftUI
 
+@MainActor
 struct HomeView: View {
 //    init() {
 //        let appearance: UITabBarAppearance = UITabBarAppearance()
@@ -27,11 +28,15 @@ struct HomeView: View {
                             Image(systemName: "clock")
                             Text("Table")
                         }
+                        .toolbarBackground(.white, for: .tabBar)
+                        .toolbarBackground(.visible, for: .tabBar)
                     ScheduleView(store: store.scope(state: \.fixtureSchedule, action: \.fixtureSchedule))
                         .tabItem {
                             Image(systemName: "clock")
                             Text("Fixture")
                         }
+                        .toolbarBackground(.white, for: .tabBar)
+                        .toolbarBackground(.visible, for: .tabBar)
                 }
                 VStack {
                     Spacer()
