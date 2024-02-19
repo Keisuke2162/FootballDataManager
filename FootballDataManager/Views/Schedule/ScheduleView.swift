@@ -16,30 +16,31 @@ struct ScheduleView: View {
             VStack {
                 if store.state.fixtures.isEmpty {
                 } else {
-                    List {
-                        HStack {
-                            Spacer()
-                            Button {
-                                store.send(.backDateButton)
-                            } label: {
-                                Text("←")
-                                    .foregroundColor(Color.init("SkySportsBlue"))
-                                    .font(.custom("SSportsD-Medium", size: 16))
-                            }
-                            Spacer()
-                            Text(store.state.dateKeys.isEmpty ? "" : store.state.dateKeys[store.selectedDateIndex])
+                    HStack {
+                        Spacer()
+                        Button {
+                            store.send(.backDateButton)
+                        } label: {
+                            Text("←")
                                 .foregroundColor(Color.init("SkySportsBlue"))
                                 .font(.custom("SSportsD-Medium", size: 16))
-                            Spacer()
-                            Button {
-                                store.send(.forwardDateButton)
-                            } label: {
-                                Text("→")
-                                    .foregroundColor(store.state.leagueType.themaColor)
-                                    .font(.custom("SSportsD-Medium", size: 16))
-                            }
-                            Spacer()
                         }
+                        Spacer()
+                        Text(store.state.dateKeys.isEmpty ? "" : store.state.dateKeys[store.selectedDateIndex])
+                            .foregroundColor(Color.init("SkySportsBlue"))
+                            .font(.custom("SSportsD-Medium", size: 16))
+                        Spacer()
+                        Button {
+                            store.send(.forwardDateButton)
+                        } label: {
+                            Text("→")
+                                .foregroundColor(store.state.leagueType.themaColor)
+                                .font(.custom("SSportsD-Medium", size: 16))
+                        }
+                        Spacer()
+                    }
+                    .frame(height: 32)
+                    List {
                         ForEach(store.groupedItems[store.dateKeys[store.selectedDateIndex]] ?? []) { item in
                             HStack {
                                 Spacer()
