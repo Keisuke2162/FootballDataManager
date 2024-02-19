@@ -15,8 +15,11 @@ struct FootballDataManagerApp: App {
 //            StandingListView(store: Store(initialState: StandingListReducer.State(leagueID: "39")) {
 //                StandingListReducer()
 //            })
-            ScheduleView(store: Store(initialState: ScheduleReducer.State(leagueType: .england), reducer: {
-                ScheduleReducer()
+//            ScheduleView(store: Store(initialState: ScheduleReducer.State(leagueType: .england), reducer: {
+//                ScheduleReducer()
+//            }))
+            HomeView(store: Store(initialState: HomeReducer.State(), reducer: {
+                HomeReducer()
             }))
         }
     }
