@@ -14,26 +14,29 @@ struct StandingListView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                HStack(spacing: 8) {
+                    Spacer().frame(width: 16)
+                    Text("Pos")
+                        .font(.custom("SSportsD-Medium", size: 12))
+                        .frame(width: 24)
+                    Text("Club")
+                        .font(.custom("SSportsD-Medium", size: 12))
+                        .frame(width: 32)
+                        .padding(.leading, 46)
+                    Spacer()
+                    Text("P")
+                        .font(.custom("SSportsD-Medium", size: 12))
+                        .frame(width: 24)
+                    Text("GD")
+                        .font(.custom("SSportsD-Medium", size: 12))
+                        .frame(width: 24)
+                    Text("Pts")
+                        .font(.custom("SSportsD-Medium", size: 12))
+                        .frame(width: 24)
+                    Spacer().frame(width: 16)
+                }
+                .frame(height: 32)
                 List {
-                    HStack(spacing: 16) {
-                        Text("Pos")
-                            .font(.custom("SSportsD-Medium", size: 12))
-                            .frame(width: 24)
-                        Text("Club")
-                            .font(.custom("SSportsD-Medium", size: 12))
-                            .frame(width: 32)
-                            .padding(.leading, 46)
-                        Spacer()
-                        Text("P")
-                            .font(.custom("SSportsD-Medium", size: 12))
-                            .frame(width: 24)
-                        Text("GD")
-                            .font(.custom("SSportsD-Medium", size: 12))
-                            .frame(width: 24)
-                        Text("Pts")
-                            .font(.custom("SSportsD-Medium", size: 12))
-                            .frame(width: 24)
-                    }
                     ForEach(store.standings) { standing in
                         StandingCellView(standingItem: standing)
                             .frame(height: 46)

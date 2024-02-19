@@ -39,6 +39,7 @@ struct ScheduleView: View {
                         }
                         Spacer()
                     }
+                    .frame(height: 32)
                     List {
                         ForEach(store.groupedItems[store.dateKeys[store.selectedDateIndex]] ?? []) { item in
                             HStack {
