@@ -5,6 +5,7 @@
 //  Created by Kei on 2023/10/11.
 //
 
+import Kingfisher
 import SwiftUI
 
 struct StandingCellView: View {
@@ -17,13 +18,10 @@ struct StandingCellView: View {
                 .font(.custom("SSportsD-Medium", size: 12))
                 .frame(width: 24)
             let imageURL = URL(string: standingItem.team.logo)
-            AsyncImage(url: imageURL) { image in
-                image.resizable()
-            } placeholder: {
-                ProgressView()
-            }
-            .scaledToFit()
-            .frame(width: 30, height: 30)
+            KFImage(imageURL)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 30, height: 30)
             Text(standingItem.team.name)
                 .foregroundColor(Color.white)
                 .font(.custom("SSportsD-Medium", size: 16))

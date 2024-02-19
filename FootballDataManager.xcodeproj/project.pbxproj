@@ -39,6 +39,7 @@
 		67BD955D2B8217FB002EBD0B /* football_api_standings_2023_140.json in Resources */ = {isa = PBXBuildFile; fileRef = 67BD955C2B8217FB002EBD0B /* football_api_standings_2023_140.json */; };
 		67BD955F2B822C1E002EBD0B /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BD955E2B822C1E002EBD0B /* HomeReducer.swift */; };
 		67BD95612B8236EF002EBD0B /* SelectLeagueReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BD95602B8236EF002EBD0B /* SelectLeagueReducer.swift */; };
+		67CCCAF72B83E83100A03301 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 67CCCAF62B83E83100A03301 /* Kingfisher */; };
 		67D742832B69960B003FA70E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 67D742822B69960B003FA70E /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67CCCAF72B83E83100A03301 /* Kingfisher in Frameworks */,
 				67D742832B69960B003FA70E /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +338,7 @@
 			name = FootballDataManager;
 			packageProductDependencies = (
 				67D742822B69960B003FA70E /* ComposableArchitecture */,
+				67CCCAF62B83E83100A03301 /* Kingfisher */,
 			);
 			productName = FootballDataManager;
 			productReference = 679A8C792AC99A33000C090C /* FootballDataManager.app */;
@@ -411,6 +414,7 @@
 			mainGroup = 679A8C702AC99A32000C090C;
 			packageReferences = (
 				67D742812B69960B003FA70E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				67CCCAF52B83E83100A03301 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 679A8C7A2AC99A33000C090C /* Products */;
 			projectDirPath = "";
@@ -811,6 +815,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		67CCCAF52B83E83100A03301 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = exactVersion;
+				version = 7.11.0;
+			};
+		};
 		67D742812B69960B003FA70E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -822,6 +834,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		67CCCAF62B83E83100A03301 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67CCCAF52B83E83100A03301 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		67D742822B69960B003FA70E /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 67D742812B69960B003FA70E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;

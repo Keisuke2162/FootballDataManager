@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import Kingfisher
 import SwiftUI
 
 struct ScheduleView: View {
@@ -46,14 +47,10 @@ struct ScheduleView: View {
                         ForEach(store.groupedItems[store.dateKeys[store.selectedDateIndex]] ?? []) { item in
                             HStack {
                                 Spacer()
-                                let homeImageURL = URL(string: item.teams.home.logo)
-                                AsyncImage(url: homeImageURL) { image in
-                                    image.resizable()
-                                } placeholder: {
-                                    ProgressView()
-                                }
-                                .scaledToFit()
-                                .frame(width: 40, height: 40)
+                                KFImage(URL(string: item.teams.home.logo))
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 40, height: 40)
                                 Spacer()
                                 Text(item.goals.home?.description ?? "")
                                     .foregroundColor(Color.white)
@@ -65,14 +62,10 @@ struct ScheduleView: View {
                                     .foregroundColor(Color.white)
                                     .font(.custom("SSportsD-Medium", size: 16))
                                 Spacer()
-                                let awayImageURL = URL(string: item.teams.away.logo)
-                                AsyncImage(url: awayImageURL) { image in
-                                    image.resizable()
-                                } placeholder: {
-                                    ProgressView()
-                                }
-                                .scaledToFit()
-                                .frame(width: 40, height: 40)
+                                KFImage(URL(string: item.teams.away.logo))
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 40, height: 40)
                                 Spacer()
                             }
                             .frame(height: 56)
