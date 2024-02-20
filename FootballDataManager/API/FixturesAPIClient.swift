@@ -28,7 +28,7 @@ extension FixturesClient: TestDependencyKey {
 }
 
 extension DependencyValues {
-    var fixtureScheduleClient: FixturesClient {
+    var fixtureClient: FixturesClient {
         get { self[FixturesClient.self] }
         set { self[FixturesClient.self] = newValue }
     }

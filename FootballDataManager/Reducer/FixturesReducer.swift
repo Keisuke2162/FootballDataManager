@@ -9,7 +9,7 @@ import Foundation
 import ComposableArchitecture
 
 @Reducer
-struct ScheduleReducer {
+struct FixturesReducer {
     @ObservableState
     struct State: Equatable {
         let leagueType: LeagueType
@@ -27,7 +27,7 @@ struct ScheduleReducer {
         case forwardDateButton
     }
 
-    @Dependency(\.fixtureScheduleClient) var fixtureScheduleClient
+    @Dependency(\.fixtureClient) var fixtureClient
     private enum CancelID { case fixtures }
 
     var body: some Reducer<State, Action> {
@@ -37,7 +37,7 @@ struct ScheduleReducer {
                 return .none
             case .fetchFixtures:   // データ取得開始
                 return .run { [leagueType = state.leagueType] send in
-                    await send(.fixturesResponse(Result { try await self.fixtureScheduleClient.getFixtures(leagueType) }))
+                    await send(.fixturesResponse(Result { try await self.fixtureClient.getFixtures(leagueType) }))
                 }
                 .cancellable(id: CancelID.fixtures)
             case .fixturesResponse(.failure):   // APIエラー時

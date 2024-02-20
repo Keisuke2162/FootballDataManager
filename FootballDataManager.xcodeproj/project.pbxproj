@@ -12,7 +12,7 @@
 		672CB5182AD3EF71005048D5 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB5172AD3EF71005048D5 /* Fixture.swift */; };
 		672CB51C2AD5D3B6005048D5 /* StandingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CB51B2AD5D3B6005048D5 /* StandingCellView.swift */; };
 		67936B952B7E6DCD0004E4B9 /* StandingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67936B942B7E6DCD0004E4B9 /* StandingReducer.swift */; };
-		67936B972B8110780004E4B9 /* ScheduleReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67936B962B8110780004E4B9 /* ScheduleReducer.swift */; };
+		67936B972B8110780004E4B9 /* FixturesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67936B962B8110780004E4B9 /* FixturesReducer.swift */; };
 		67936B9A2B814FEF0004E4B9 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67936B992B814FEF0004E4B9 /* String+Extension.swift */; };
 		679A8C7D2AC99A33000C090C /* FootballDataManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A8C7C2AC99A33000C090C /* FootballDataManagerApp.swift */; };
 		679A8C812AC99A35000C090C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679A8C802AC99A35000C090C /* Assets.xcassets */; };
@@ -68,7 +68,7 @@
 		672CB5172AD3EF71005048D5 /* Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
 		672CB51B2AD5D3B6005048D5 /* StandingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingCellView.swift; sourceTree = "<group>"; };
 		67936B942B7E6DCD0004E4B9 /* StandingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingReducer.swift; sourceTree = "<group>"; };
-		67936B962B8110780004E4B9 /* ScheduleReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleReducer.swift; sourceTree = "<group>"; };
+		67936B962B8110780004E4B9 /* FixturesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesReducer.swift; sourceTree = "<group>"; };
 		67936B992B814FEF0004E4B9 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		679A8C792AC99A33000C090C /* FootballDataManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballDataManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		679A8C7C2AC99A33000C090C /* FootballDataManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballDataManagerApp.swift; sourceTree = "<group>"; };
@@ -130,12 +130,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		672CB5122AD3EDB0005048D5 /* Schedule */ = {
+		672CB5122AD3EDB0005048D5 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
 				672CB5132AD3EDBD005048D5 /* ScheduleView.swift */,
 			);
-			path = Schedule;
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 		67936B932B7D2A0F0004E4B9 /* Reducer */ = {
@@ -144,7 +144,7 @@
 				67BD955E2B822C1E002EBD0B /* HomeReducer.swift */,
 				67BD95602B8236EF002EBD0B /* SelectLeagueReducer.swift */,
 				67936B942B7E6DCD0004E4B9 /* StandingReducer.swift */,
-				67936B962B8110780004E4B9 /* ScheduleReducer.swift */,
+				67936B962B8110780004E4B9 /* FixturesReducer.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -291,7 +291,7 @@
 		679A8CC72AD3C358000C090C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				672CB5122AD3EDB0005048D5 /* Schedule */,
+				672CB5122AD3EDB0005048D5 /* Fixtures */,
 				679A8CA62AC99F08000C090C /* Home */,
 				679A8CAC2AC9A912000C090C /* Standing */,
 			);
@@ -491,7 +491,7 @@
 				672CB5162AD3EDD0005048D5 /* FixturesAPIClient.swift in Sources */,
 				67BD955F2B822C1E002EBD0B /* HomeReducer.swift in Sources */,
 				679A8CB42AC9BEA9000C090C /* StandingAPIClient.swift in Sources */,
-				67936B972B8110780004E4B9 /* ScheduleReducer.swift in Sources */,
+				67936B972B8110780004E4B9 /* FixturesReducer.swift in Sources */,
 				672CB5142AD3EDBD005048D5 /* ScheduleView.swift in Sources */,
 				679A8CC32ACF4ED8000C090C /* SelectLeagueView.swift in Sources */,
 				679A8CB62AC9BEDC000C090C /* APIError.swift in Sources */,

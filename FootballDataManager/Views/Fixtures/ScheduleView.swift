@@ -10,7 +10,7 @@ import Kingfisher
 import SwiftUI
 
 struct ScheduleView: View {
-    @Bindable var store: StoreOf<ScheduleReducer>
+    @Bindable var store: StoreOf<FixturesReducer>
 
     var body: some View {
         NavigationView {
@@ -90,7 +90,7 @@ struct ScheduleView: View {
 }
 
 #Preview {
-    ScheduleView(store: Store(initialState: ScheduleReducer.State(leagueType: .spain), reducer: {
-        ScheduleReducer()
+    ScheduleView(store: Store(initialState: FixturesReducer.State(leagueType: .spain), reducer: {
+        FixturesReducer()
     }))
 }
