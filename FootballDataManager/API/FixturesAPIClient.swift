@@ -1,5 +1,5 @@
 //
-//  ScheduleAPIClient.swift
+//  FixturesAPIClient.swift
 //  FootballDataManager
 //
 //  Created by Kei on 2023/10/09.
@@ -9,11 +9,11 @@ import ComposableArchitecture
 import Foundation
 
 @DependencyClient
-struct FixtureScheduleClient {
+struct FixturesClient {
     var getFixtures: @Sendable (_ type: LeagueType) async throws -> FixturesItem
 }
 
-extension FixtureScheduleClient: TestDependencyKey {
+extension FixturesClient: TestDependencyKey {
 //    static let previewValue = Self(
 //        getFixtures: { _ in .mock }
 //    )
@@ -24,18 +24,18 @@ extension FixtureScheduleClient: TestDependencyKey {
             } catch { return .init(response: []) }
         }
     )
-    static let testValue: FixtureScheduleClient = Self()
+    static let testValue: FixturesClient = Self()
 }
 
 extension DependencyValues {
-    var fixtureScheduleClient: FixtureScheduleClient {
-        get { self[FixtureScheduleClient.self] }
-        set { self[FixtureScheduleClient.self] = newValue }
+    var fixtureScheduleClient: FixturesClient {
+        get { self[FixturesClient.self] }
+        set { self[FixturesClient.self] = newValue }
     }
 }
 
-extension FixtureScheduleClient: DependencyKey {
-    static let liveValue: FixtureScheduleClient = FixtureScheduleClient(
+extension FixturesClient: DependencyKey {
+    static let liveValue: FixturesClient = FixturesClient(
         getFixtures: { type in
             var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures")!
             //https://v3.football.api-sports.io/fixtures?season=2021&league=39

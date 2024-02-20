@@ -1,5 +1,5 @@
 //
-//  StandingListAPIClient.swift
+//  StandingAPIClient.swift
 //  FootballDataManager
 //
 //  Created by Kei on 2023/10/01.
