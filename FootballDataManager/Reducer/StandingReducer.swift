@@ -9,7 +9,7 @@ import Foundation
 import ComposableArchitecture
 
 @Reducer
-struct StandingListReducer {
+struct StandingReducer {
     @ObservableState
     struct State: Equatable {
         let leagueType: LeagueType

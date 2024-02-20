@@ -10,27 +10,20 @@ import SwiftUI
 
 @MainActor
 struct HomeView: View {
-//    init() {
-//        let appearance: UITabBarAppearance = UITabBarAppearance()
-//        appearance.configureWithDefaultBackground()
-//        UITabBar.appearance().scrollEdgeAppearance = appearance
-//        UITabBar.appearance().standardAppearance = appearance
-//    }
-
     @Bindable var store: StoreOf<HomeReducer>
 
     var body: some View {
         NavigationView {
             ZStack {
                 TabView {
-                    StandingListView(store: store.scope(state: \.standingList, action: \.standingList))
+                    StandingView(store: store.scope(state: \.standingList, action: \.standingList))
                         .tabItem {
                             Image(systemName: "clock")
                             Text("Table")
                         }
                         .toolbarBackground(.white, for: .tabBar)
                         .toolbarBackground(.visible, for: .tabBar)
-                    ScheduleView(store: store.scope(state: \.fixtureSchedule, action: \.fixtureSchedule))
+                    FixturesView(store: store.scope(state: \.fixtureSchedule, action: \.fixtureSchedule))
                         .tabItem {
                             Image(systemName: "clock")
                             Text("Fixture")

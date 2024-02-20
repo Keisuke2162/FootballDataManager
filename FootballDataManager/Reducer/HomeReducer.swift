@@ -14,23 +14,23 @@ struct HomeReducer {
     struct State: Equatable {
         @Presents var destination: Destination.State?
         var selectedLeagueType: LeagueType = .england
-        var standingList = StandingListReducer.State(leagueType: .england)
-        var fixtureSchedule = ScheduleReducer.State(leagueType: .england)
+        var standingList = StandingReducer.State(leagueType: .england)
+        var fixtureSchedule = FixturesReducer.State(leagueType: .england)
     }
 
     enum Action {
         case tapSelectLeagueButton
         case destination(PresentationAction<Destination.Action>)
-        case standingList(StandingListReducer.Action)
-        case fixtureSchedule(ScheduleReducer.Action)
+        case standingList(StandingReducer.Action)
+        case fixtureSchedule(FixturesReducer.Action)
     }
 
     var body: some ReducerOf<Self> {
         Scope(state: \.standingList, action: \.standingList) {
-            StandingListReducer()
+            StandingReducer()
         }
         Scope(state: \.fixtureSchedule, action: \.fixtureSchedule) {
-            ScheduleReducer()
+            FixturesReducer()
         }
         Reduce { state, action in
             switch action {
@@ -61,6 +61,6 @@ extension HomeReducer {
     @Reducer(state: .equatable)
     enum Destination {
         case changeLeague(SelectLeagueReducer)
-        case fixtureSchedule(ScheduleReducer)
+        case fixtureSchedule(FixturesReducer)
     }
 }
