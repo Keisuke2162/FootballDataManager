@@ -1,5 +1,5 @@
 //
-//  ScheduleView.swift
+//  FixturesView.swift
 //  FootballDataManager
 //
 //  Created by Kei on 2023/10/09.
@@ -9,7 +9,7 @@ import ComposableArchitecture
 import Kingfisher
 import SwiftUI
 
-struct ScheduleView: View {
+struct FixturesView: View {
     @Bindable var store: StoreOf<FixturesReducer>
 
     var body: some View {
@@ -90,7 +90,7 @@ struct ScheduleView: View {
 }
 
 #Preview {
-    ScheduleView(store: Store(initialState: FixturesReducer.State(leagueType: .spain), reducer: {
+    FixturesView(store: Store(initialState: FixturesReducer.State(leagueType: .spain), reducer: {
         FixturesReducer()
     }))
 }

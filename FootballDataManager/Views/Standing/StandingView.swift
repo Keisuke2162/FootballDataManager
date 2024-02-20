@@ -8,7 +8,7 @@
 import ComposableArchitecture
 import SwiftUI
 
-struct StandingListView: View {
+struct StandingView: View {
     @Bindable var store: StoreOf<StandingReducer>
 
     var body: some View {
@@ -60,7 +60,7 @@ struct StandingListView: View {
 }
 
 #Preview {
-    StandingListView(store: Store(initialState: StandingReducer.State(leagueType: .spain), reducer: {
+    StandingView(store: Store(initialState: StandingReducer.State(leagueType: .spain), reducer: {
         StandingReducer()
     }))
 }

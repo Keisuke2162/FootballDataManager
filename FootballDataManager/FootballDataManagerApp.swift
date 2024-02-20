@@ -12,12 +12,6 @@ import SwiftUI
 struct FootballDataManagerApp: App {
     var body: some Scene {
         WindowGroup {
-//            StandingListView(store: Store(initialState: StandingListReducer.State(leagueID: "39")) {
-//                StandingListReducer()
-//            })
-//            ScheduleView(store: Store(initialState: ScheduleReducer.State(leagueType: .england), reducer: {
-//                ScheduleReducer()
-//            }))
             HomeView(store: Store(initialState: HomeReducer.State(), reducer: {
                 HomeReducer()
             }))
