@@ -12,6 +12,7 @@ enum LeagueType: CaseIterable, Identifiable, Equatable {
     case england
     case italy
     case spain
+    case japan
 }
 
 extension LeagueType {
@@ -23,6 +24,8 @@ extension LeagueType {
             "135"
         case .spain:
             "140"
+        case .japan:
+            "98"
         }
     }
 
@@ -34,6 +37,8 @@ extension LeagueType {
             "Serie A"
         case .spain:
             "La Liga"
+        case .japan:
+            "J League"
         }
     }
 
@@ -45,6 +50,8 @@ extension LeagueType {
             Color.init("background-seriea")
         case .spain:
             Color.init("background-laliga")
+        case .japan:
+            Color.init("background-japan")
         }
     }
 
@@ -56,6 +63,8 @@ extension LeagueType {
             "football_api_standings_2023_135"
         case .spain:
             "football_api_standings_2023_140"
+        case .japan:
+            "football_api_standings_2024_98"
         }
     }
 
@@ -67,6 +76,8 @@ extension LeagueType {
             "foorball_api_fixtures_2023_135"
         case .spain:
             "foorball_api_fixtures_2023_140"
+        case .japan:
+            "foorball_api_fixtures_2024_98"
         }
     }
 
@@ -78,6 +89,8 @@ extension LeagueType {
             Image("ic-italy")
         case .spain:
             Image("ic-spain")
+        case .japan:
+            Image("ic-japan")
         }
     }
 }
