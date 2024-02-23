@@ -35,7 +35,7 @@ struct PlayerStatsReducer {
                         case .topScorers:
                             try await self.statsAPIClient.getTopScorers(leagueType)
                         case .topAssists:
-                            try await self.statsAPIClient.getTopScorers(leagueType)
+                            try await self.statsAPIClient.getTopAssists(type: leagueType)
                         }
                     }))
                 }
