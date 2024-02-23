@@ -47,6 +47,7 @@
 		67D36B0D2B862EB100AE813C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B0C2B862EB100AE813C /* Player.swift */; };
 		67D36B0F2B88BAF600AE813C /* foorball_api_topscorer_2023_39.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B0E2B88BAF600AE813C /* foorball_api_topscorer_2023_39.json */; };
 		67D36B112B88BB1F00AE813C /* foorball_api_topscorer_2024_98.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B102B88BB1F00AE813C /* foorball_api_topscorer_2024_98.json */; };
+		67D36B132B88BB2700AE813C /* foorball_api_topscorer_2023_140.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B122B88BB2700AE813C /* foorball_api_topscorer_2023_140.json */; };
 		67D36B152B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B142B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json */; };
 		67D36B172B88C28A00AE813C /* PlayerStatsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B162B88C28A00AE813C /* PlayerStatsReducer.swift */; };
 		67D36B192B88CC4F00AE813C /* PlayerStatsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B182B88CC4F00AE813C /* PlayerStatsListCell.swift */; };
@@ -121,6 +122,7 @@
 		67D36B0C2B862EB100AE813C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		67D36B0E2B88BAF600AE813C /* foorball_api_topscorer_2023_39.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_39.json; sourceTree = "<group>"; };
 		67D36B102B88BB1F00AE813C /* foorball_api_topscorer_2024_98.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2024_98.json; sourceTree = "<group>"; };
+		67D36B122B88BB2700AE813C /* foorball_api_topscorer_2023_140.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_140.json; sourceTree = "<group>"; };
 		67D36B142B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_135.json; sourceTree = "<group>"; };
 		67D36B162B88C28A00AE813C /* PlayerStatsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsReducer.swift; sourceTree = "<group>"; };
 		67D36B182B88CC4F00AE813C /* PlayerStatsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsListCell.swift; sourceTree = "<group>"; };
