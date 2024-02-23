@@ -18,15 +18,22 @@ struct HomeView: View {
                 TabView {
                     StandingView(store: store.scope(state: \.standingList, action: \.standingList))
                         .tabItem {
-                            Image(systemName: "clock")
+                            Image(systemName: "list.bullet.rectangle.fill")
                             Text("Table")
                         }
                         .toolbarBackground(.white, for: .tabBar)
                         .toolbarBackground(.visible, for: .tabBar)
                     FixturesView(store: store.scope(state: \.fixtureSchedule, action: \.fixtureSchedule))
                         .tabItem {
-                            Image(systemName: "clock")
+                            Image(systemName: "sportscourt.fill")
                             Text("Fixture")
+                        }
+                        .toolbarBackground(.white, for: .tabBar)
+                        .toolbarBackground(.visible, for: .tabBar)
+                    StatsContainerView(store: store.scope(state: \.statsList, action: \.statsList))
+                        .tabItem {
+                            Image(systemName: "figure.soccer")
+                            Text("Stats")
                         }
                         .toolbarBackground(.white, for: .tabBar)
                         .toolbarBackground(.visible, for: .tabBar)
