@@ -45,10 +45,6 @@ extension StatsAPIClient: DependencyKey {
                 .init(name: "season", value: "2023"),
                 .init(name: "league", value: type.id)
             ]
-            // MARK: - API Request
-            // MARK: - Local JSON File
-            guard let fileURL = Bundle.main.url(forResource: type.topScorerResource, withExtension: "json") else {
-            // MARK: - API Request
             // MARK: - Local JSON File
             guard let fileURL = Bundle.main.url(forResource: type.topScorerResource, withExtension: "json") else {
                 throw APIError.unknown

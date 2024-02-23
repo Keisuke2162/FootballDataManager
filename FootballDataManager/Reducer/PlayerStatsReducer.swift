@@ -35,9 +35,10 @@ struct PlayerStatsReducer {
                         case .topScorers:
                             try await self.statsAPIClient.getTopScorers(leagueType)
                         case .topAssists:
-                            try await self.statsAPIClient.getTopAssists(type: leagueType)
+                            try await self.statsAPIClient.getTopScorers(leagueType)
                         }
                     }))
+                }
                 .cancellable(id: CancelID.stats)
             case .topScorerResponse(.failure):
                 return .none

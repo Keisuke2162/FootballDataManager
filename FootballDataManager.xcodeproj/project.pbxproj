@@ -51,6 +51,8 @@
 		67D36B152B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B142B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json */; };
 		67D36B172B88C28A00AE813C /* PlayerStatsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B162B88C28A00AE813C /* PlayerStatsReducer.swift */; };
 		67D36B192B88CC4F00AE813C /* PlayerStatsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B182B88CC4F00AE813C /* PlayerStatsListCell.swift */; };
+		67D36B1C2B88D56100AE813C /* StatsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B1B2B88D56100AE813C /* StatsContainerView.swift */; };
+		67D36B1E2B88DE8D00AE813C /* StatsContainerReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B1D2B88DE8D00AE813C /* StatsContainerReducer.swift */; };
 		67D742832B69960B003FA70E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 67D742822B69960B003FA70E /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +121,8 @@
 		67D36B142B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_135.json; sourceTree = "<group>"; };
 		67D36B162B88C28A00AE813C /* PlayerStatsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsReducer.swift; sourceTree = "<group>"; };
 		67D36B182B88CC4F00AE813C /* PlayerStatsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsListCell.swift; sourceTree = "<group>"; };
+		67D36B1B2B88D56100AE813C /* StatsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsContainerView.swift; sourceTree = "<group>"; };
+		67D36B1D2B88DE8D00AE813C /* StatsContainerReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsContainerReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 				67BD95602B8236EF002EBD0B /* SelectLeagueReducer.swift */,
 				67936B942B7E6DCD0004E4B9 /* StandingReducer.swift */,
 				67936B962B8110780004E4B9 /* FixturesReducer.swift */,
+				67D36B1D2B88DE8D00AE813C /* StatsContainerReducer.swift */,
 				67D36B162B88C28A00AE813C /* PlayerStatsReducer.swift */,
 			);
 			path = Reducer;
@@ -363,6 +368,7 @@
 		67D36B072B8628BF00AE813C /* Stats */ = {
 			isa = PBXGroup;
 			children = (
+				67D36B1B2B88D56100AE813C /* StatsContainerView.swift */,
 				67D36B1A2B88D4E700AE813C /* PlayerStatsVIew */,
 			);
 			path = Stats;
@@ -545,7 +551,9 @@
 				672CB5142AD3EDBD005048D5 /* FixturesView.swift in Sources */,
 				679A8CC32ACF4ED8000C090C /* SelectLeagueView.swift in Sources */,
 				679A8CB62AC9BEDC000C090C /* APIError.swift in Sources */,
+				67D36B1C2B88D56100AE813C /* StatsContainerView.swift in Sources */,
 				672CB5182AD3EF71005048D5 /* Fixture.swift in Sources */,
+				67D36B1E2B88DE8D00AE813C /* StatsContainerReducer.swift in Sources */,
 				67BD95512B815C2E002EBD0B /* LeagueType.swift in Sources */,
 				67936B952B7E6DCD0004E4B9 /* StandingReducer.swift in Sources */,
 				67D36B192B88CC4F00AE813C /* PlayerStatsListCell.swift in Sources */,
