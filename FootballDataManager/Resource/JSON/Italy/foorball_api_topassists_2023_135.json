@@ -1,8 +1,8 @@
 {
-    "get": "players/topscorers",
+    "get": "players/topassists",
     "parameters": {
-        "league": "39",
-        "season": "2023"
+        "season": "2023",
+        "league": "135"
     },
     "errors": [],
     "results": 20,
@@ -13,93 +13,93 @@
     "response": [
         {
             "player": {
-                "id": 1100,
-                "name": "E. Haaland",
-                "firstname": "Erling",
-                "lastname": "Braut Haaland",
-                "age": 24,
+                "id": 2295,
+                "name": "O. Giroud",
+                "firstname": "Olivier Jonathan",
+                "lastname": "Giroud",
+                "age": 38,
                 "birth": {
-                    "date": "2000-07-21",
-                    "place": "Leeds",
-                    "country": "England"
+                    "date": "1986-09-30",
+                    "place": "Chambéry",
+                    "country": "France"
                 },
-                "nationality": "Norway",
-                "height": "194 cm",
-                "weight": "88 kg",
+                "nationality": "France",
+                "height": "193 cm",
+                "weight": "91 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/1100.png"
+                "photo": "https://media.api-sports.io/football/players/2295.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 50,
-                        "name": "Manchester City",
-                        "logo": "https://media.api-sports.io/football/teams/50.png"
+                        "id": 489,
+                        "name": "AC Milan",
+                        "logo": "https://media.api-sports.io/football/teams/489.png"
                     },
                     "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
                         "season": 2023
                     },
                     "games": {
-                        "appearences": 20,
-                        "lineups": 19,
-                        "minutes": 1671,
+                        "appearences": 22,
+                        "lineups": 20,
+                        "minutes": 1631,
                         "number": null,
                         "position": "Attacker",
-                        "rating": "7.490000",
+                        "rating": "7.377272",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 1,
-                        "out": 4,
-                        "bench": 1
+                        "in": 2,
+                        "out": 12,
+                        "bench": 3
                     },
                     "shots": {
-                        "total": 67,
-                        "on": 40
+                        "total": 42,
+                        "on": 26
                     },
                     "goals": {
-                        "total": 17,
+                        "total": 12,
                         "conceded": 0,
-                        "assists": 5,
+                        "assists": 8,
                         "saves": null
                     },
                     "passes": {
-                        "total": 229,
-                        "key": 22,
-                        "accuracy": 8
+                        "total": 345,
+                        "key": 29,
+                        "accuracy": 10
                     },
                     "tackles": {
-                        "total": 4,
-                        "blocks": 1,
-                        "interceptions": 1
+                        "total": 13,
+                        "blocks": 3,
+                        "interceptions": 4
                     },
                     "duels": {
-                        "total": 115,
-                        "won": 57
+                        "total": 145,
+                        "won": 66
                     },
                     "dribbles": {
-                        "attempts": 15,
-                        "success": 9,
+                        "attempts": 6,
+                        "success": 3,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 18,
-                        "committed": 13
+                        "drawn": 15,
+                        "committed": 22
                     },
                     "cards": {
                         "yellow": 1,
                         "yellowred": 0,
-                        "red": 0
+                        "red": 1
                     },
                     "penalty": {
                         "won": null,
                         "commited": null,
-                        "scored": 3,
+                        "scored": 4,
                         "missed": 1,
                         "saved": null
                     }
@@ -108,276 +108,86 @@
         },
         {
             "player": {
-                "id": 306,
-                "name": "Mohamed Salah",
-                "firstname": "Mohamed",
-                "lastname": "Salah Hamed Mahrous Ghaly",
-                "age": 32,
-                "birth": {
-                    "date": "1992-06-15",
-                    "place": "Nagrig",
-                    "country": "Egypt"
-                },
-                "nationality": "Egypt",
-                "height": "175 cm",
-                "weight": "71 kg",
-                "injured": false,
-                "photo": "https://media.api-sports.io/football/players/306.png"
-            },
-            "statistics": [
-                {
-                    "team": {
-                        "id": 40,
-                        "name": "Liverpool",
-                        "logo": "https://media.api-sports.io/football/teams/40.png"
-                    },
-                    "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
-                        "season": 2023
-                    },
-                    "games": {
-                        "appearences": 21,
-                        "lineups": 20,
-                        "minutes": 1790,
-                        "number": null,
-                        "position": "Attacker",
-                        "rating": "7.771428",
-                        "captain": false
-                    },
-                    "substitutes": {
-                        "in": 1,
-                        "out": 5,
-                        "bench": 1
-                    },
-                    "shots": {
-                        "total": 54,
-                        "on": 34
-                    },
-                    "goals": {
-                        "total": 15,
-                        "conceded": 0,
-                        "assists": 9,
-                        "saves": null
-                    },
-                    "passes": {
-                        "total": 672,
-                        "key": 51,
-                        "accuracy": 24
-                    },
-                    "tackles": {
-                        "total": 13,
-                        "blocks": 1,
-                        "interceptions": 2
-                    },
-                    "duels": {
-                        "total": 158,
-                        "won": 54
-                    },
-                    "dribbles": {
-                        "attempts": 54,
-                        "success": 19,
-                        "past": null
-                    },
-                    "fouls": {
-                        "drawn": 18,
-                        "committed": 7
-                    },
-                    "cards": {
-                        "yellow": 2,
-                        "yellowred": 0,
-                        "red": 0
-                    },
-                    "penalty": {
-                        "won": null,
-                        "commited": null,
-                        "scored": 4,
-                        "missed": 2,
-                        "saved": null
-                    }
-                }
-            ]
-        },
-        {
-            "player": {
-                "id": 18883,
-                "name": "D. Solanke",
-                "firstname": "Dominic Ayodele",
-                "lastname": "Solanke-Mitchell",
+                "id": 21509,
+                "name": "M. Thuram",
+                "firstname": "Marcus Lilian",
+                "lastname": "Thuram-Ulien",
                 "age": 27,
                 "birth": {
-                    "date": "1997-09-14",
-                    "place": "Reading",
-                    "country": "England"
+                    "date": "1997-08-06",
+                    "place": "Parma",
+                    "country": "Italy"
                 },
-                "nationality": "England",
-                "height": "187 cm",
-                "weight": "80 kg",
+                "nationality": "France",
+                "height": "192 cm",
+                "weight": "90 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/18883.png"
+                "photo": "https://media.api-sports.io/football/players/21509.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 35,
-                        "name": "Bournemouth",
-                        "logo": "https://media.api-sports.io/football/teams/35.png"
+                        "id": 505,
+                        "name": "Inter",
+                        "logo": "https://media.api-sports.io/football/teams/505.png"
                     },
                     "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
                         "season": 2023
                     },
                     "games": {
                         "appearences": 24,
                         "lineups": 24,
-                        "minutes": 2141,
+                        "minutes": 1842,
                         "number": null,
                         "position": "Attacker",
-                        "rating": "7.037500",
+                        "rating": "7.304166",
                         "captain": false
                     },
                     "substitutes": {
                         "in": 0,
-                        "out": 4,
+                        "out": 18,
                         "bench": 0
                     },
                     "shots": {
-                        "total": 56,
-                        "on": 27
+                        "total": 47,
+                        "on": 23
                     },
                     "goals": {
-                        "total": 14,
+                        "total": 10,
                         "conceded": 0,
-                        "assists": 3,
+                        "assists": 7,
                         "saves": null
                     },
                     "passes": {
-                        "total": 334,
-                        "key": 21,
-                        "accuracy": 10
+                        "total": 428,
+                        "key": 17,
+                        "accuracy": 13
                     },
                     "tackles": {
-                        "total": 14,
-                        "blocks": 4,
-                        "interceptions": 3
-                    },
-                    "duels": {
-                        "total": 343,
-                        "won": 121
-                    },
-                    "dribbles": {
-                        "attempts": 70,
-                        "success": 27,
-                        "past": null
-                    },
-                    "fouls": {
-                        "drawn": 23,
-                        "committed": 26
-                    },
-                    "cards": {
-                        "yellow": 2,
-                        "yellowred": 0,
-                        "red": 0
-                    },
-                    "penalty": {
-                        "won": null,
-                        "commited": null,
-                        "scored": 1,
-                        "missed": 0,
-                        "saved": null
-                    }
-                }
-            ]
-        },
-        {
-            "player": {
-                "id": 19366,
-                "name": "O. Watkins",
-                "firstname": "Oliver George Arthur",
-                "lastname": "Watkins",
-                "age": 29,
-                "birth": {
-                    "date": "1995-12-30",
-                    "place": "Torbay",
-                    "country": "England"
-                },
-                "nationality": "England",
-                "height": "180 cm",
-                "weight": "70 kg",
-                "injured": false,
-                "photo": "https://media.api-sports.io/football/players/19366.png"
-            },
-            "statistics": [
-                {
-                    "team": {
-                        "id": 66,
-                        "name": "Aston Villa",
-                        "logo": "https://media.api-sports.io/football/teams/66.png"
-                    },
-                    "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
-                        "season": 2023
-                    },
-                    "games": {
-                        "appearences": 25,
-                        "lineups": 25,
-                        "minutes": 2213,
-                        "number": null,
-                        "position": "Attacker",
-                        "rating": "7.428000",
-                        "captain": false
-                    },
-                    "substitutes": {
-                        "in": 0,
-                        "out": 7,
-                        "bench": 0
-                    },
-                    "shots": {
-                        "total": 59,
-                        "on": 33
-                    },
-                    "goals": {
-                        "total": 13,
-                        "conceded": 0,
-                        "assists": 10,
-                        "saves": null
-                    },
-                    "passes": {
-                        "total": 399,
-                        "key": 36,
-                        "accuracy": 12
-                    },
-                    "tackles": {
-                        "total": 8,
+                        "total": 15,
                         "blocks": 3,
-                        "interceptions": 3
+                        "interceptions": 4
                     },
                     "duels": {
-                        "total": 215,
-                        "won": 79
+                        "total": 208,
+                        "won": 115
                     },
                     "dribbles": {
-                        "attempts": 41,
-                        "success": 18,
+                        "attempts": 36,
+                        "success": 26,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 22,
-                        "committed": 17
+                        "drawn": 27,
+                        "committed": 21
                     },
                     "cards": {
-                        "yellow": 4,
+                        "yellow": 3,
                         "yellowred": 0,
                         "red": 0
                     },
@@ -393,83 +203,368 @@
         },
         {
             "player": {
-                "id": 186,
-                "name": "Son Heung-Min",
-                "firstname": "Heung-Min",
-                "lastname": "Son",
-                "age": 32,
+                "id": 22236,
+                "name": "Rafael Leão",
+                "firstname": "Rafael Alexandre",
+                "lastname": "da Conceição Leão",
+                "age": 25,
                 "birth": {
-                    "date": "1992-07-08",
-                    "place": "Chuncheon",
-                    "country": "Korea Republic"
+                    "date": "1999-06-10",
+                    "place": "Almada",
+                    "country": "Portugal"
                 },
-                "nationality": "Korea Republic",
-                "height": "183 cm",
-                "weight": "78 kg",
+                "nationality": "Portugal",
+                "height": "188 cm",
+                "weight": "81 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/186.png"
+                "photo": "https://media.api-sports.io/football/players/22236.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 47,
-                        "name": "Tottenham",
-                        "logo": "https://media.api-sports.io/football/teams/47.png"
+                        "id": 489,
+                        "name": "AC Milan",
+                        "logo": "https://media.api-sports.io/football/teams/489.png"
                     },
                     "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
                         "season": 2023
                     },
                     "games": {
                         "appearences": 22,
-                        "lineups": 21,
-                        "minutes": 1817,
+                        "lineups": 19,
+                        "minutes": 1630,
                         "number": null,
                         "position": "Attacker",
-                        "rating": "7.618181",
+                        "rating": "7.272727",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 1,
-                        "out": 10,
+                        "in": 3,
+                        "out": 11,
+                        "bench": 3
+                    },
+                    "shots": {
+                        "total": 25,
+                        "on": 10
+                    },
+                    "goals": {
+                        "total": 3,
+                        "conceded": 0,
+                        "assists": 7,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 536,
+                        "key": 38,
+                        "accuracy": 20
+                    },
+                    "tackles": {
+                        "total": 11,
+                        "blocks": 1,
+                        "interceptions": 6
+                    },
+                    "duels": {
+                        "total": 197,
+                        "won": 106
+                    },
+                    "dribbles": {
+                        "attempts": 81,
+                        "success": 42,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 35,
+                        "committed": 16
+                    },
+                    "cards": {
+                        "yellow": 3,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 875,
+                "name": "P. Dybala",
+                "firstname": "Paulo Exequiel",
+                "lastname": "Dybala",
+                "age": 31,
+                "birth": {
+                    "date": "1993-11-15",
+                    "place": "Laguna Larga",
+                    "country": "Argentina"
+                },
+                "nationality": "Argentina",
+                "height": "177 cm",
+                "weight": "75 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/875.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 497,
+                        "name": "AS Roma",
+                        "logo": "https://media.api-sports.io/football/teams/497.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2023
+                    },
+                    "games": {
+                        "appearences": 17,
+                        "lineups": 17,
+                        "minutes": 1272,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.447058",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 13,
                         "bench": 1
                     },
                     "shots": {
-                        "total": 39,
-                        "on": 26
+                        "total": 32,
+                        "on": 17
                     },
                     "goals": {
-                        "total": 12,
+                        "total": 8,
                         "conceded": 0,
                         "assists": 6,
                         "saves": null
                     },
                     "passes": {
-                        "total": 594,
-                        "key": 39,
-                        "accuracy": 22
+                        "total": 600,
+                        "key": 31,
+                        "accuracy": 29
                     },
                     "tackles": {
-                        "total": 14,
-                        "blocks": 1,
-                        "interceptions": 7
+                        "total": 16,
+                        "blocks": null,
+                        "interceptions": 2
                     },
                     "duels": {
-                        "total": 140,
-                        "won": 62
+                        "total": 153,
+                        "won": 72
                     },
                     "dribbles": {
-                        "attempts": 50,
-                        "success": 22,
+                        "attempts": 47,
+                        "success": 19,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 23,
-                        "committed": 9
+                        "drawn": 33,
+                        "committed": 10
+                    },
+                    "cards": {
+                        "yellow": 3,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 5,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 17,
+                "name": "C. Pulišić",
+                "firstname": "Christian Mate",
+                "lastname": "Pulišić",
+                "age": 26,
+                "birth": {
+                    "date": "1998-09-18",
+                    "place": "Hershey",
+                    "country": "USA"
+                },
+                "nationality": "USA",
+                "height": "177 cm",
+                "weight": "69 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/17.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 489,
+                        "name": "AC Milan",
+                        "logo": "https://media.api-sports.io/football/teams/489.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2023
+                    },
+                    "games": {
+                        "appearences": 23,
+                        "lineups": 21,
+                        "minutes": 1675,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": "7.282608",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 2,
+                        "out": 16,
+                        "bench": 2
+                    },
+                    "shots": {
+                        "total": 27,
+                        "on": 17
+                    },
+                    "goals": {
+                        "total": 7,
+                        "conceded": 0,
+                        "assists": 6,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 623,
+                        "key": 28,
+                        "accuracy": 22
+                    },
+                    "tackles": {
+                        "total": 24,
+                        "blocks": 1,
+                        "interceptions": 9
+                    },
+                    "duels": {
+                        "total": 183,
+                        "won": 96
+                    },
+                    "dribbles": {
+                        "attempts": 58,
+                        "success": 29,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 31,
+                        "committed": 16
+                    },
+                    "cards": {
+                        "yellow": 1,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 147859,
+                "name": "C. De Ketelaere",
+                "firstname": "Charles Marc S.",
+                "lastname": "De Ketelaere",
+                "age": 23,
+                "birth": {
+                    "date": "2001-03-10",
+                    "place": "Brugge",
+                    "country": "Belgium"
+                },
+                "nationality": "Belgium",
+                "height": "192 cm",
+                "weight": "74 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/147859.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 499,
+                        "name": "Atalanta",
+                        "logo": "https://media.api-sports.io/football/teams/499.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2023
+                    },
+                    "games": {
+                        "appearences": 22,
+                        "lineups": 16,
+                        "minutes": 1303,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": "7.322727",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 6,
+                        "out": 15,
+                        "bench": 7
+                    },
+                    "shots": {
+                        "total": 26,
+                        "on": 16
+                    },
+                    "goals": {
+                        "total": 6,
+                        "conceded": 0,
+                        "assists": 6,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 465,
+                        "key": 35,
+                        "accuracy": 16
+                    },
+                    "tackles": {
+                        "total": 23,
+                        "blocks": 1,
+                        "interceptions": 5
+                    },
+                    "duels": {
+                        "total": 217,
+                        "won": 114
+                    },
+                    "dribbles": {
+                        "attempts": 52,
+                        "success": 28,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 33,
+                        "committed": 15
                     },
                     "cards": {
                         "yellow": 1,
@@ -488,177 +583,82 @@
         },
         {
             "player": {
-                "id": 1460,
-                "name": "B. Saka",
-                "firstname": "Bukayo Ayoyinka Temidayo",
-                "lastname": "Saka",
-                "age": 23,
+                "id": 2412,
+                "name": "Felipe Anderson",
+                "firstname": "Felipe",
+                "lastname": "Anderson Pereira Gomes",
+                "age": 31,
                 "birth": {
-                    "date": "2001-09-05",
-                    "place": "London",
-                    "country": "England"
+                    "date": "1993-04-15",
+                    "place": "Brasília",
+                    "country": "Brazil"
                 },
-                "nationality": "England",
-                "height": "178 cm",
-                "weight": "72 kg",
+                "nationality": "Brazil",
+                "height": "175 cm",
+                "weight": "70 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/1460.png"
+                "photo": "https://media.api-sports.io/football/players/2412.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 42,
-                        "name": "Arsenal",
-                        "logo": "https://media.api-sports.io/football/teams/42.png"
+                        "id": 487,
+                        "name": "Lazio",
+                        "logo": "https://media.api-sports.io/football/teams/487.png"
                     },
                     "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
                         "season": 2023
                     },
                     "games": {
                         "appearences": 24,
-                        "lineups": 24,
-                        "minutes": 2063,
+                        "lineups": 21,
+                        "minutes": 1770,
                         "number": null,
-                        "position": "Attacker",
-                        "rating": "7.691666",
+                        "position": "Midfielder",
+                        "rating": "7.075000",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 0,
-                        "out": 11,
-                        "bench": 0
+                        "in": 3,
+                        "out": 12,
+                        "bench": 3
                     },
                     "shots": {
-                        "total": 42,
-                        "on": 26
+                        "total": 14,
+                        "on": 5
                     },
                     "goals": {
-                        "total": 12,
+                        "total": 3,
                         "conceded": 0,
                         "assists": 6,
                         "saves": null
                     },
                     "passes": {
-                        "total": 942,
-                        "key": 61,
-                        "accuracy": 32
+                        "total": 795,
+                        "key": 26,
+                        "accuracy": 25
                     },
                     "tackles": {
                         "total": 48,
-                        "blocks": 2,
-                        "interceptions": 10
+                        "blocks": 1,
+                        "interceptions": 21
                     },
                     "duels": {
-                        "total": 297,
-                        "won": 148
+                        "total": 241,
+                        "won": 111
                     },
                     "dribbles": {
-                        "attempts": 77,
-                        "success": 34,
+                        "attempts": 73,
+                        "success": 31,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 48,
-                        "committed": 27
-                    },
-                    "cards": {
-                        "yellow": 3,
-                        "yellowred": 0,
-                        "red": 0
-                    },
-                    "penalty": {
-                        "won": null,
-                        "commited": null,
-                        "scored": 4,
-                        "missed": 0,
-                        "saved": null
-                    }
-                }
-            ]
-        },
-        {
-            "player": {
-                "id": 19428,
-                "name": "J. Bowen",
-                "firstname": "Jarrod",
-                "lastname": "Bowen",
-                "age": 28,
-                "birth": {
-                    "date": "1996-12-20",
-                    "place": "Leominster",
-                    "country": "England"
-                },
-                "nationality": "England",
-                "height": "175 cm",
-                "weight": "70 kg",
-                "injured": false,
-                "photo": "https://media.api-sports.io/football/players/19428.png"
-            },
-            "statistics": [
-                {
-                    "team": {
-                        "id": 48,
-                        "name": "West Ham",
-                        "logo": "https://media.api-sports.io/football/teams/48.png"
-                    },
-                    "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
-                        "season": 2023
-                    },
-                    "games": {
-                        "appearences": 24,
-                        "lineups": 24,
-                        "minutes": 2157,
-                        "number": null,
-                        "position": "Attacker",
-                        "rating": "7.054166",
-                        "captain": false
-                    },
-                    "substitutes": {
-                        "in": 0,
-                        "out": 2,
-                        "bench": 0
-                    },
-                    "shots": {
-                        "total": 45,
-                        "on": 27
-                    },
-                    "goals": {
-                        "total": 11,
-                        "conceded": 0,
-                        "assists": 2,
-                        "saves": null
-                    },
-                    "passes": {
-                        "total": 445,
-                        "key": 17,
-                        "accuracy": 13
-                    },
-                    "tackles": {
-                        "total": 30,
-                        "blocks": 5,
-                        "interceptions": 16
-                    },
-                    "duels": {
-                        "total": 267,
-                        "won": 108
-                    },
-                    "dribbles": {
-                        "attempts": 52,
-                        "success": 22,
-                        "past": null
-                    },
-                    "fouls": {
-                        "drawn": 30,
+                        "drawn": 22,
                         "committed": 21
                     },
                     "cards": {
@@ -678,83 +678,83 @@
         },
         {
             "player": {
-                "id": 2413,
-                "name": "Richarlison",
-                "firstname": "Richarlison",
-                "lastname": "de Andrade",
-                "age": 27,
+                "id": 1457,
+                "name": "H. Mkhitaryan",
+                "firstname": "Henrikh",
+                "lastname": "Hamlet Mkhitaryan",
+                "age": 35,
                 "birth": {
-                    "date": "1997-05-10",
-                    "place": "Nova Venécia",
-                    "country": "Brazil"
+                    "date": "1989-01-21",
+                    "place": "Yerevan",
+                    "country": "Armenia"
                 },
-                "nationality": "Brazil",
-                "height": "184 cm",
-                "weight": "83 kg",
+                "nationality": "Armenia",
+                "height": "177 cm",
+                "weight": "75 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/2413.png"
+                "photo": "https://media.api-sports.io/football/players/1457.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 47,
-                        "name": "Tottenham",
-                        "logo": "https://media.api-sports.io/football/teams/47.png"
+                        "id": 505,
+                        "name": "Inter",
+                        "logo": "https://media.api-sports.io/football/teams/505.png"
                     },
                     "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
                         "season": 2023
                     },
                     "games": {
-                        "appearences": 22,
-                        "lineups": 17,
-                        "minutes": 1352,
+                        "appearences": 24,
+                        "lineups": 23,
+                        "minutes": 1944,
                         "number": null,
-                        "position": "Attacker",
-                        "rating": "7.086363",
+                        "position": "Midfielder",
+                        "rating": "7.283333",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 5,
-                        "out": 11,
-                        "bench": 6
+                        "in": 1,
+                        "out": 12,
+                        "bench": 1
                     },
                     "shots": {
-                        "total": 43,
-                        "on": 22
+                        "total": 22,
+                        "on": 4
                     },
                     "goals": {
-                        "total": 10,
+                        "total": 2,
                         "conceded": 0,
-                        "assists": 3,
+                        "assists": 6,
                         "saves": null
                     },
                     "passes": {
-                        "total": 339,
-                        "key": 15,
-                        "accuracy": 11
+                        "total": 1086,
+                        "key": 30,
+                        "accuracy": 39
                     },
                     "tackles": {
-                        "total": 16,
-                        "blocks": 6,
-                        "interceptions": 8
+                        "total": 50,
+                        "blocks": 2,
+                        "interceptions": 23
                     },
                     "duels": {
-                        "total": 209,
-                        "won": 72
+                        "total": 177,
+                        "won": 94
                     },
                     "dribbles": {
-                        "attempts": 33,
-                        "success": 10,
+                        "attempts": 28,
+                        "success": 14,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 24,
-                        "committed": 18
+                        "drawn": 19,
+                        "committed": 27
                     },
                     "cards": {
                         "yellow": 3,
@@ -773,93 +773,93 @@
         },
         {
             "player": {
-                "id": 24888,
-                "name": "Hwang Hee-Chan",
-                "firstname": "Hee-Chan",
-                "lastname": "Hwang",
-                "age": 28,
+                "id": 202,
+                "name": "A. Candreva",
+                "firstname": "Antonio",
+                "lastname": "Candreva",
+                "age": 37,
                 "birth": {
-                    "date": "1996-01-26",
-                    "place": "Chuncheon",
-                    "country": "Korea Republic"
+                    "date": "1987-02-28",
+                    "place": "Roma",
+                    "country": "Italy"
                 },
-                "nationality": "Korea Republic",
-                "height": "177 cm",
-                "weight": "77 kg",
+                "nationality": "Italy",
+                "height": "180 cm",
+                "weight": "70 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/24888.png"
+                "photo": "https://media.api-sports.io/football/players/202.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 39,
-                        "name": "Wolves",
-                        "logo": "https://media.api-sports.io/football/teams/39.png"
+                        "id": 514,
+                        "name": "Salernitana",
+                        "logo": "https://media.api-sports.io/football/teams/514.png"
                     },
                     "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
                         "season": 2023
                     },
                     "games": {
-                        "appearences": 21,
-                        "lineups": 18,
-                        "minutes": 1539,
+                        "appearences": 24,
+                        "lineups": 23,
+                        "minutes": 1964,
                         "number": null,
-                        "position": "Attacker",
-                        "rating": "7.076190",
+                        "position": "Midfielder",
+                        "rating": "7.241666",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 3,
-                        "out": 7,
-                        "bench": 3
+                        "in": 1,
+                        "out": 6,
+                        "bench": 1
                     },
                     "shots": {
-                        "total": 29,
-                        "on": 13
+                        "total": 32,
+                        "on": 18
                     },
                     "goals": {
-                        "total": 10,
+                        "total": 5,
                         "conceded": 0,
-                        "assists": 3,
+                        "assists": 5,
                         "saves": null
                     },
                     "passes": {
-                        "total": 413,
-                        "key": 15,
-                        "accuracy": 15
+                        "total": 757,
+                        "key": 49,
+                        "accuracy": 25
                     },
                     "tackles": {
-                        "total": 16,
-                        "blocks": 1,
-                        "interceptions": 8
+                        "total": 12,
+                        "blocks": null,
+                        "interceptions": 5
                     },
                     "duels": {
-                        "total": 192,
-                        "won": 78
+                        "total": 98,
+                        "won": 54
                     },
                     "dribbles": {
-                        "attempts": 58,
-                        "success": 32,
+                        "attempts": 25,
+                        "success": 11,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 27,
-                        "committed": 25
+                        "drawn": 31,
+                        "committed": 5
                     },
                     "cards": {
-                        "yellow": 4,
+                        "yellow": 3,
                         "yellowred": 0,
                         "red": 0
                     },
                     "penalty": {
                         "won": null,
                         "commited": null,
-                        "scored": 1,
+                        "scored": 0,
                         "missed": 0,
                         "saved": null
                     }
@@ -868,86 +868,656 @@
         },
         {
             "player": {
-                "id": 2864,
-                "name": "A. Isak",
-                "firstname": "Alexander",
-                "lastname": "Isak",
-                "age": 25,
+                "id": 31010,
+                "name": "F. Dimarco",
+                "firstname": "Federico",
+                "lastname": "Dimarco",
+                "age": 27,
                 "birth": {
-                    "date": "1999-09-21",
-                    "place": "Stockholm",
-                    "country": "Sweden"
+                    "date": "1997-11-10",
+                    "place": "Milano",
+                    "country": "Italy"
                 },
-                "nationality": "Sweden",
-                "height": "192 cm",
-                "weight": "77 kg",
+                "nationality": "Italy",
+                "height": "175 cm",
+                "weight": "75 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/2864.png"
+                "photo": "https://media.api-sports.io/football/players/31010.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 34,
-                        "name": "Newcastle",
-                        "logo": "https://media.api-sports.io/football/teams/34.png"
+                        "id": 505,
+                        "name": "Inter",
+                        "logo": "https://media.api-sports.io/football/teams/505.png"
                     },
                     "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
                         "season": 2023
                     },
                     "games": {
-                        "appearences": 17,
-                        "lineups": 14,
-                        "minutes": 1187,
+                        "appearences": 19,
+                        "lineups": 18,
+                        "minutes": 1307,
                         "number": null,
-                        "position": "Attacker",
-                        "rating": "6.976470",
+                        "position": "Defender",
+                        "rating": "7.347368",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 3,
-                        "out": 9,
+                        "in": 1,
+                        "out": 17,
                         "bench": 4
                     },
                     "shots": {
-                        "total": 30,
-                        "on": 21
+                        "total": 25,
+                        "on": 10
                     },
                     "goals": {
-                        "total": 10,
+                        "total": 3,
                         "conceded": 0,
-                        "assists": null,
+                        "assists": 5,
                         "saves": null
                     },
                     "passes": {
-                        "total": 244,
-                        "key": 12,
-                        "accuracy": 11
+                        "total": 626,
+                        "key": 40,
+                        "accuracy": 27
                     },
                     "tackles": {
-                        "total": 3,
+                        "total": 26,
+                        "blocks": 2,
+                        "interceptions": 7
+                    },
+                    "duels": {
+                        "total": 81,
+                        "won": 44
+                    },
+                    "dribbles": {
+                        "attempts": 13,
+                        "success": 4,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 13,
+                        "committed": 7
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 31042,
+                "name": "G. Di Lorenzo",
+                "firstname": "Giovanni",
+                "lastname": "Di Lorenzo",
+                "age": 31,
+                "birth": {
+                    "date": "1993-08-04",
+                    "place": "Castelnuovo Garfagnana",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "183 cm",
+                "weight": "83 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/31042.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 492,
+                        "name": "Napoli",
+                        "logo": "https://media.api-sports.io/football/teams/492.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2023
+                    },
+                    "games": {
+                        "appearences": 24,
+                        "lineups": 24,
+                        "minutes": 2160,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": "7.220833",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": 16,
+                        "on": 5
+                    },
+                    "goals": {
+                        "total": 1,
+                        "conceded": 0,
+                        "assists": 5,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 1478,
+                        "key": 34,
+                        "accuracy": 53
+                    },
+                    "tackles": {
+                        "total": 39,
+                        "blocks": 8,
+                        "interceptions": 14
+                    },
+                    "duels": {
+                        "total": 197,
+                        "won": 91
+                    },
+                    "dribbles": {
+                        "attempts": 35,
+                        "success": 13,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 22,
+                        "committed": 14
+                    },
+                    "cards": {
+                        "yellow": 5,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30532,
+                "name": "A. Duncan",
+                "firstname": "Joseph Alfred",
+                "lastname": "Duncan",
+                "age": 31,
+                "birth": {
+                    "date": "1993-03-10",
+                    "place": "Accra",
+                    "country": "Ghana"
+                },
+                "nationality": "Ghana",
+                "height": "178 cm",
+                "weight": "78 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/30532.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 502,
+                        "name": "Fiorentina",
+                        "logo": "https://media.api-sports.io/football/teams/502.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2023
+                    },
+                    "games": {
+                        "appearences": 22,
+                        "lineups": 18,
+                        "minutes": 1429,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": "7.031818",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 4,
+                        "out": 14,
+                        "bench": 6
+                    },
+                    "shots": {
+                        "total": 12,
+                        "on": 4
+                    },
+                    "goals": {
+                        "total": 1,
+                        "conceded": 0,
+                        "assists": 5,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 711,
+                        "key": 30,
+                        "accuracy": 26
+                    },
+                    "tackles": {
+                        "total": 27,
+                        "blocks": 4,
+                        "interceptions": 10
+                    },
+                    "duels": {
+                        "total": 148,
+                        "won": 70
+                    },
+                    "dribbles": {
+                        "attempts": 27,
+                        "success": 14,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 12,
+                        "committed": 20
+                    },
+                    "cards": {
+                        "yellow": 2,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30432,
+                "name": "M. de Roon",
+                "firstname": "Marten Elco",
+                "lastname": "de Roon",
+                "age": 33,
+                "birth": {
+                    "date": "1991-03-29",
+                    "place": "Zwijndrecht",
+                    "country": "Netherlands"
+                },
+                "nationality": "Netherlands",
+                "height": "186 cm",
+                "weight": "76 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/30432.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 499,
+                        "name": "Atalanta",
+                        "logo": "https://media.api-sports.io/football/teams/499.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2023
+                    },
+                    "games": {
+                        "appearences": 22,
+                        "lineups": 22,
+                        "minutes": 1980,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": "7.090909",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 1
+                    },
+                    "shots": {
+                        "total": 6,
+                        "on": 2
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": 0,
+                        "assists": 5,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 1264,
+                        "key": 19,
+                        "accuracy": 49
+                    },
+                    "tackles": {
+                        "total": 63,
+                        "blocks": 6,
+                        "interceptions": 29
+                    },
+                    "duels": {
+                        "total": 211,
+                        "won": 109
+                    },
+                    "dribbles": {
+                        "attempts": 8,
+                        "success": 3,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 17,
+                        "committed": 32
+                    },
+                    "cards": {
+                        "yellow": 8,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 1118,
+                "name": "J. Toljan",
+                "firstname": "Jeremy Isaiah Richard",
+                "lastname": "Toljan",
+                "age": 30,
+                "birth": {
+                    "date": "1994-08-08",
+                    "place": "Stuttgart",
+                    "country": "Germany"
+                },
+                "nationality": "Germany",
+                "height": "182 cm",
+                "weight": "74 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/1118.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2023
+                    },
+                    "games": {
+                        "appearences": 18,
+                        "lineups": 18,
+                        "minutes": 1615,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": "6.683333",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 1,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": 8,
+                        "on": 3
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": 0,
+                        "assists": 5,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 612,
+                        "key": 17,
+                        "accuracy": 26
+                    },
+                    "tackles": {
+                        "total": 10,
+                        "blocks": 4,
+                        "interceptions": 10
+                    },
+                    "duels": {
+                        "total": 64,
+                        "won": 28
+                    },
+                    "dribbles": {
+                        "attempts": 10,
+                        "success": 6,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 6,
+                        "committed": 6
+                    },
+                    "cards": {
+                        "yellow": 1,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 118956,
+                "name": "L. Banda",
+                "firstname": "Lameck",
+                "lastname": "Banda",
+                "age": 23,
+                "birth": {
+                    "date": "2001-01-29",
+                    "place": "Lusaka",
+                    "country": "Zambia"
+                },
+                "nationality": "Zambia",
+                "height": "169 cm",
+                "weight": "69 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/118956.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 867,
+                        "name": "Lecce",
+                        "logo": "https://media.api-sports.io/football/teams/867.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2023
+                    },
+                    "games": {
+                        "appearences": 16,
+                        "lineups": 14,
+                        "minutes": 1115,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": "7.043750",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 2,
+                        "out": 11,
+                        "bench": 2
+                    },
+                    "shots": {
+                        "total": 28,
+                        "on": 20
+                    },
+                    "goals": {
+                        "total": 2,
+                        "conceded": 0,
+                        "assists": 4,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 236,
+                        "key": 22,
+                        "accuracy": 12
+                    },
+                    "tackles": {
+                        "total": 21,
                         "blocks": null,
                         "interceptions": 3
                     },
                     "duels": {
-                        "total": 94,
-                        "won": 37
+                        "total": 202,
+                        "won": 89
                     },
                     "dribbles": {
-                        "attempts": 35,
-                        "success": 23,
+                        "attempts": 77,
+                        "success": 39,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 8,
-                        "committed": 10
+                        "drawn": 24,
+                        "committed": 27
                     },
                     "cards": {
-                        "yellow": 0,
+                        "yellow": 4,
+                        "yellowred": 0,
+                        "red": 1
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 271,
+                "name": "L. Paredes",
+                "firstname": "Leandro Daniel",
+                "lastname": "Paredes",
+                "age": 30,
+                "birth": {
+                    "date": "1994-06-29",
+                    "place": "San Justo",
+                    "country": "Argentina"
+                },
+                "nationality": "Argentina",
+                "height": "182 cm",
+                "weight": "75 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/271.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 497,
+                        "name": "AS Roma",
+                        "logo": "https://media.api-sports.io/football/teams/497.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2023
+                    },
+                    "games": {
+                        "appearences": 23,
+                        "lineups": 21,
+                        "minutes": 1781,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": "7.069565",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 2,
+                        "out": 9,
+                        "bench": 2
+                    },
+                    "shots": {
+                        "total": 11,
+                        "on": 2
+                    },
+                    "goals": {
+                        "total": 2,
+                        "conceded": 0,
+                        "assists": 4,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 1238,
+                        "key": 14,
+                        "accuracy": 48
+                    },
+                    "tackles": {
+                        "total": 37,
+                        "blocks": 3,
+                        "interceptions": 19
+                    },
+                    "duels": {
+                        "total": 148,
+                        "won": 82
+                    },
+                    "dribbles": {
+                        "attempts": 9,
+                        "success": 6,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 29,
+                        "committed": 21
+                    },
+                    "cards": {
+                        "yellow": 11,
                         "yellowred": 0,
                         "red": 0
                     },
@@ -963,93 +1533,93 @@
         },
         {
             "player": {
-                "id": 152982,
-                "name": "C. Palmer",
-                "firstname": "Cole Jermaine",
-                "lastname": "Palmer",
-                "age": 22,
+                "id": 2215,
+                "name": "A. Laurienté",
+                "firstname": "Armand",
+                "lastname": "Laurienté",
+                "age": 26,
                 "birth": {
-                    "date": "2002-05-06",
-                    "place": null,
-                    "country": "England"
+                    "date": "1998-12-04",
+                    "place": "Gonesse",
+                    "country": "France"
                 },
-                "nationality": "England",
-                "height": "182 cm",
-                "weight": "74 kg",
+                "nationality": "France",
+                "height": "171 cm",
+                "weight": "59 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/152982.png"
+                "photo": "https://media.api-sports.io/football/players/2215.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 49,
-                        "name": "Chelsea",
-                        "logo": "https://media.api-sports.io/football/teams/49.png"
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media.api-sports.io/football/teams/488.png"
                     },
                     "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
                         "season": 2023
                     },
                     "games": {
-                        "appearences": 21,
-                        "lineups": 17,
-                        "minutes": 1570,
+                        "appearences": 24,
+                        "lineups": 23,
+                        "minutes": 1858,
                         "number": null,
-                        "position": "Midfielder",
-                        "rating": "7.490476",
+                        "position": "Attacker",
+                        "rating": "6.937500",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 4,
-                        "out": 9,
-                        "bench": 4
+                        "in": 1,
+                        "out": 15,
+                        "bench": 1
                     },
                     "shots": {
-                        "total": 35,
-                        "on": 21
+                        "total": 41,
+                        "on": 20
                     },
                     "goals": {
-                        "total": 10,
+                        "total": 1,
                         "conceded": 0,
-                        "assists": 6,
+                        "assists": 4,
                         "saves": null
                     },
                     "passes": {
-                        "total": 836,
-                        "key": 32,
-                        "accuracy": 33
+                        "total": 519,
+                        "key": 38,
+                        "accuracy": 16
                     },
                     "tackles": {
-                        "total": 16,
-                        "blocks": 1,
-                        "interceptions": 11
+                        "total": 14,
+                        "blocks": 2,
+                        "interceptions": 9
                     },
                     "duels": {
-                        "total": 147,
-                        "won": 60
+                        "total": 214,
+                        "won": 86
                     },
                     "dribbles": {
-                        "attempts": 56,
-                        "success": 28,
+                        "attempts": 71,
+                        "success": 38,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 15,
-                        "committed": 15
+                        "drawn": 31,
+                        "committed": 23
                     },
                     "cards": {
-                        "yellow": 7,
+                        "yellow": 2,
                         "yellowred": 0,
                         "red": 0
                     },
                     "penalty": {
                         "won": null,
                         "commited": null,
-                        "scored": 5,
+                        "scored": 0,
                         "missed": 0,
                         "saved": null
                     }
@@ -1058,368 +1628,83 @@
         },
         {
             "player": {
-                "id": 51617,
-                "name": "D. Núñez",
-                "firstname": "Darwin Gabriel",
-                "lastname": "Núñez Ribeiro",
-                "age": 25,
+                "id": 15881,
+                "name": "M. Frendrup",
+                "firstname": "Morten",
+                "lastname": "Wetche Frendrup",
+                "age": 23,
                 "birth": {
-                    "date": "1999-06-24",
-                    "place": "Artigas",
-                    "country": "Uruguay"
+                    "date": "2001-04-07",
+                    "place": "Holbæk",
+                    "country": "Denmark"
                 },
-                "nationality": "Uruguay",
-                "height": "187 cm",
-                "weight": "81 kg",
+                "nationality": "Denmark",
+                "height": "178 cm",
+                "weight": "63 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/51617.png"
+                "photo": "https://media.api-sports.io/football/players/15881.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 40,
-                        "name": "Liverpool",
-                        "logo": "https://media.api-sports.io/football/teams/40.png"
+                        "id": 495,
+                        "name": "Genoa",
+                        "logo": "https://media.api-sports.io/football/teams/495.png"
                     },
                     "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
                         "season": 2023
                     },
                     "games": {
                         "appearences": 24,
-                        "lineups": 16,
-                        "minutes": 1467,
+                        "lineups": 23,
+                        "minutes": 2089,
                         "number": null,
-                        "position": "Attacker",
-                        "rating": "7.083333",
+                        "position": "Midfielder",
+                        "rating": "7.075000",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 8,
-                        "out": 9,
-                        "bench": 9
+                        "in": 1,
+                        "out": 0,
+                        "bench": 1
                     },
                     "shots": {
-                        "total": 65,
-                        "on": 35
+                        "total": 12,
+                        "on": 3
                     },
                     "goals": {
-                        "total": 9,
+                        "total": 1,
                         "conceded": 0,
-                        "assists": 7,
+                        "assists": 4,
                         "saves": null
                     },
                     "passes": {
-                        "total": 353,
-                        "key": 26,
-                        "accuracy": 10
+                        "total": 760,
+                        "key": 12,
+                        "accuracy": 24
                     },
                     "tackles": {
-                        "total": 19,
-                        "blocks": 6,
-                        "interceptions": 2
+                        "total": 94,
+                        "blocks": 7,
+                        "interceptions": 32
                     },
                     "duels": {
-                        "total": 175,
-                        "won": 62
+                        "total": 238,
+                        "won": 153
                     },
                     "dribbles": {
-                        "attempts": 29,
+                        "attempts": 18,
                         "success": 12,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 11,
-                        "committed": 22
-                    },
-                    "cards": {
-                        "yellow": 8,
-                        "yellowred": 0,
-                        "red": 0
-                    },
-                    "penalty": {
-                        "won": null,
-                        "commited": null,
-                        "scored": 0,
-                        "missed": 1,
-                        "saved": null
-                    }
-                }
-            ]
-        },
-        {
-            "player": {
-                "id": 2678,
-                "name": "Diogo Jota",
-                "firstname": "Diogo José",
-                "lastname": "Teixeira da Silva",
-                "age": 28,
-                "birth": {
-                    "date": "1996-12-04",
-                    "place": "Massarelos",
-                    "country": "Portugal"
-                },
-                "nationality": "Portugal",
-                "height": "178 cm",
-                "weight": "68 kg",
-                "injured": false,
-                "photo": "https://media.api-sports.io/football/players/2678.png"
-            },
-            "statistics": [
-                {
-                    "team": {
-                        "id": 40,
-                        "name": "Liverpool",
-                        "logo": "https://media.api-sports.io/football/teams/40.png"
-                    },
-                    "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
-                        "season": 2023
-                    },
-                    "games": {
-                        "appearences": 19,
-                        "lineups": 13,
-                        "minutes": 1052,
-                        "number": null,
-                        "position": "Attacker",
-                        "rating": "7.284210",
-                        "captain": false
-                    },
-                    "substitutes": {
-                        "in": 6,
-                        "out": 10,
-                        "bench": 6
-                    },
-                    "shots": {
-                        "total": 25,
-                        "on": 17
-                    },
-                    "goals": {
-                        "total": 9,
-                        "conceded": 0,
-                        "assists": 3,
-                        "saves": null
-                    },
-                    "passes": {
-                        "total": 360,
-                        "key": 20,
-                        "accuracy": 14
-                    },
-                    "tackles": {
-                        "total": 23,
-                        "blocks": 1,
-                        "interceptions": 6
-                    },
-                    "duels": {
-                        "total": 179,
-                        "won": 73
-                    },
-                    "dribbles": {
-                        "attempts": 32,
-                        "success": 14,
-                        "past": null
-                    },
-                    "fouls": {
-                        "drawn": 20,
-                        "committed": 27
-                    },
-                    "cards": {
-                        "yellow": 2,
-                        "yellowred": 1,
-                        "red": 0
-                    },
-                    "penalty": {
-                        "won": null,
-                        "commited": null,
-                        "scored": 0,
-                        "missed": 0,
-                        "saved": null
-                    }
-                }
-            ]
-        },
-        {
-            "player": {
-                "id": 17641,
-                "name": "E. Adebayo",
-                "firstname": "Elijah Anuoluwapo Oluwaferanmi",
-                "lastname": "Ayomikulehin Adebayo",
-                "age": 26,
-                "birth": {
-                    "date": "1998-01-07",
-                    "place": "London",
-                    "country": "England"
-                },
-                "nationality": "England",
-                "height": "193 cm",
-                "weight": "89 kg",
-                "injured": false,
-                "photo": "https://media.api-sports.io/football/players/17641.png"
-            },
-            "statistics": [
-                {
-                    "team": {
-                        "id": 1359,
-                        "name": "Luton",
-                        "logo": "https://media.api-sports.io/football/teams/1359.png"
-                    },
-                    "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
-                        "season": 2023
-                    },
-                    "games": {
-                        "appearences": 23,
-                        "lineups": 13,
-                        "minutes": 1160,
-                        "number": null,
-                        "position": "Attacker",
-                        "rating": "6.765217",
-                        "captain": false
-                    },
-                    "substitutes": {
-                        "in": 10,
-                        "out": 9,
-                        "bench": 10
-                    },
-                    "shots": {
-                        "total": 22,
-                        "on": 12
-                    },
-                    "goals": {
-                        "total": 9,
-                        "conceded": 0,
-                        "assists": null,
-                        "saves": null
-                    },
-                    "passes": {
-                        "total": 171,
-                        "key": 14,
-                        "accuracy": 6
-                    },
-                    "tackles": {
-                        "total": 1,
-                        "blocks": 1,
-                        "interceptions": 5
-                    },
-                    "duels": {
-                        "total": 192,
-                        "won": 64
-                    },
-                    "dribbles": {
-                        "attempts": 50,
-                        "success": 14,
-                        "past": null
-                    },
-                    "fouls": {
-                        "drawn": 11,
-                        "committed": 22
-                    },
-                    "cards": {
-                        "yellow": 1,
-                        "yellowred": 0,
-                        "red": 0
-                    },
-                    "penalty": {
-                        "won": null,
-                        "commited": null,
-                        "scored": 0,
-                        "missed": 0,
-                        "saved": null
-                    }
-                }
-            ]
-        },
-        {
-            "player": {
-                "id": 1165,
-                "name": "Matheus Cunha",
-                "firstname": "Matheus Santos",
-                "lastname": "Carneiro da Cunha",
-                "age": 25,
-                "birth": {
-                    "date": "1999-05-27",
-                    "place": "João Pessoa",
-                    "country": "Brazil"
-                },
-                "nationality": "Brazil",
-                "height": "183 cm",
-                "weight": "76 kg",
-                "injured": false,
-                "photo": "https://media.api-sports.io/football/players/1165.png"
-            },
-            "statistics": [
-                {
-                    "team": {
-                        "id": 39,
-                        "name": "Wolves",
-                        "logo": "https://media.api-sports.io/football/teams/39.png"
-                    },
-                    "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
-                        "season": 2023
-                    },
-                    "games": {
-                        "appearences": 24,
-                        "lineups": 24,
-                        "minutes": 1974,
-                        "number": null,
-                        "position": "Attacker",
-                        "rating": "7.254166",
-                        "captain": false
-                    },
-                    "substitutes": {
-                        "in": 0,
-                        "out": 13,
-                        "bench": 0
-                    },
-                    "shots": {
-                        "total": 50,
-                        "on": 31
-                    },
-                    "goals": {
-                        "total": 9,
-                        "conceded": 0,
-                        "assists": 6,
-                        "saves": null
-                    },
-                    "passes": {
-                        "total": 605,
-                        "key": 25,
-                        "accuracy": 20
-                    },
-                    "tackles": {
-                        "total": 24,
-                        "blocks": 7,
-                        "interceptions": 13
-                    },
-                    "duels": {
-                        "total": 289,
-                        "won": 125
-                    },
-                    "dribbles": {
-                        "attempts": 98,
-                        "success": 52,
-                        "past": null
-                    },
-                    "fouls": {
-                        "drawn": 37,
-                        "committed": 19
+                        "drawn": 26,
+                        "committed": 34
                     },
                     "cards": {
                         "yellow": 5,
@@ -1429,7 +1714,7 @@
                     "penalty": {
                         "won": null,
                         "commited": null,
-                        "scored": 1,
+                        "scored": 0,
                         "missed": 0,
                         "saved": null
                     }
@@ -1438,329 +1723,44 @@
         },
         {
             "player": {
-                "id": 631,
-                "name": "P. Foden",
-                "firstname": "Philip Walter",
-                "lastname": "Foden",
+                "id": 91422,
+                "name": "R. Bellanova",
+                "firstname": "Raoul",
+                "lastname": "Bellanova",
                 "age": 24,
                 "birth": {
-                    "date": "2000-05-28",
-                    "place": "Stockport",
-                    "country": "England"
+                    "date": "2000-05-17",
+                    "place": "Rho",
+                    "country": "Italy"
                 },
-                "nationality": "England",
-                "height": "171 cm",
-                "weight": "70 kg",
+                "nationality": "Italy",
+                "height": "188 cm",
+                "weight": "82 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/631.png"
+                "photo": "https://media.api-sports.io/football/players/91422.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 50,
-                        "name": "Manchester City",
-                        "logo": "https://media.api-sports.io/football/teams/50.png"
+                        "id": 503,
+                        "name": "Torino",
+                        "logo": "https://media.api-sports.io/football/teams/503.png"
                     },
                     "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
                         "season": 2023
                     },
                     "games": {
-                        "appearences": 24,
+                        "appearences": 23,
                         "lineups": 22,
-                        "minutes": 1954,
+                        "minutes": 1880,
                         "number": null,
-                        "position": "Midfielder",
-                        "rating": "7.616666",
-                        "captain": false
-                    },
-                    "substitutes": {
-                        "in": 2,
-                        "out": 7,
-                        "bench": 2
-                    },
-                    "shots": {
-                        "total": 37,
-                        "on": 25
-                    },
-                    "goals": {
-                        "total": 8,
-                        "conceded": 0,
-                        "assists": 7,
-                        "saves": null
-                    },
-                    "passes": {
-                        "total": 1072,
-                        "key": 48,
-                        "accuracy": 39
-                    },
-                    "tackles": {
-                        "total": 21,
-                        "blocks": null,
-                        "interceptions": 11
-                    },
-                    "duels": {
-                        "total": 188,
-                        "won": 97
-                    },
-                    "dribbles": {
-                        "attempts": 62,
-                        "success": 33,
-                        "past": null
-                    },
-                    "fouls": {
-                        "drawn": 38,
-                        "committed": 9
-                    },
-                    "cards": {
-                        "yellow": 1,
-                        "yellowred": 0,
-                        "red": 0
-                    },
-                    "penalty": {
-                        "won": null,
-                        "commited": null,
-                        "scored": 0,
-                        "missed": 0,
-                        "saved": null
-                    }
-                }
-            ]
-        },
-        {
-            "player": {
-                "id": 18931,
-                "name": "C. Wood",
-                "firstname": "Christopher Grant",
-                "lastname": "Wood",
-                "age": 33,
-                "birth": {
-                    "date": "1991-12-07",
-                    "place": "Auckland",
-                    "country": "New Zealand"
-                },
-                "nationality": "New Zealand",
-                "height": "191 cm",
-                "weight": "81 kg",
-                "injured": false,
-                "photo": "https://media.api-sports.io/football/players/18931.png"
-            },
-            "statistics": [
-                {
-                    "team": {
-                        "id": 65,
-                        "name": "Nottingham Forest",
-                        "logo": "https://media.api-sports.io/football/teams/65.png"
-                    },
-                    "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
-                        "season": 2023
-                    },
-                    "games": {
-                        "appearences": 20,
-                        "lineups": 9,
-                        "minutes": 866,
-                        "number": null,
-                        "position": "Attacker",
-                        "rating": "6.970000",
-                        "captain": false
-                    },
-                    "substitutes": {
-                        "in": 11,
-                        "out": 3,
-                        "bench": 11
-                    },
-                    "shots": {
-                        "total": 18,
-                        "on": 12
-                    },
-                    "goals": {
-                        "total": 8,
-                        "conceded": 0,
-                        "assists": 1,
-                        "saves": null
-                    },
-                    "passes": {
-                        "total": 223,
-                        "key": 16,
-                        "accuracy": 8
-                    },
-                    "tackles": {
-                        "total": 2,
-                        "blocks": 3,
-                        "interceptions": 1
-                    },
-                    "duels": {
-                        "total": 125,
-                        "won": 52
-                    },
-                    "dribbles": {
-                        "attempts": 7,
-                        "success": 5,
-                        "past": null
-                    },
-                    "fouls": {
-                        "drawn": 7,
-                        "committed": 13
-                    },
-                    "cards": {
-                        "yellow": 0,
-                        "yellowred": 0,
-                        "red": 0
-                    },
-                    "penalty": {
-                        "won": null,
-                        "commited": null,
-                        "scored": 0,
-                        "missed": 0,
-                        "saved": null
-                    }
-                }
-            ]
-        },
-        {
-            "player": {
-                "id": 6009,
-                "name": "J. Álvarez",
-                "firstname": "Julián",
-                "lastname": "Álvarez",
-                "age": 24,
-                "birth": {
-                    "date": "2000-01-31",
-                    "place": "Cachín",
-                    "country": "Argentina"
-                },
-                "nationality": "Argentina",
-                "height": "170 cm",
-                "weight": "71 kg",
-                "injured": false,
-                "photo": "https://media.api-sports.io/football/players/6009.png"
-            },
-            "statistics": [
-                {
-                    "team": {
-                        "id": 50,
-                        "name": "Manchester City",
-                        "logo": "https://media.api-sports.io/football/teams/50.png"
-                    },
-                    "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
-                        "season": 2023
-                    },
-                    "games": {
-                        "appearences": 25,
-                        "lineups": 25,
-                        "minutes": 2094,
-                        "number": null,
-                        "position": "Attacker",
-                        "rating": "7.452000",
-                        "captain": false
-                    },
-                    "substitutes": {
-                        "in": 0,
-                        "out": 13,
-                        "bench": 0
-                    },
-                    "shots": {
-                        "total": 55,
-                        "on": 30
-                    },
-                    "goals": {
-                        "total": 8,
-                        "conceded": 0,
-                        "assists": 6,
-                        "saves": null
-                    },
-                    "passes": {
-                        "total": 865,
-                        "key": 58,
-                        "accuracy": 30
-                    },
-                    "tackles": {
-                        "total": 18,
-                        "blocks": null,
-                        "interceptions": 2
-                    },
-                    "duels": {
-                        "total": 148,
-                        "won": 48
-                    },
-                    "dribbles": {
-                        "attempts": 31,
-                        "success": 16,
-                        "past": null
-                    },
-                    "fouls": {
-                        "drawn": 10,
-                        "committed": 20
-                    },
-                    "cards": {
-                        "yellow": 2,
-                        "yellowred": 0,
-                        "red": 0
-                    },
-                    "penalty": {
-                        "won": null,
-                        "commited": null,
-                        "scored": 1,
-                        "missed": 0,
-                        "saved": null
-                    }
-                }
-            ]
-        },
-        {
-            "player": {
-                "id": 138787,
-                "name": "A. Gordon",
-                "firstname": "Anthony Michael",
-                "lastname": "Gordon",
-                "age": 23,
-                "birth": {
-                    "date": "2001-02-24",
-                    "place": "Liverpool",
-                    "country": "England"
-                },
-                "nationality": "England",
-                "height": "183 cm",
-                "weight": "72 kg",
-                "injured": false,
-                "photo": "https://media.api-sports.io/football/players/138787.png"
-            },
-            "statistics": [
-                {
-                    "team": {
-                        "id": 34,
-                        "name": "Newcastle",
-                        "logo": "https://media.api-sports.io/football/teams/34.png"
-                    },
-                    "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
-                        "season": 2023
-                    },
-                    "games": {
-                        "appearences": 24,
-                        "lineups": 23,
-                        "minutes": 1983,
-                        "number": null,
-                        "position": "Attacker",
-                        "rating": "7.304166",
+                        "position": "Defender",
+                        "rating": "7.034782",
                         "captain": false
                     },
                     "substitutes": {
@@ -1769,47 +1769,47 @@
                         "bench": 1
                     },
                     "shots": {
-                        "total": 39,
-                        "on": 22
+                        "total": 14,
+                        "on": 1
                     },
                     "goals": {
-                        "total": 8,
+                        "total": 1,
                         "conceded": 0,
-                        "assists": 5,
+                        "assists": 4,
                         "saves": null
                     },
                     "passes": {
-                        "total": 599,
-                        "key": 26,
-                        "accuracy": 20
+                        "total": 689,
+                        "key": 22,
+                        "accuracy": 25
                     },
                     "tackles": {
-                        "total": 38,
-                        "blocks": null,
-                        "interceptions": 4
+                        "total": 23,
+                        "blocks": 2,
+                        "interceptions": 12
                     },
                     "duels": {
-                        "total": 261,
-                        "won": 125
+                        "total": 183,
+                        "won": 106
                     },
                     "dribbles": {
-                        "attempts": 74,
-                        "success": 34,
+                        "attempts": 46,
+                        "success": 24,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 47,
-                        "committed": 27
+                        "drawn": 37,
+                        "committed": 11
                     },
                     "cards": {
-                        "yellow": 8,
+                        "yellow": 5,
                         "yellowred": 0,
                         "red": 0
                     },
                     "penalty": {
                         "won": null,
                         "commited": null,
-                        "scored": 1,
+                        "scored": 0,
                         "missed": 0,
                         "saved": null
                     }
@@ -1818,83 +1818,83 @@
         },
         {
             "player": {
-                "id": 10329,
-                "name": "João Pedro",
-                "firstname": "João Pedro",
-                "lastname": "Junqueira de Jesus",
-                "age": 23,
+                "id": 1821,
+                "name": "F. Kostić",
+                "firstname": "Filip",
+                "lastname": "Kostić",
+                "age": 32,
                 "birth": {
-                    "date": "2001-09-26",
-                    "place": "Ribeirão Preto",
-                    "country": "Brazil"
+                    "date": "1992-11-01",
+                    "place": "Kragujevac",
+                    "country": "Serbia"
                 },
-                "nationality": "Brazil",
-                "height": "182 cm",
-                "weight": "70 kg",
+                "nationality": "Serbia",
+                "height": "184 cm",
+                "weight": "81 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/10329.png"
+                "photo": "https://media.api-sports.io/football/players/1821.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 51,
-                        "name": "Brighton",
-                        "logo": "https://media.api-sports.io/football/teams/51.png"
+                        "id": 496,
+                        "name": "Juventus",
+                        "logo": "https://media.api-sports.io/football/teams/496.png"
                     },
                     "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
                         "season": 2023
                     },
                     "games": {
-                        "appearences": 23,
-                        "lineups": 12,
-                        "minutes": 1387,
+                        "appearences": 22,
+                        "lineups": 20,
+                        "minutes": 1452,
                         "number": null,
-                        "position": "Attacker",
-                        "rating": "7.252173",
+                        "position": "Midfielder",
+                        "rating": "6.945454",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 11,
-                        "out": 8,
-                        "bench": 11
+                        "in": 2,
+                        "out": 17,
+                        "bench": 5
                     },
                     "shots": {
-                        "total": 27,
-                        "on": 19
+                        "total": 7,
+                        "on": 2
                     },
                     "goals": {
-                        "total": 8,
+                        "total": 0,
                         "conceded": 0,
-                        "assists": 2,
+                        "assists": 4,
                         "saves": null
                     },
                     "passes": {
-                        "total": 534,
-                        "key": 21,
+                        "total": 526,
+                        "key": 36,
                         "accuracy": 19
                     },
                     "tackles": {
-                        "total": 23,
-                        "blocks": 1,
-                        "interceptions": 9
+                        "total": 28,
+                        "blocks": 8,
+                        "interceptions": 8
                     },
                     "duels": {
-                        "total": 240,
-                        "won": 123
+                        "total": 117,
+                        "won": 51
                     },
                     "dribbles": {
-                        "attempts": 56,
-                        "success": 28,
+                        "attempts": 16,
+                        "success": 4,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 43,
-                        "committed": 13
+                        "drawn": 14,
+                        "committed": 17
                     },
                     "cards": {
                         "yellow": 2,
@@ -1904,7 +1904,7 @@
                     "penalty": {
                         "won": null,
                         "commited": null,
-                        "scored": 4,
+                        "scored": 0,
                         "missed": 0,
                         "saved": null
                     }
