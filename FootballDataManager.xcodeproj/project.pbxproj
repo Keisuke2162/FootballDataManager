@@ -46,7 +46,7 @@
 		67D36B0B2B862E8000AE813C /* StatsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B0A2B862E8000AE813C /* StatsAPIClient.swift */; };
 		67D36B0D2B862EB100AE813C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B0C2B862EB100AE813C /* Player.swift */; };
 		67D36B0F2B88BAF600AE813C /* foorball_api_topscorer_2023_39.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B0E2B88BAF600AE813C /* foorball_api_topscorer_2023_39.json */; };
-		67D36B112B88BB1F00AE813C /* foorball_api_topscorer_2023_98.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B102B88BB1F00AE813C /* foorball_api_topscorer_2023_98.json */; };
+		67D36B112B88BB1F00AE813C /* foorball_api_topscorer_2024_98.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B102B88BB1F00AE813C /* foorball_api_topscorer_2024_98.json */; };
 		67D36B132B88BB2700AE813C /* foorball_api_topscorer_2023_140.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B122B88BB2700AE813C /* foorball_api_topscorer_2023_140.json */; };
 		67D36B152B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B142B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json */; };
 		67D742832B69960B003FA70E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 67D742822B69960B003FA70E /* ComposableArchitecture */; };
@@ -112,7 +112,7 @@
 		67D36B0A2B862E8000AE813C /* StatsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsAPIClient.swift; sourceTree = "<group>"; };
 		67D36B0C2B862EB100AE813C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		67D36B0E2B88BAF600AE813C /* foorball_api_topscorer_2023_39.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_39.json; sourceTree = "<group>"; };
-		67D36B102B88BB1F00AE813C /* foorball_api_topscorer_2023_98.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_98.json; sourceTree = "<group>"; };
+		67D36B102B88BB1F00AE813C /* foorball_api_topscorer_2024_98.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2024_98.json; sourceTree = "<group>"; };
 		67D36B122B88BB2700AE813C /* foorball_api_topscorer_2023_140.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_140.json; sourceTree = "<group>"; };
 		67D36B142B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_135.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -348,7 +348,7 @@
 		67D36B022B84DDF100AE813C /* Japan */ = {
 			isa = PBXGroup;
 			children = (
-				67D36B102B88BB1F00AE813C /* foorball_api_topscorer_2023_98.json */,
+				67D36B102B88BB1F00AE813C /* foorball_api_topscorer_2024_98.json */,
 				67D36B042B84DEE600AE813C /* foorball_api_fixtures_2024_98.json */,
 				67D36B032B84DEE600AE813C /* football_api_standings_2024_98.json */,
 			);
@@ -476,7 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67BD95592B8217EE002EBD0B /* football_api_standings_2023_135.json in Resources */,
-				67D36B112B88BB1F00AE813C /* foorball_api_topscorer_2023_98.json in Resources */,
+				67D36B112B88BB1F00AE813C /* foorball_api_topscorer_2024_98.json in Resources */,
 				679A8C842AC99A35000C090C /* Preview Assets.xcassets in Resources */,
 				679A8C812AC99A35000C090C /* Assets.xcassets in Resources */,
 				67D36B152B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json in Resources */,

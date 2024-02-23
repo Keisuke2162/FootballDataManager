@@ -10,7 +10,7 @@ import Foundation
 
 @DependencyClient
 struct StatsAPIClient {
-    var getTopScorers: @Sendable (_ type: LeagueType) async throws -> FixturesItem
+    var getTopScorers: @Sendable (_ type: LeagueType) async throws -> PlayersItem
 }
 
 extension StatsAPIClient: TestDependencyKey {
@@ -58,17 +58,14 @@ extension StatsAPIClient: DependencyKey {
 //            }
             
             // MARK: - Local JSON File
-            guard let fileURL = Bundle.main.url(forResource: type.fixturesResource, withExtension: "json") else {
+            guard let fileURL = Bundle.main.url(forResource: type.topScorerResource, withExtension: "json") else {
                 throw APIError.unknown
             }
 
             do {
                 let data = try Data(contentsOf: fileURL)
                 let decoder = JSONDecoder()
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-                decoder.dateDecodingStrategy = .formatted(dateFormatter)
-                let item = try decoder.decode(FixturesItem.self, from: data)
+                let item = try decoder.decode(PlayersItem.self, from: data)
                 return item
             } catch {
                 throw APIError.unknown

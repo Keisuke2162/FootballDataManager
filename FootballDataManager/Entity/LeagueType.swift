@@ -81,6 +81,19 @@ extension LeagueType {
         }
     }
 
+    var topScorerResource: String {
+        switch self {
+        case .england:
+            "foorball_api_topscorer_2023_39"
+        case .italy:
+            "foorball_api_topscorer_2023_135"
+        case .spain:
+            "foorball_api_topscorer_2023_140"
+        case .japan:
+            "foorball_api_topscorer_2024_98"
+        }
+    }
+
     var iconImage: Image {
         switch self {
         case .england:
