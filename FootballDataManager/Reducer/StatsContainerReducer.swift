@@ -12,6 +12,7 @@ import Foundation
 struct StatsContainerReducer {
     @ObservableState
     struct State: Equatable {
+        let leagueType: LeagueType
         var selectedStatsType: StatType = .topScorers
         var topScorerList = PlayerStatsReducer.State(leagueType: .england, statType: .topScorers)
         var topAssistList = PlayerStatsReducer.State(leagueType: .england, statType: .topAssists)

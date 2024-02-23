@@ -7,9 +7,18 @@
 
 import Foundation
 
-enum StatType {
+enum StatType: CaseIterable, Equatable {
     case topScorers
     case topAssists
+
+    var title: String {
+        switch self {
+        case .topScorers:
+            "Top Scorers"
+        case .topAssists:
+            "Top Assists"
+        }
+    }
 }
 
 struct PlayerStatsItem: Codable {
