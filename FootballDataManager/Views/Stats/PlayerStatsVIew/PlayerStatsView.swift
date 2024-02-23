@@ -35,7 +35,7 @@ struct PlayerStatsView: View {
 }
 
 #Preview {
-    PlayerStatsView(store: Store(initialState: PlayerStatsReducer.State(leagueType: .england), reducer: {
+    PlayerStatsView(store: Store(initialState: PlayerStatsReducer.State(leagueType: .england, statType: .topScorers), reducer: {
         PlayerStatsReducer()
     }))
 }
