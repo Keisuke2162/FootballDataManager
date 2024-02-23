@@ -49,6 +49,7 @@
 		67D36B112B88BB1F00AE813C /* foorball_api_topscorer_2024_98.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B102B88BB1F00AE813C /* foorball_api_topscorer_2024_98.json */; };
 		67D36B132B88BB2700AE813C /* foorball_api_topscorer_2023_140.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B122B88BB2700AE813C /* foorball_api_topscorer_2023_140.json */; };
 		67D36B152B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B142B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json */; };
+		67D36B172B88C28A00AE813C /* StatsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B162B88C28A00AE813C /* StatsReducer.swift */; };
 		67D742832B69960B003FA70E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 67D742822B69960B003FA70E /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +116,7 @@
 		67D36B102B88BB1F00AE813C /* foorball_api_topscorer_2024_98.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2024_98.json; sourceTree = "<group>"; };
 		67D36B122B88BB2700AE813C /* foorball_api_topscorer_2023_140.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_140.json; sourceTree = "<group>"; };
 		67D36B142B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_135.json; sourceTree = "<group>"; };
+		67D36B162B88C28A00AE813C /* StatsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				67BD95602B8236EF002EBD0B /* SelectLeagueReducer.swift */,
 				67936B942B7E6DCD0004E4B9 /* StandingReducer.swift */,
 				67936B962B8110780004E4B9 /* FixturesReducer.swift */,
+				67D36B162B88C28A00AE813C /* StatsReducer.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				679A8CAE2AC9A97A000C090C /* StandingsItem.swift in Sources */,
 				672CB51C2AD5D3B6005048D5 /* StandingCellView.swift in Sources */,
 				672CB5162AD3EDD0005048D5 /* FixturesAPIClient.swift in Sources */,
+				67D36B172B88C28A00AE813C /* StatsReducer.swift in Sources */,
 				67BD955F2B822C1E002EBD0B /* HomeReducer.swift in Sources */,
 				679A8CB42AC9BEA9000C090C /* StandingAPIClient.swift in Sources */,
 				67936B972B8110780004E4B9 /* FixturesReducer.swift in Sources */,

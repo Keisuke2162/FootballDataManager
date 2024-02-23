@@ -10,7 +10,7 @@ import Foundation
 
 @DependencyClient
 struct StatsAPIClient {
-    var getTopScorers: @Sendable (_ type: LeagueType) async throws -> PlayersItem
+    var getTopScorers: @Sendable (_ type: LeagueType) async throws -> [PlayerStats]
 }
 
 extension StatsAPIClient: TestDependencyKey {
@@ -21,7 +21,7 @@ extension StatsAPIClient: TestDependencyKey {
         getTopScorers: { type in
             do {
                 return try await liveValue.getTopScorers(type)
-            } catch { return .init(response: []) }
+            } catch { return .init([]) }
         }
     )
     static let testValue: StatsAPIClient = Self()
@@ -65,8 +65,8 @@ extension StatsAPIClient: DependencyKey {
             do {
                 let data = try Data(contentsOf: fileURL)
                 let decoder = JSONDecoder()
-                let item = try decoder.decode(PlayersItem.self, from: data)
-                return item
+                let item = try decoder.decode(TopScorersItem.self, from: data)
+                return item.response
             } catch {
                 throw APIError.unknown
             }
