@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct TopScorersItem: Codable {
+enum StatType {
+    case topScorers
+    case topAssists
+}
+
+struct PlayerStatsItem: Codable {
     let response: [PlayerStats]
 }
 
@@ -39,4 +44,5 @@ struct Statistics: Codable, Identifiable, Sendable {
 
 struct Goals: Codable {
     let total: Int?
+    let assists: Int?
 }

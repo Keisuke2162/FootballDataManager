@@ -11,6 +11,8 @@ import Foundation
 @DependencyClient
 struct StatsAPIClient {
     var getTopScorers: @Sendable (_ type: LeagueType) async throws -> [PlayerStats]
+    var getTopAssists: @Sendable (_ type: LeagueType) async throws -> [PlayerStats]
+
 }
 
 extension StatsAPIClient: TestDependencyKey {
@@ -21,6 +23,11 @@ extension StatsAPIClient: TestDependencyKey {
         getTopScorers: { type in
             do {
                 return try await liveValue.getTopScorers(type)
+            } catch { return .init([]) }
+        },
+        getTopAssists: { type in
+            do {
+                return try await liveValue.getTopAssists(type)
             } catch { return .init([]) }
         }
     )
@@ -38,25 +45,11 @@ extension StatsAPIClient: DependencyKey {
     static let liveValue: StatsAPIClient = StatsAPIClient(
         getTopScorers: { type in
             var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures")!
-            //https://v3.football.api-sports.io/fixtures?season=2021&league=39
             components.queryItems = [
                 .init(name: "season", value: "2023"),
                 .init(name: "league", value: type.id)
             ]
-
             // MARK: - API Request
-//            var request = URLRequest(url: components.url!)
-//            request.setValue("", forHTTPHeaderField: "x-rapidapi-key")
-//            request.httpMethod = "GET"
-//
-//            let (data, _) = try await URLSession.shared.data(from: request.url!)
-//            do {
-//                let item = try JSONDecoder().decode(FixturesItem.self, from: data)
-//                return item
-//            } catch {
-//                throw APIError.unknown
-//            }
-            
             // MARK: - Local JSON File
             guard let fileURL = Bundle.main.url(forResource: type.topScorerResource, withExtension: "json") else {
                 throw APIError.unknown
@@ -65,7 +58,28 @@ extension StatsAPIClient: DependencyKey {
             do {
                 let data = try Data(contentsOf: fileURL)
                 let decoder = JSONDecoder()
-                let item = try decoder.decode(TopScorersItem.self, from: data)
+                let item = try decoder.decode(PlayerStatsItem.self, from: data)
+                return item.response
+            } catch {
+                throw APIError.unknown
+            }
+        },
+        getTopAssists: { type in
+            var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures")!
+            components.queryItems = [
+                .init(name: "season", value: "2023"),
+                .init(name: "league", value: type.id)
+            ]
+            // MARK: - API Request
+            // MARK: - Local JSON File
+            guard let fileURL = Bundle.main.url(forResource: type.topScorerResource, withExtension: "json") else {
+                throw APIError.unknown
+            }
+
+            do {
+                let data = try Data(contentsOf: fileURL)
+                let decoder = JSONDecoder()
+                let item = try decoder.decode(PlayerStatsItem.self, from: data)
                 return item.response
             } catch {
                 throw APIError.unknown

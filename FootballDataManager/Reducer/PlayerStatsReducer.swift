@@ -13,6 +13,7 @@ struct PlayerStatsReducer {
     @ObservableState
     struct State: Equatable {
         let leagueType: LeagueType
+        let statType: StatType
         var topScorerStats: [PlayerStats] = []
     }
 
@@ -28,8 +29,15 @@ struct PlayerStatsReducer {
         Reduce { state, action in
             switch action {
             case .fetchTopScorer:
-                return .run { [leagueType = state.leagueType] send in
-                    await send(.topScorerResponse(Result { try await self.statsAPIClient.getTopScorers(leagueType) }))
+                return .run { [leagueType = state.leagueType, statsType = state.statType] send in
+                    await send(.topScorerResponse(Result {
+                        switch statsType {
+                        case .topScorers:
+                            try await self.statsAPIClient.getTopScorers(leagueType)
+                        case .topAssists:
+                            try await self.statsAPIClient.getTopScorers(leagueType)
+                        }
+                    }))
                 }
                 .cancellable(id: CancelID.stats)
             case .topScorerResponse(.failure):
