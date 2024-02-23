@@ -15,7 +15,7 @@ struct PlayerStatsView: View {
         NavigationStack {
             List {
                 ForEach(store.topScorerStats) { scorer in
-                    PlayerStatsListCell(statType: store.state.statType, playerStatsItem: scorer)
+                    PlayerStatsListCell(playerStatsItem: scorer)
                         .frame(height: 46)
                         .listRowBackground(Color.clear)
                 }
@@ -35,7 +35,7 @@ struct PlayerStatsView: View {
 }
 
 #Preview {
-    PlayerStatsView(store: Store(initialState: PlayerStatsReducer.State(leagueType: .england, statType: .topScorers), reducer: {
+    PlayerStatsView(store: Store(initialState: PlayerStatsReducer.State(leagueType: .england), reducer: {
         PlayerStatsReducer()
     }))
 }
