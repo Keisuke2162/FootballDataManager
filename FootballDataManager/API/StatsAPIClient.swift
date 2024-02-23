@@ -72,7 +72,7 @@ extension StatsAPIClient: DependencyKey {
             ]
             // MARK: - API Request
             // MARK: - Local JSON File
-            guard let fileURL = Bundle.main.url(forResource: type.topScorerResource, withExtension: "json") else {
+            guard let fileURL = Bundle.main.url(forResource: type.topAssistResource, withExtension: "json") else {
                 throw APIError.unknown
             }
 

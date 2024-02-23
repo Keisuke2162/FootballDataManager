@@ -9,6 +9,7 @@ import Kingfisher
 import SwiftUI
 
 struct PlayerStatsListCell: View {
+    let statType: StatType
     let playerStatsItem: PlayerStats
 
     var body: some View {
@@ -22,9 +23,16 @@ struct PlayerStatsListCell: View {
                 .foregroundColor(Color.white)
                 .font(.custom("SSportsD-Medium", size: 12))
             Spacer()
-            Text("\(playerStatsItem.statistics[0].goals.total ?? 0)")
-                .foregroundColor(Color.white)
-                .font(.custom("SSportsD-Medium", size: 16))
+            switch statType {
+            case .topScorers:
+                Text("\(playerStatsItem.statistics[0].goals.total ?? 0)")
+                    .foregroundColor(Color.white)
+                    .font(.custom("SSportsD-Medium", size: 16))
+            case .topAssists:
+                Text("\(playerStatsItem.statistics[0].goals.assists ?? 0)")
+                    .foregroundColor(Color.white)
+                    .font(.custom("SSportsD-Medium", size: 16))
+            }
         }
     }
 }

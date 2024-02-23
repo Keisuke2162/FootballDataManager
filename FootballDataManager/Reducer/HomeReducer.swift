@@ -16,6 +16,7 @@ struct HomeReducer {
         var selectedLeagueType: LeagueType = .england
         var standingList = StandingReducer.State(leagueType: .england)
         var fixtureSchedule = FixturesReducer.State(leagueType: .england)
+        var statsList = StatsContainerReducer.State(leagueType: .england)
     }
 
     enum Action {
@@ -23,6 +24,7 @@ struct HomeReducer {
         case destination(PresentationAction<Destination.Action>)
         case standingList(StandingReducer.Action)
         case fixtureSchedule(FixturesReducer.Action)
+        case statsList(StatsContainerReducer.Action)
     }
 
     var body: some ReducerOf<Self> {
@@ -31,6 +33,9 @@ struct HomeReducer {
         }
         Scope(state: \.fixtureSchedule, action: \.fixtureSchedule) {
             FixturesReducer()
+        }
+        Scope(state: \.statsList, action: \.statsList) {
+            StatsContainerReducer()
         }
         Reduce { state, action in
             switch action {
@@ -50,6 +55,8 @@ struct HomeReducer {
             case .standingList:
                 return .none
             case .fixtureSchedule:
+                return .none
+            case .statsList:
                 return .none
             }
         }

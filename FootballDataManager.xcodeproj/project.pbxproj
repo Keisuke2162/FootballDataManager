@@ -325,10 +325,10 @@
 		679A8CC72AD3C358000C090C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				67D36B072B8628BF00AE813C /* Stats */,
-				672CB5122AD3EDB0005048D5 /* Fixtures */,
 				679A8CA62AC99F08000C090C /* Home */,
 				679A8CAC2AC9A912000C090C /* Standing */,
+				672CB5122AD3EDB0005048D5 /* Fixtures */,
+				67D36B072B8628BF00AE813C /* Stats */,
 			);
 			path = Views;
 			sourceTree = "<group>";
