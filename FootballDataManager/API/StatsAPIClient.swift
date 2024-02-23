@@ -12,13 +12,9 @@ import Foundation
 struct StatsAPIClient {
     var getTopScorers: @Sendable (_ type: LeagueType) async throws -> [PlayerStats]
     var getTopAssists: @Sendable (_ type: LeagueType) async throws -> [PlayerStats]
-
 }
 
 extension StatsAPIClient: TestDependencyKey {
-//    static let previewValue = Self(
-//        getFixtures: { _ in .mock }
-//    )
     static let previewValue = Self(
         getTopScorers: { type in
             do {
@@ -52,6 +48,9 @@ extension StatsAPIClient: DependencyKey {
             // MARK: - API Request
             // MARK: - Local JSON File
             guard let fileURL = Bundle.main.url(forResource: type.topScorerResource, withExtension: "json") else {
+            // MARK: - API Request
+            // MARK: - Local JSON File
+            guard let fileURL = Bundle.main.url(forResource: type.fixturesResource, withExtension: "json") else {
                 throw APIError.unknown
             }
 
