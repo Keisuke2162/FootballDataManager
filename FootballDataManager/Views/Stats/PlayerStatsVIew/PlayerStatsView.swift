@@ -8,18 +8,16 @@
 import ComposableArchitecture
 import SwiftUI
 
-struct StatsView: View {
-    @Bindable var store: StoreOf<StatsReducer>
+struct PlayerStatsView: View {
+    @Bindable var store: StoreOf<PlayerStatsReducer>
 
     var body: some View {
         NavigationStack {
             List {
-                ForEach(store.topScorer) { topScorer in
-                    
-                    
-                    
-                    
-                    Text(topScorer.player.name)
+                ForEach(store.topScorerStats) { scorer in
+                    PlayerStatsListCell(playerStatsItem: scorer)
+                        .frame(height: 46)
+                        .listRowBackground(Color.clear)
                 }
                 Spacer().frame(height: 50).listRowBackground(EmptyView())
             }
@@ -37,7 +35,7 @@ struct StatsView: View {
 }
 
 #Preview {
-    StatsView(store: Store(initialState: StatsReducer.State(leagueType: .england), reducer: {
-        StatsReducer()
+    PlayerStatsView(store: Store(initialState: PlayerStatsReducer.State(leagueType: .england), reducer: {
+        PlayerStatsReducer()
     }))
 }

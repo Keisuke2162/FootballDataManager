@@ -1,5 +1,5 @@
 //
-//  StatsReducer.swift
+//  PlayerStatsReducer.swift
 //  FootballDataManager
 //
 //  Created by Kei on 2024/02/23.
@@ -9,11 +9,11 @@ import Foundation
 import ComposableArchitecture
 
 @Reducer
-struct StatsReducer {
+struct PlayerStatsReducer {
     @ObservableState
     struct State: Equatable {
         let leagueType: LeagueType
-        var topScorer: [PlayerStats] = []
+        var topScorerStats: [PlayerStats] = []
     }
 
     enum Action {
@@ -35,7 +35,7 @@ struct StatsReducer {
             case .topScorerResponse(.failure):
                 return .none
             case let .topScorerResponse(.success(response)):
-                state.topScorer = response
+                state.topScorerStats = response
                 return .none
             }
         }
