@@ -21,6 +21,34 @@ struct FixtureDetail: Codable, Equatable, Identifiable, Sendable {
     }
     let team: FixtureTeam
     let statistics: [Statictics]
+
+    var shopsOnGoal: String? {
+        statistics.first(where: { $0.type == .shotsOnGoal })?.value
+    }
+    var totalShots: String? {
+        statistics.first(where: { $0.type == .totalShots })?.value
+    }
+    var fouls: String? {
+        statistics.first(where: { $0.type == .fouls })?.value
+    }
+    var cornerKicks: String? {
+        statistics.first(where: { $0.type == .cornerKicks })?.value
+    }
+    var offsides: String? {
+        statistics.first(where: { $0.type == .offsides })?.value
+    }
+    var yellowCards: String? {
+        statistics.first(where: { $0.type == .yellowCards })?.value
+    }
+    var redCards: String? {
+        statistics.first(where: { $0.type == .redCards })?.value
+    }
+    var ballPossession: String? {
+        statistics.first(where: { $0.type == .ballPossession })?.value
+    }
+    var expectedGoals: String? {
+        statistics.first(where: { $0.type == .expectedGoals })?.value
+    }
 }
 
 struct Statictics: Codable {
