@@ -37,18 +37,6 @@ struct PlayerStats: Codable, Equatable, Identifiable, Sendable {
     let statistics: [Statistics]
 }
 
-struct PlayerStats: Codable, Equatable, Identifiable, Sendable {
-    static func == (lhs: PlayerStats, rhs: PlayerStats) -> Bool {
-        lhs.id == rhs.id
-    }
-
-    var id: Int {
-        player.id
-    }
-    let player: Player
-    let statistics: [Statistics]
-}
-
 struct Player: Codable {
     let id: Int
     let name: String
