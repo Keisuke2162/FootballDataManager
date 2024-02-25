@@ -57,6 +57,8 @@
 		67D36B252B88E8A700AE813C /* foorball_api_topassists_2023_39.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B212B88E8A700AE813C /* foorball_api_topassists_2023_39.json */; };
 		67D36B262B88E8A700AE813C /* foorball_api_topassists_2024_98.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B222B88E8A700AE813C /* foorball_api_topassists_2024_98.json */; };
 		67D36B2A2B88E9E600AE813C /* foorball_api_topscorer_2023_140.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B292B88E9E600AE813C /* foorball_api_topscorer_2023_140.json */; };
+		67D36B2F2B8B680600AE813C /* FixtureDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B2E2B8B680600AE813C /* FixtureDetailReducer.swift */; };
+		67D36B332B8B687600AE813C /* FixtureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B322B8B687600AE813C /* FixtureDetailView.swift */; };
 		67D742832B69960B003FA70E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 67D742822B69960B003FA70E /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +133,8 @@
 		67D36B212B88E8A700AE813C /* foorball_api_topassists_2023_39.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topassists_2023_39.json; sourceTree = "<group>"; };
 		67D36B222B88E8A700AE813C /* foorball_api_topassists_2024_98.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topassists_2024_98.json; sourceTree = "<group>"; };
 		67D36B292B88E9E600AE813C /* foorball_api_topscorer_2023_140.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_140.json; sourceTree = "<group>"; };
+		67D36B2E2B8B680600AE813C /* FixtureDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetailReducer.swift; sourceTree = "<group>"; };
+		67D36B322B8B687600AE813C /* FixtureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 		672CB5122AD3EDB0005048D5 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				67D36B2D2B8B67CF00AE813C /* FixtureDetail */,
 				672CB5132AD3EDBD005048D5 /* FixturesView.swift */,
 			);
 			path = Fixtures;
@@ -177,6 +182,7 @@
 				67936B962B8110780004E4B9 /* FixturesReducer.swift */,
 				67D36B1D2B88DE8D00AE813C /* StatsContainerReducer.swift */,
 				67D36B162B88C28A00AE813C /* PlayerStatsReducer.swift */,
+				67D36B2E2B8B680600AE813C /* FixtureDetailReducer.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -395,6 +401,14 @@
 			path = PlayerStatsVIew;
 			sourceTree = "<group>";
 		};
+		67D36B2D2B8B67CF00AE813C /* FixtureDetail */ = {
+			isa = PBXGroup;
+			children = (
+				67D36B322B8B687600AE813C /* FixtureDetailView.swift */,
+			);
+			path = FixtureDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -561,6 +575,7 @@
 				672CB5162AD3EDD0005048D5 /* FixturesAPIClient.swift in Sources */,
 				67D36B172B88C28A00AE813C /* PlayerStatsReducer.swift in Sources */,
 				67BD955F2B822C1E002EBD0B /* HomeReducer.swift in Sources */,
+				67D36B2F2B8B680600AE813C /* FixtureDetailReducer.swift in Sources */,
 				679A8CB42AC9BEA9000C090C /* StandingAPIClient.swift in Sources */,
 				67936B972B8110780004E4B9 /* FixturesReducer.swift in Sources */,
 				67D36B0B2B862E8000AE813C /* StatsAPIClient.swift in Sources */,
@@ -577,6 +592,7 @@
 				679A8CAB2AC9A470000C090C /* League.swift in Sources */,
 				67BD95612B8236EF002EBD0B /* SelectLeagueReducer.swift in Sources */,
 				679A8C7D2AC99A33000C090C /* FootballDataManagerApp.swift in Sources */,
+				67D36B332B8B687600AE813C /* FixtureDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
