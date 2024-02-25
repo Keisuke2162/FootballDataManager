@@ -60,8 +60,9 @@
 		67D36B2F2B8B680600AE813C /* FixtureDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B2E2B8B680600AE813C /* FixtureDetailReducer.swift */; };
 		67D36B332B8B687600AE813C /* FixtureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B322B8B687600AE813C /* FixtureDetailView.swift */; };
 		67D36B352B8B79E300AE813C /* FixtureDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B342B8B79E300AE813C /* FixtureDetail.swift */; };
-		67D36B382B8B838000AE813C /* football_api_standings_2024_98_287.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B362B8B838000AE813C /* football_api_standings_2024_98_287.json */; };
-		67D36B392B8B838000AE813C /* football_api_standings_2024_98_282.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B372B8B838000AE813C /* football_api_standings_2024_98_282.json */; };
+		67D36B382B8B838000AE813C /* football_api_statistics_2024_98_287.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B362B8B838000AE813C /* football_api_statistics_2024_98_287.json */; };
+		67D36B392B8B838000AE813C /* football_api_statistics_2024_98_282.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B372B8B838000AE813C /* football_api_statistics_2024_98_282.json */; };
+		67D36B3B2B8BBF4600AE813C /* FixtureDetailStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B3A2B8BBF4600AE813C /* FixtureDetailStatsCell.swift */; };
 		67D742832B69960B003FA70E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 67D742822B69960B003FA70E /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -139,8 +140,9 @@
 		67D36B2E2B8B680600AE813C /* FixtureDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetailReducer.swift; sourceTree = "<group>"; };
 		67D36B322B8B687600AE813C /* FixtureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetailView.swift; sourceTree = "<group>"; };
 		67D36B342B8B79E300AE813C /* FixtureDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetail.swift; sourceTree = "<group>"; };
-		67D36B362B8B838000AE813C /* football_api_standings_2024_98_287.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football_api_standings_2024_98_287.json; sourceTree = "<group>"; };
-		67D36B372B8B838000AE813C /* football_api_standings_2024_98_282.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football_api_standings_2024_98_282.json; sourceTree = "<group>"; };
+		67D36B362B8B838000AE813C /* football_api_statistics_2024_98_287.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football_api_statistics_2024_98_287.json; sourceTree = "<group>"; };
+		67D36B372B8B838000AE813C /* football_api_statistics_2024_98_282.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football_api_statistics_2024_98_282.json; sourceTree = "<group>"; };
+		67D36B3A2B8BBF4600AE813C /* FixtureDetailStatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetailStatsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,8 +384,8 @@
 		67D36B022B84DDF100AE813C /* Japan */ = {
 			isa = PBXGroup;
 			children = (
-				67D36B372B8B838000AE813C /* football_api_standings_2024_98_282.json */,
-				67D36B362B8B838000AE813C /* football_api_standings_2024_98_287.json */,
+				67D36B372B8B838000AE813C /* football_api_statistics_2024_98_282.json */,
+				67D36B362B8B838000AE813C /* football_api_statistics_2024_98_287.json */,
 				67D36B032B84DEE600AE813C /* football_api_standings_2024_98.json */,
 				67D36B042B84DEE600AE813C /* foorball_api_fixtures_2024_98.json */,
 				67D36B102B88BB1F00AE813C /* foorball_api_topscorer_2024_98.json */,
@@ -414,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				67D36B322B8B687600AE813C /* FixtureDetailView.swift */,
+				67D36B3A2B8BBF4600AE813C /* FixtureDetailStatsCell.swift */,
 			);
 			path = FixtureDetail;
 			sourceTree = "<group>";
@@ -533,14 +536,14 @@
 				67BD95592B8217EE002EBD0B /* football_api_standings_2023_135.json in Resources */,
 				67D36B112B88BB1F00AE813C /* foorball_api_topscorer_2024_98.json in Resources */,
 				679A8C842AC99A35000C090C /* Preview Assets.xcassets in Resources */,
-				67D36B392B8B838000AE813C /* football_api_standings_2024_98_282.json in Resources */,
+				67D36B392B8B838000AE813C /* football_api_statistics_2024_98_282.json in Resources */,
 				67D36B252B88E8A700AE813C /* foorball_api_topassists_2023_39.json in Resources */,
 				679A8C812AC99A35000C090C /* Assets.xcassets in Resources */,
 				67D36B152B88BB2F00AE813C /* foorball_api_topscorer_2023_135.json in Resources */,
 				679A8CCD2AD3C7C2000C090C /* foorball_api_fixtures_2023_39.json in Resources */,
 				67D36B062B84DEE600AE813C /* foorball_api_fixtures_2024_98.json in Resources */,
 				67D36B2A2B88E9E600AE813C /* foorball_api_topscorer_2023_140.json in Resources */,
-				67D36B382B8B838000AE813C /* football_api_standings_2024_98_287.json in Resources */,
+				67D36B382B8B838000AE813C /* football_api_statistics_2024_98_287.json in Resources */,
 				67D36B232B88E8A700AE813C /* foorball_api_topassists_2023_140.json in Resources */,
 				67D36B262B88E8A700AE813C /* foorball_api_topassists_2024_98.json in Resources */,
 				67BD95572B8217E9002EBD0B /* foorball_api_fixtures_2023_135.json in Resources */,
@@ -600,6 +603,7 @@
 				67BD95512B815C2E002EBD0B /* LeagueType.swift in Sources */,
 				67936B952B7E6DCD0004E4B9 /* StandingReducer.swift in Sources */,
 				67D36B192B88CC4F00AE813C /* PlayerStatsListCell.swift in Sources */,
+				67D36B3B2B8BBF4600AE813C /* FixtureDetailStatsCell.swift in Sources */,
 				67D36B092B8628CD00AE813C /* PlayerStatsView.swift in Sources */,
 				679A8CAB2AC9A470000C090C /* League.swift in Sources */,
 				67BD95612B8236EF002EBD0B /* SelectLeagueReducer.swift in Sources */,

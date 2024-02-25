@@ -14,7 +14,7 @@ struct FixtureDetailView: View {
 
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack(spacing: 16) {
                 // スコア表示領域
                 HStack {
                     Spacer()
@@ -40,16 +40,32 @@ struct FixtureDetailView: View {
                     Spacer()
                 }
                 .frame(height: 160)
-                .background(Color.blue)
-                
-                // 得点表示領域
-                
-                
+                .background(store.state.leagueType.themaColor)
+                // 得点者
                 
                 // スタッツ表示領域
-                
-                
-                // メンバー表示領域
+                if let homeFixtureDetail = store.state.fixtureDetailHome, let awayFixtureDetail = store.state.fixtureDetailAway {
+                    VStack(spacing: 24) {
+                        // 総シュート
+                        FixtureDetailStatsCell(statsType: .totalShots,
+                                               homeValue: homeFixtureDetail.totalShots,
+                                               awayValue: awayFixtureDetail.totalShots)
+                        // 枠内シュート
+                        FixtureDetailStatsCell(statsType: .shotsOnGoal,
+                                               homeValue: homeFixtureDetail.shotsOnGoal,
+                                               awayValue: awayFixtureDetail.shotsOnGoal)
+                        // ポゼッション
+                        FixtureDetailStatsCell(statsType: .ballPossession,
+                                               homeValue: homeFixtureDetail.ballPossession,
+                                               awayValue: awayFixtureDetail.ballPossession)
+                        // xG
+                        FixtureDetailStatsCell(statsType: .expectedGoals,
+                                               homeValue: homeFixtureDetail.expectedGoals,
+                                               awayValue: awayFixtureDetail.expectedGoals)
+                    }
+                }
+
+                // メンバー
                 
                 
                 
@@ -57,11 +73,17 @@ struct FixtureDetailView: View {
             }
             .background(store.state.leagueType.themaColor)
         }
+        .task {
+            do {
+                try await Task.sleep(for: .milliseconds(300))
+                await store.send(.fetchFixtureDetail).finish()
+            } catch {}
+        }
     }
 }
 
 #Preview {
-    FixtureDetailView(store: Store(initialState: FixtureDetailReducer.State(leagueType: .england, fixture: Fixture.mock), reducer: {
+    FixtureDetailView(store: Store(initialState: FixtureDetailReducer.State(leagueType: .japan, fixture: Fixture.mock), reducer: {
         FixtureDetailReducer()
     }))
 }

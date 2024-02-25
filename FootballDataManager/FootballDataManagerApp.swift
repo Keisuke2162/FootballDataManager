@@ -12,8 +12,11 @@ import SwiftUI
 struct FootballDataManagerApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView(store: Store(initialState: HomeReducer.State(), reducer: {
-                HomeReducer()
+//            HomeView(store: Store(initialState: HomeReducer.State(), reducer: {
+//                HomeReducer()
+//            }))
+            FixtureDetailView(store: Store(initialState: FixtureDetailReducer.State(leagueType: .england, fixture: Fixture.mock), reducer: {
+                FixtureDetailReducer()
             }))
         }
     }

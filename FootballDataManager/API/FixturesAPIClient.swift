@@ -23,7 +23,7 @@ extension FixturesClient: TestDependencyKey {
         },
         getFixtureDetail: { teamID, fixtureID, isHome in
             do {
-                
+                return try await liveValue.getFixtureDetail(teamID, fixtureID, isHome)
             } catch {
                 throw APIError.noneValue
             }
@@ -80,14 +80,21 @@ extension FixturesClient: DependencyKey {
             }
         },
         getFixtureDetail: { teamID, fixtureID, isHome in
-            let resource = isHome ? "football_api_standings_2024_98_282" : "football_api_standings_2024_98_287"
+            let resource = isHome ? "football_api_statistics_2024_98_282" : "football_api_statistics_2024_98_287"
             guard let fileURL = Bundle.main.url(forResource: resource, withExtension: "json") else { throw APIError.unknown }
             do {
                 let data = try Data(contentsOf: fileURL)
                 let decoder = JSONDecoder()
+//                let dateFormatter = DateFormatter()
+//                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+//                decoder.dateDecodingStrategy = .formatted(dateFormatter)
                 let item = try decoder.decode(FixtureDetailItem.self, from: data)
-                return item.response
+                guard let response = item.response.first else {
+                    throw APIError.unknown
+                }
+                return response
             } catch {
+                print("テスト4 \(error)")
                 throw APIError.unknown
             }
         }
