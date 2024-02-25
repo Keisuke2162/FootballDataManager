@@ -11,17 +11,22 @@ import Foundation
 @DependencyClient
 struct FixturesClient {
     var getFixtures: @Sendable (_ type: LeagueType) async throws -> FixturesItem
+    var getFixtureDetail: @Sendable (_ teamID: Int, _ fixtureID: Int, _ isHome: Bool) async throws -> FixtureDetail
 }
 
 extension FixturesClient: TestDependencyKey {
-//    static let previewValue = Self(
-//        getFixtures: { _ in .mock }
-//    )
     static let previewValue = Self(
         getFixtures: { type in
             do {
                 return try await liveValue.getFixtures(type)
             } catch { return .init(response: []) }
+        },
+        getFixtureDetail: { teamID, fixtureID, isHome in
+            do {
+                
+            } catch {
+                throw APIError.noneValue
+            }
         }
     )
     static let testValue: FixturesClient = Self()
@@ -70,6 +75,18 @@ extension FixturesClient: DependencyKey {
                 decoder.dateDecodingStrategy = .formatted(dateFormatter)
                 let item = try decoder.decode(FixturesItem.self, from: data)
                 return item
+            } catch {
+                throw APIError.unknown
+            }
+        },
+        getFixtureDetail: { teamID, fixtureID, isHome in
+            let resource = isHome ? "football_api_standings_2024_98_282" : "football_api_standings_2024_98_287"
+            guard let fileURL = Bundle.main.url(forResource: resource, withExtension: "json") else { throw APIError.unknown }
+            do {
+                let data = try Data(contentsOf: fileURL)
+                let decoder = JSONDecoder()
+                let item = try decoder.decode(FixtureDetailItem.self, from: data)
+                return item.response
             } catch {
                 throw APIError.unknown
             }
