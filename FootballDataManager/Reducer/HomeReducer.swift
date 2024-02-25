@@ -46,9 +46,11 @@ struct HomeReducer {
                 state.selectedLeagueType = type
                 state.standingList = .init(leagueType: type)
                 state.fixtureSchedule = .init(leagueType: type)
+                state.statsList = .init(leagueType: type)
                 return .run { send in
                     await send(.standingList(.fetchStandings))
                     await send(.fixtureSchedule(.fetchFixtures))
+                    await send(.statsList(.updateLeagueType))
                 }
             case .destination:
                 return .none

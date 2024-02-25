@@ -20,6 +20,7 @@ struct StatsContainerReducer {
 
     enum Action {
         case selectedType(StatType)
+        case updateLeagueType
         case topScorerList(PlayerStatsReducer.Action)
         case topAssistList(PlayerStatsReducer.Action)
     }
@@ -36,6 +37,13 @@ struct StatsContainerReducer {
             case let .selectedType(type):
                 state.selectedStatsType = type
                 return .none
+            case .updateLeagueType:
+                state.topScorerList = .init(leagueType: state.leagueType, statType: .topScorers)
+                state.topAssistList = .init(leagueType: state.leagueType, statType: .topAssists)
+                return .run { send in
+                    await send(.topScorerList(.fetchTopScorer))
+                    await send(.topAssistList(.fetchTopScorer))
+                }
             case .topScorerList:
                 return .none
             case .topAssistList:
