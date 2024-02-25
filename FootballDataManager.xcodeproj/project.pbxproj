@@ -59,6 +59,7 @@
 		67D36B2A2B88E9E600AE813C /* foorball_api_topscorer_2023_140.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B292B88E9E600AE813C /* foorball_api_topscorer_2023_140.json */; };
 		67D36B2F2B8B680600AE813C /* FixtureDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B2E2B8B680600AE813C /* FixtureDetailReducer.swift */; };
 		67D36B332B8B687600AE813C /* FixtureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B322B8B687600AE813C /* FixtureDetailView.swift */; };
+		67D36B352B8B79E300AE813C /* FixtureDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B342B8B79E300AE813C /* FixtureDetail.swift */; };
 		67D742832B69960B003FA70E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 67D742822B69960B003FA70E /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +136,7 @@
 		67D36B292B88E9E600AE813C /* foorball_api_topscorer_2023_140.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_140.json; sourceTree = "<group>"; };
 		67D36B2E2B8B680600AE813C /* FixtureDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetailReducer.swift; sourceTree = "<group>"; };
 		67D36B322B8B687600AE813C /* FixtureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetailView.swift; sourceTree = "<group>"; };
+		67D36B342B8B79E300AE813C /* FixtureDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,8 +274,9 @@
 				679A8CAA2AC9A470000C090C /* League.swift */,
 				679A8CAD2AC9A97A000C090C /* StandingsItem.swift */,
 				679A8CAF2AC9B917000C090C /* Team.swift */,
-				672CB5172AD3EF71005048D5 /* Fixture.swift */,
 				67D36B0C2B862EB100AE813C /* Player.swift */,
+				672CB5172AD3EF71005048D5 /* Fixture.swift */,
+				67D36B342B8B79E300AE813C /* FixtureDetail.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 			files = (
 				67D36B0D2B862EB100AE813C /* Player.swift in Sources */,
 				679A8CB02AC9B917000C090C /* Team.swift in Sources */,
+				67D36B352B8B79E300AE813C /* FixtureDetail.swift in Sources */,
 				679A8CBA2AC9D832000C090C /* StandingView.swift in Sources */,
 				679A8CA82AC99F14000C090C /* HomeView.swift in Sources */,
 				67936B9A2B814FEF0004E4B9 /* String+Extension.swift in Sources */,
