@@ -63,6 +63,7 @@
 		67D36B382B8B838000AE813C /* football_api_statistics_2024_98_287.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B362B8B838000AE813C /* football_api_statistics_2024_98_287.json */; };
 		67D36B392B8B838000AE813C /* football_api_statistics_2024_98_282.json in Resources */ = {isa = PBXBuildFile; fileRef = 67D36B372B8B838000AE813C /* football_api_statistics_2024_98_282.json */; };
 		67D36B3B2B8BBF4600AE813C /* FixtureDetailStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B3A2B8BBF4600AE813C /* FixtureDetailStatsCell.swift */; };
+		67D36B3D2B8E401B00AE813C /* FixturesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D36B3C2B8E401B00AE813C /* FixturesListCell.swift */; };
 		67D742832B69960B003FA70E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 67D742822B69960B003FA70E /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +144,7 @@
 		67D36B362B8B838000AE813C /* football_api_statistics_2024_98_287.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football_api_statistics_2024_98_287.json; sourceTree = "<group>"; };
 		67D36B372B8B838000AE813C /* football_api_statistics_2024_98_282.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football_api_statistics_2024_98_282.json; sourceTree = "<group>"; };
 		67D36B3A2B8BBF4600AE813C /* FixtureDetailStatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetailStatsCell.swift; sourceTree = "<group>"; };
+		67D36B3C2B8E401B00AE813C /* FixturesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +177,9 @@
 		672CB5122AD3EDB0005048D5 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				67D36B2D2B8B67CF00AE813C /* FixtureDetail */,
 				672CB5132AD3EDBD005048D5 /* FixturesView.swift */,
+				67D36B3C2B8E401B00AE813C /* FixturesListCell.swift */,
+				67D36B2D2B8B67CF00AE813C /* FixtureDetail */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				67D36B2F2B8B680600AE813C /* FixtureDetailReducer.swift in Sources */,
 				679A8CB42AC9BEA9000C090C /* StandingAPIClient.swift in Sources */,
 				67936B972B8110780004E4B9 /* FixturesReducer.swift in Sources */,
+				67D36B3D2B8E401B00AE813C /* FixturesListCell.swift in Sources */,
 				67D36B0B2B862E8000AE813C /* StatsAPIClient.swift in Sources */,
 				672CB5142AD3EDBD005048D5 /* FixturesView.swift in Sources */,
 				679A8CC32ACF4ED8000C090C /* SelectLeagueView.swift in Sources */,

@@ -11,9 +11,9 @@ import SwiftUI
 
 struct FixturesView: View {
     @Bindable var store: StoreOf<FixturesReducer>
-
+ 
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
             VStack {
                 if store.state.fixtures.isEmpty {
                     Color.clear
@@ -45,28 +45,30 @@ struct FixturesView: View {
                     .background(Color.white)
                     List {
                         ForEach(store.groupedItems[store.dateKeys[store.selectedDateIndex]] ?? []) { item in
-                            HStack {
-                                Spacer()
-                                KFImage(URL(string: item.teams.home.logo))
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 40, height: 40)
-                                Spacer()
-                                Text(item.goals.home?.description ?? "")
-                                    .foregroundColor(Color.white)
-                                    .font(.custom("SSportsD-Medium", size: 16))
-                                Text("-")
-                                    .foregroundColor(Color.white)
-                                    .font(.custom("SSportsD-Medium", size: 16))
-                                Text(item.goals.away?.description ?? "")
-                                    .foregroundColor(Color.white)
-                                    .font(.custom("SSportsD-Medium", size: 16))
-                                Spacer()
-                                KFImage(URL(string: item.teams.away.logo))
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 40, height: 40)
-                                Spacer()
+                            NavigationLink(state: FixtureDetailReducer.State(leagueType: store.state.leagueType, fixture: item)) {
+                                HStack {
+                                    Spacer()
+                                    KFImage(URL(string: item.teams.home.logo))
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 40, height: 40)
+                                    Spacer()
+                                    Text(item.goals.home?.description ?? "")
+                                        .foregroundColor(Color.white)
+                                        .font(.custom("SSportsD-Medium", size: 16))
+                                    Text("-")
+                                        .foregroundColor(Color.white)
+                                        .font(.custom("SSportsD-Medium", size: 16))
+                                    Text(item.goals.away?.description ?? "")
+                                        .foregroundColor(Color.white)
+                                        .font(.custom("SSportsD-Medium", size: 16))
+                                    Spacer()
+                                    KFImage(URL(string: item.teams.away.logo))
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 40, height: 40)
+                                    Spacer()
+                                }
                             }
                             .frame(height: 56)
                             .listRowBackground(Color.clear)
@@ -78,7 +80,12 @@ struct FixturesView: View {
                     .listStyle(.grouped)
                 }
             }
-            .background(store.state.leagueType.themaColor)
+        } destination: { store in
+            FixtureDetailView(store: store)
+//            switch store.case {
+//            case let .detail(store):
+//                FixtureDetailView(store: store)
+//            }
         }
         .task {
             do {

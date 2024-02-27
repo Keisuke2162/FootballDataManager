@@ -10,6 +10,11 @@ import ComposableArchitecture
 
 @Reducer
 struct FixturesReducer {
+//    @Reducer(state: .equatable)
+//    enum Path {
+//        case detail(FixtureDetailReducer)
+//    }
+
     @ObservableState
     struct State: Equatable {
         let leagueType: LeagueType
@@ -17,14 +22,15 @@ struct FixturesReducer {
         var selectedDateIndex: Int = 0
         var groupedItems: [String: [Fixture]] = [:]
         var dateKeys: [String] = []
+        var path = StackState<FixtureDetailReducer.State>()
     }
 
     enum Action {
-        case tapFixtureCell    // セルをタップ
         case fetchFixtures
         case fixturesResponse(Result<FixturesItem, Error>)
         case backDateButton
         case forwardDateButton
+        case path(StackAction<FixtureDetailReducer.State, FixtureDetailReducer.Action>)
     }
 
     @Dependency(\.fixtureClient) var fixtureClient
@@ -33,16 +39,14 @@ struct FixturesReducer {
     var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
-            case .tapFixtureCell:      // Cellタップ時
-                return .none
-            case .fetchFixtures:   // データ取得開始
+            case .fetchFixtures:
                 return .run { [leagueType = state.leagueType] send in
                     await send(.fixturesResponse(Result { try await self.fixtureClient.getFixtures(leagueType) }))
                 }
                 .cancellable(id: CancelID.fixtures)
-            case .fixturesResponse(.failure):   // APIエラー時
+            case .fixturesResponse(.failure):
                 return .none
-            case let .fixturesResponse(.success(response)): // データ取得正常終了時
+            case let .fixturesResponse(.success(response)):
                 state.fixtures = response.response
                 state.groupedItems = response.groupedItems
                 state.dateKeys = response.dateKeys
@@ -57,7 +61,12 @@ struct FixturesReducer {
                     state.selectedDateIndex += 1
                 }
                 return .none
+            case .path:
+                return .none
             }
+        }
+        .forEach(\.path, action: \.path) {
+            FixtureDetailReducer()
         }
     }
 }
