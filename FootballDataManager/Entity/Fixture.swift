@@ -62,6 +62,17 @@ struct FixtureGoals: Codable {
     let away: Int?
 }
 
+struct FixtureScore: Codable {
+    let halftime: FixtureGoals
+    let fulltime: FixtureGoals
+    let extratime: FixtureGoals
+    let penalty: FixtureGoals
+    var secondHalf: FixtureGoals {
+        guard let halftimeHome = halftime.home, let fulltimeHome =  fulltime.home , let halftimeAway = halftime.away, let fulltimeAway = fulltime.away else { return .init(home: nil, away: nil) }
+        return .init(home: fulltimeHome - halftimeHome, away: fulltimeAway - halftimeAway)
+    }
+}
+
 // MARK: - Mock
 extension FixturesItem {
     static let mock = Self(
@@ -78,8 +89,8 @@ extension Fixture {
 
 extension FixtureItem {
     static let mock = Self(
-        id: 1035037,
-        date: "2023-08-11T19:00:00+00:00".toDate()!,
+        id: 1153775,
+        date: "2024-02-23T05:00:00+00:00".toDate()!,
         status: .mock
     )
 }
@@ -98,94 +109,47 @@ extension FixtureTeams {
 
 extension FixtureTeam {
     static let mockHome = Self(
-        id: 44,
-        name: "Burnley",
-        logo: "https://media-4.api-sports.io/football/teams/44.png",
-        winner: false
+        id: 282,
+        name: "Sanfrecce Hiroshima",
+        logo: "https://media.api-sports.io/football/teams/282.png",
+        winner: true
     )
     static let mockAway = Self(
-        id: 50,
-        name: "Manchester City",
-        logo: "https://media-4.api-sports.io/football/teams/50.png",
-        winner: true
+        id: 287,
+        name: "Urawa",
+        logo: "https://media.api-sports.io/football/teams/287.png",
+        winner: false
     )
 }
 
 extension FixtureGoals {
     static let mock = Self(
-        home: 3,
+        home: 2,
         away: 0
+    )
+    static let halftimeMock = Self(
+        home: 1,
+        away: 0
+    )
+    static let fulltime = Self(
+        home: 2,
+        away: 0
+    )
+    static let extratime = Self(
+        home: nil,
+        away: nil
+    )
+    static let penalty = Self(
+        home: nil,
+        away: nil
     )
 }
 
-
-/*
- {
-     "fixture": {
-         "id": 1035037,
-         "referee": "Craig Pawson, England",
-         "timezone": "UTC",
-         "date": "2023-08-11T19:00:00+00:00",
-         "timestamp": 1691780400,
-         "periods": {
-             "first": 1691780400,
-             "second": 1691784000
-         },
-         "venue": {
-             "id": 512,
-             "name": "Turf Moor",
-             "city": "Burnley"
-         },
-         "status": {
-             "long": "Match Finished",
-             "short": "FT",
-             "elapsed": 90
-         }
-     },
-     "league": {
-         "id": 39,
-         "name": "Premier League",
-         "country": "England",
-         "logo": "https://media-4.api-sports.io/football/leagues/39.png",
-         "flag": "https://media-4.api-sports.io/flags/gb.svg",
-         "season": 2023,
-         "round": "Regular Season - 1"
-     },
-     "teams": {
-         "home": {
-             "id": 44,
-             "name": "Burnley",
-             "logo": "https://media-4.api-sports.io/football/teams/44.png",
-             "winner": false
-         },
-         "away": {
-             "id": 50,
-             "name": "Manchester City",
-             "logo": "https://media-4.api-sports.io/football/teams/50.png",
-             "winner": true
-         }
-     },
-     "goals": {
-         "home": 0,
-         "away": 3
-     },
-     "score": {
-         "halftime": {
-             "home": 0,
-             "away": 2
-         },
-         "fulltime": {
-             "home": 0,
-             "away": 3
-         },
-         "extratime": {
-             "home": null,
-             "away": null
-         },
-         "penalty": {
-             "home": null,
-             "away": null
-         }
-     }
- },
- */
+extension FixtureScore {
+    static let mock = Self(
+        halftime: .halftimeMock,
+        fulltime: .fulltime,
+        extratime: .extratime,
+        penalty: .penalty
+    )
+}
